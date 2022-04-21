@@ -19,6 +19,11 @@ nav ul li a {
     display: block;
     padding: .5rem 1rem;
     background-color: orange;
+    text-decoration: none;
+}
+.selected {
+    color: red;
+    font-weight: bold;
 }
 main h1 {
     clear: both;
