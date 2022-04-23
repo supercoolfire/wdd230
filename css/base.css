@@ -2,7 +2,7 @@
     margin: 0;
     padding:  0;
     box-sizing: border-box;
-    /* outline: 1px dotted red; */
+    outline: 1px dotted red;
 }
 
 body {
@@ -84,6 +84,10 @@ footer p:nth-of-type(2) {
         display: block;
         text-align: center;
         font-size: 1rem;
+    }
+
+    main {
+        text-align: center;
     }
     
 }
