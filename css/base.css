@@ -11,6 +11,7 @@ body {
 }
 
 header, 
+nav,
 main, 
 footer {
     max-width: 700px;
@@ -49,9 +50,14 @@ h2 {
     font-size: 2rem;
 }
 
-/* main {
-    padding: 3rem;
-} */
+nav ul li{
+    list-style-type: none;
+}
+
+main {
+    padding: 1rem;
+}
+
 main ul {
     /* margin-top: 1rem; */
     padding: 2rem;
