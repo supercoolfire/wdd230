@@ -8,6 +8,12 @@ body {
 header h1 {
     color: brown;
 }
+header {
+    display: grid;
+}
+nav li {
+    grid-template-columns: ;
+}
 nav ul {
     padding: 0;
 }
@@ -34,10 +40,15 @@ main img {
 footer {
     text-align: center;
     clear: both;
+    background-color: lightskyblue;
 }
 @media screen and (max-width: 550px) {
-    header main {
+    header, main, img {
         display: block;
+    }
+    main img {
+        float: none;
+        margin: auto;
     }
     
 }
