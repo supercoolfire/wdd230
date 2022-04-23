@@ -44,6 +44,7 @@ h1 {
     /* margin-left: auto;
     margin-right: auto; */
     font-size: 2rem;
+    /* color: gold; */
     /* outline: 1px dotted red;  */
 }
 h2 {
@@ -92,6 +93,8 @@ footer p:nth-of-type(2) {
         /* position: relative; */
         text-align: center;
         font-size: 1rem;
+        margin-right: 10px;
+        margin-left: 10px;
     }
     h1 {
         position: absolute;
@@ -105,5 +108,9 @@ footer p:nth-of-type(2) {
         text-align: center;
         font-size: 1.5rem;
     }
-    
+    footer {
+        margin-right: 10px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
 }
