@@ -49,11 +49,12 @@ h2 {
     font-size: 2rem;
 }
 
-main {
+/* main {
     padding: 3rem;
-}
+} */
 main ul {
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
+    padding: 2rem;
 }
 main ul li {
     list-style-type: none;
@@ -78,10 +79,11 @@ footer p:nth-of-type(2) {
     color: goldenrod;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 700px) {
     header {
         display: block;
         text-align: center;
+        font-size: 1rem;
     }
     
 }
