@@ -77,3 +77,11 @@ footer p:nth-of-type(2) {
     font-size: larger;
     color: goldenrod;
 }
+
+@media screen and (max-width: 550px) {
+    header {
+        display: block;
+        text-align: center;
+    }
+    
+}
