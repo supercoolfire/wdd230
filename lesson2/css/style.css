@@ -1,0 +1,20 @@
+/* This goes in the SMALL CSS file */
+/* the dog class references the parent element the class. The class name "dog" is a terriable name so use something meaningful in your own work. I just wnat you to realize that the class name is somthing that I made up myself.*/
+div.dog {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  /* these are the children of the dog */
+  div.dog div {border: 1px grey solid;}
+  
+  
+  /* This goes in the MEDIUM CSS file */
+  @media only screen and (min-width: 760px) {
+    div.dog {grid-template-columns: 1fr 1fr;}
+  }
+  
+  /* This goes in the LARGE CSS file */
+  @media only screen and (min-width: 1024px) {
+    div.dog {grid-template-columns: 1fr 1fr 1fr;}
+  }
