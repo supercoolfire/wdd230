@@ -110,9 +110,9 @@ main {
 }
 
 /* these are the children of the dog */
-section div {
-  /* border: 1px grey solid; */
-}
+/* section div {
+  border: 1px grey solid;
+} */
 
 
 /* This goes in the MEDIUM CSS file */
