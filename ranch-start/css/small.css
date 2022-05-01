@@ -1,0 +1,77 @@
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* body rules here */
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+}
+
+/* header rulse here */
+header {
+  background-color: rgb(137, 80, 250);
+  padding: 1rem 2%;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header h2 {
+  margin: 0;
+}
+
+/* navigation rules here */
+nav {
+  background-color: rgb(23, 20, 20);
+
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  list-style-type: none;
+}
+nav li.active {
+  background-color: rgb(53, 40, 40);
+}
+nav a {
+  display: block;
+  padding: .8rem 0; /* 44 min height */
+  color: rgb(73, 68, 68);
+  text-align: center;
+  text-decoration: none;
+}
+nav a:hover {
+  background-color: rgb(65, 59, 59);
+}
+
+/* main rules here */
+main {
+  padding: 1rem 2%;
+  display: block;
+}
+main h1 {
+  color: rgb(137, 80, 250);
+}
+main figure img {
+  width: 100%;
+}
+main figure {
+  width: 100%;
+  margin: 0;
+}
+main figcaption {
+  text-align: center;
+  font-size: .8rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 2%;
+  background-color: rgb(137, 80, 250);
+}

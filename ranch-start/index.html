@@ -6,11 +6,14 @@
   <meta name="description" content="Fill Me In">
   <meta name="author" content="John Doe">
   <title>Events: Christmas Ranch</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
 
   <!-- STYLE SHEETS -->
-  <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/medium.css">
+  <link rel="stylesheet" href="css/large.css">
   <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
 </head>
 
@@ -26,7 +29,7 @@
       <ul>
         <li><a href="index.html">Services</a></li>
         <li><a href="#">Location</a></li>
-        <li><a href="#">Events</a></li>
+        <li class="active"><a href="#">Events</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
@@ -34,8 +37,10 @@
     <main>
 
       <h1>Events</h1>
+      <figure> <img src="images/cows.jpg" alt="Herford Cows">
+        <figcaption>Cowboy pets</figcaption>
+      </figure>
 
-      <img src="images/cows.jpg" alt="Herford Cows">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel mauris pretium, tempus elit vel, condimentum
         ex. Aliquam tempus arcu vitae massa fermentum mattis. Vestibulum ante ipsum primis in faucibus orci luctus et
         ultrices posuere cubilia Curae; Donec vel sapien gravida, consequat tellus non, rhoncus est. Maecenas tincidunt
@@ -43,7 +48,7 @@
         posuere malesuada leo. Phasellus facilisis enim lorem, sed ultricies diam maximus in. Maecenas fermentum eu mi
         vitae pretium.</p>
 
-      <div>
+      <div class="news">
         <p>Appropriately deliver resource-leveling infrastructures via one-to-one architectures. Progressively expedite
           B2B process improvements with plug-and-play applications. Conveniently simplify robust channels via ubiquitous
           intellectual capital. Monotonectally implement client-centric supply chains without customer directed
