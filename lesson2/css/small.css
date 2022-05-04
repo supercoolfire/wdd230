@@ -1,0 +1,110 @@
+/* This goes in the SMALL CSS file */
+/* the dog class references the parent element the class. The class name "dog" is a terriable name so use something meaningful in your own work. I just wnat you to realize that the class name is somthing that I made up myself.*/
+
+body {
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1024px;
+  margin: 0 auto;
+  /* outline: 1px dotted red; */
+}
+
+header,
+main,
+footer {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: lavender;
+  border-radius: 20px;
+}
+
+footer {
+  text-align: center;
+  background-color: lavender;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+footer p:nth-of-type(1) {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  color: rgb(79, 79, 140);
+}
+
+footer p:nth-of-type(2) {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8rem;
+  color: rgb(6, 84, 99);
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
+
+h2 a {
+  text-decoration: none;
+  color: black;
+}
+
+section {
+  margin: 1rem;
+  /* max-width: 320px; */
+  background-color: rgb(171, 223, 223);
+  border-radius: 10px;
+}
+
+.principle {
+  margin-top: 0;
+  font-size: 1rem;
+  font-family: 'Bebas Neue', cursive;
+  background-color: rgb(82, 133, 133);
+  padding: 1rem;
+  border-radius: 10px 10px 0 0;
+  clear: both;
+}
+
+.organization {
+  font-family: 'Permanent Marker', cursive;
+  padding-left: 1rem;
+  clear: both;
+}
+
+/* .hyperlink {
+  font-family: 'Indie Flower', cursive;
+  font-size: 1rem;
+  padding: 1rem;
+  clear: both;
+} */
+
+.screenshot {
+  text-align: center;
+  width: 100%;
+  display: block;
+  clear: both;
+}
+
+p {
+  font-family: 'Indie Flower', cursive;
+  font-size: 1rem;
+  padding-left: 1rem;
+  border-radius: 0 0 10px 10px;
+}
+
+/* div.content div {
+  max-width: 300px;
+} */
+
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
