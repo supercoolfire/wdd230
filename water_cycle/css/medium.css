@@ -17,7 +17,10 @@
     }
 
 
-    nav ul li a{padding: .5rem 1rem;}
+    nav ul li a{
+        padding: .5rem 1rem;
+        border-left: 0;
+    }
 
 
 /*----------- MAIN --------------*/
