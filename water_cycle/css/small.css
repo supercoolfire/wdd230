@@ -10,7 +10,30 @@ body {
     font-size: 16px;
     font-family: Verdana, sans-serif;
 }
+p button {
+    border: 0px;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
 
+.evaporate {
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+.evaporate:hover {
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
 
 /*----------- HEADER --------------*/
 header {
@@ -21,6 +44,10 @@ header {
 }
 header div {
     margin-left: 10px;
+}
+header a {
+    text-decoration: none;
+    color: #000;
 }
 header h1 {margin: 0;}
 header h2 {margin: 0; font-weight: normal;}
