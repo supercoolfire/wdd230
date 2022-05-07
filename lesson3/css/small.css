@@ -105,6 +105,9 @@ main  p:last-of-type {
   margin-bottom: 0;
   padding-bottom: 20px;
 }
+main ol {
+  margin: 0;
+}
 
 /*----------- FOOTER --------------*/
 footer {
