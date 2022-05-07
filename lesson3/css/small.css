@@ -116,7 +116,9 @@ main  p:last-of-type {
 main ol {
   margin: 0;
 }
-
+section:last-of-type {
+  padding: 10px;
+}
 /*----------- FOOTER --------------*/
 footer {
   background-color: var(--head-foot-color);
