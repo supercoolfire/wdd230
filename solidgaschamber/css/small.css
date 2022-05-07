@@ -1,0 +1,122 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 2px;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+
+header,
+nav,
+main,
+footer {
+	max-width: 767px;
+	margin: 0 auto;
+}
+
+/* body rules here */
+body {
+  font-size: 16px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p button {
+  border: 0px;
+  background-color: rgb(133, 199, 201);
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* header rulse here */
+header {
+  padding: .5rem 2%;
+  background-color: lavender;
+  display: grid;
+  grid-template-columns: 150px auto;
+  border-radius: 20px 20px 0 0;
+}
+header div {
+  margin-left: 10px;
+}
+header a {
+  text-decoration: none;
+  color: #000;
+}
+header h1 {margin: 0;}
+header h2 {margin: 0; font-weight: normal;}
+
+/* navigation rules here */
+nav {
+  display: block;
+  background-color: #666;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  /* border-left: 5px solid lavender;
+  border-right: 5px solid lavender; */
+  box-shadow: 0 -5px 30px 2px rgb(64, 59, 59);
+}
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  color: #eee;
+  padding: .5rem 0;
+  text-decoration: none;
+  font-size: .9rem;
+  text-align: center;
+  border-left: 5px solid rgb(133, 199, 201);
+}
+
+
+nav ul li a:hover {
+  background-color: #aaa;
+  color: #333;
+  border-radius: 0 20px 0 0;
+}
+nav ul li.active a {
+  background-color: rgb(133, 199, 201);
+  color: rgb(45, 11, 147);
+  
+  border-radius: 0 20px 0 0;
+}
+
+/* main rules here */
+main {
+  display: block;
+  padding: 0 2%;
+  padding-top: 10px;
+  margin-top: 0;
+  min-height: 10rem;
+  /* border-left: 5px solid lavender;
+  border-right: 5px solid lavender; */
+  background-color: rgb(133, 199, 201);
+  min-height: 24rem;
+}
+main h1 {
+  margin-top: 0;
+  padding-top: 20px;
+}
+main  p:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 20px;
+}
+
+figure {
+  float: right;
+  margin: 0;
+}
+.headingIndent {
+  display: flex;
+  
+}
+/*----------- FOOTER --------------*/
+footer {
+  background-color: lavender;
+  padding: .5rem 2%;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+}
