@@ -11,6 +11,10 @@
   
   
   /*----------- NAVIGATION --------------*/
+  nav {
+    border-radius: 0;
+    background-color: var(--navbackground-color);
+  }
       nav ul {
           display: flex;
           margin-left: 2%;
