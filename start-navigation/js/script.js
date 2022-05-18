@@ -1,8 +1,8 @@
 // hamburger
 function toggleMenu() {
-    console.log("it worked");
-    document.getElementById("primaryNav").classList.toggle("open");
-    document.getElementById("hamburgerBtn").classList.toggle("open");
+  console.log("it worked");
+  document.getElementById("primaryNav").classList.toggle("open");
+  document.getElementById("hamburgerBtn").classList.toggle("open");
 }
 
 const x = document.getElementById("hamburgerBtn");
@@ -21,4 +21,3 @@ document.querySelector(".myName").textContent = "Jayser Pilapil";
 let theTitle = document.querySelector("h1").textContent;
 let theTagline = document.querySelector("h2").textContent;
 document.querySelector("title").textContent = `${theTitle} ${theTagline}`;
-
