@@ -1,0 +1,79 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+:root {
+  --main-background-color: rgb(231, 254, 255);
+  --main-head-foot-color: rgb(181, 181, 214);
+  --head-foot-color: rgb(128, 128, 165);
+  --navbackground-color: #eee;
+  --navlink-color: #333;
+  --navlink-hoverbackground-color: rgb(6, 52, 19);
+  --navlink-activebackground-color: rgba(0,0,0,0.2);
+  --navlink-active-color: #fff;
+  --navlink-hover-color: rgba(0,0,0,0.3);
+  --navbutton-color: #555;
+}
+h1, p {margin: 0 2vw;}
+
+nav button {
+    margin: .2rem 2vw;
+    /* make the button look less buttonish */
+    background-color: transparent;
+    border: none;
+
+    font-size: 2rem; /*googel recommends 48 tall, apple 44 tall*/
+    color: var(--navbutton-color); /*soften the contrast*/
+}
+
+nav {
+    background-color: var(--navbackground-color);
+} 
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    display: block; /*make entire width clickable*/
+    padding: .8rem 2vw; /*make finger fit*/
+    text-decoration: none; /*remove underline*/
+    color: var(--navlink-color); /*almonst black*/
+    border-top: 1px solid var(--navlink-color);
+}
+
+nav ul li.active a { /*must place before hover*/
+    background-color: var(--navlink-activebackground-color);
+    color: var(--navlink-color);
+    border-radius: 20px;
+}
+
+nav ul li a:hover {
+    background-color: var(--navlink-hover-color);
+    border-radius: 20px;
+}
+
+nav ul {display: none;}
+nav ul.open {display: block;}
+
+#hamburgerBtn span:nth-child(1) {display: block;}
+#hamburgerBtn span:nth-child(2) {display: none;}
+ 
+#hamburgerBtn.open span:nth-child(1) {display: none;}
+#hamburgerBtn.open span:nth-child(2) {display: block;}
+
+#hamburgerBtn:hover {
+    background-color: var(--navlink-hover-color);
+    border-radius: 3rem;
+}
+
+
+/* extra */
+.bold {
+    font-weight: bold;
+}
