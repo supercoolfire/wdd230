@@ -6,6 +6,7 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 2px;}
 
 :root {
   --main-background-color: rgb(231, 254, 255);
+  --main-color: #000;
   --head-foot-color: rgb(181, 181, 214);
   --navbackground-color: rgb(51, 143, 28);
   --navlink-color: rgb(29, 10, 10);
@@ -132,6 +133,9 @@ figure {
   float: left;
   margin: 10px;
 }
+figure img {
+  width: 100px;
+}
 figcaption {
   clear: both;
 }
@@ -152,4 +156,9 @@ footer {
   float: left;
   margin: 0;
   padding: 0;
+}
+
+#myName {
+  text-decoration: none;
+  color: var(--main-color);
 }
