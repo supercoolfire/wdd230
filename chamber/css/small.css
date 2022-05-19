@@ -234,6 +234,7 @@ main {
   width: 25%vh;
   border: 1px solid blue;
   margin-top: .5rem;
+  padding: .5rem;
   min-height: 5rem;
   background-color: var(--section-background-color);
   border-radius: .3rem;
@@ -244,6 +245,7 @@ main {
 }
 .spotlight {
   border: 0;
+  padding: 0;
 }
 
 .window {

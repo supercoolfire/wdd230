@@ -95,10 +95,10 @@
     gap: .5rem;
   }
 
-  .spot:nth-last-of-type(1) {
+  .spot:nth-of-type(1) {
     grid-area: spot1;
   }
-  .spot:nth-last-of-type(2) {
+  .spot:nth-of-type(2) {
     grid-area: spot2;
   }
 
