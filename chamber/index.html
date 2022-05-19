@@ -8,15 +8,19 @@
   <meta name="author" content="Jayser Pilapil">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Gas Chamber of Commerce and Industry</title>
-  <link rel="stylesheet" href="css/normalize.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/small.css">
   <link rel="stylesheet" href="css/medium.css">
   <link rel="stylesheet" href="css/large.css">
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- <link rel="stylesheet" href="https://unpkg.com/xp.css"> -->
 </head>
 
 <body>
@@ -28,19 +32,9 @@
     </div>
     <section class="headings">
       <h1>Gas <span>Chamber of Commerce</span></h1>
-      <p class="m">Dino-sour sauce</p>
+      <h2 class="m">Dino-sour sauce</h2>
     </section>
 
-    <nav>
-      <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
-      <ul id="primaryNav">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="#">Discover</a></li>
-        <li><a href="#">Directory</a></li>
-        <li><a href="#">Join</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
 
 
     <div class="social">
@@ -91,12 +85,39 @@
 
       <!-- <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="" alt="Youtube Channel"></a> -->
     </div>
-    <div class="dateTracker">
-      <span id="currentDate"></span>
-    </div>
   </header>
+  <div class="date"></div>
+
+  <nav>
+    <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+    <ul id="primaryNav">
+      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="#">Discover</a></li>
+      <li><a href="#">Directory</a></li>
+      <li><a href="#">Join</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
   <main>
-    <div class="placeholder-box hero">Hero with site name and call to action</div>
+    <h1 class="wayfind">Home</h1>
+    <div class="placeholder-box hero">Hero with site name and call to action
+
+
+      <div class="window" style="width: 320px">
+        <div class="title-bar">
+          <div class="title-bar-text">Spam</div>
+          <div class="title-bar-controls">
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body">
+          <p>The slow brown fox dive under the active cats</p>
+          <button>Join Now!</button>
+        </div>
+      </div>
+
+    </div>
     <div class="placeholder-box news">News rellease</div>
     <div class="placeholder-box event">Event</div>
     <div class="placeholder-box weather">Weather</div>
@@ -105,12 +126,28 @@
     <div class="placeholder-box spotlight">
       <div class="placeholder-box spot">Spotlight 1</div>
       <div class="placeholder-box spot">Spotlight 2</div>
-      <div class="placeholder-box spot">Spotlight 3</div>
     </div>
   </main>
   <footer>
-    &copy; <span id="theYear"> </span> | start-navigation | <span class="myName bold"></span> | WDD 230 Project |
-    <span id="lu"></span>
+    <div class="fTop">
+      <div class="fLeft">
+        <picture>
+          <img src="images/logo.png" alt="chamber logo">
+        </picture>
+        <p>
+          Gas Chamber of Commerce
+          <br>
+          0 Missing Street,<br>
+          Finding City, 0000</p>
+      </div>
+      <div class="fRight">
+        <p><a href="mailto:support@solidgaschamber.com">support@solidgaschamber.com</a><br>
+          <a href="tel:+055533111">+0 555 33 111</a></p>
+        <p><a href="https://goo.gl/maps/9iaYvdgLgRP9hn1F6">Link to map</a></p>
+      </div>
+    </div>
+    <p>&copy; <span id="theYear"> </span> | start-navigation | <span class="myName bold"></span> | WDD 230 Project |
+      <span id="lu"></span></p>
   </footer>
   <script src="js/script.js"></script>
 </body>

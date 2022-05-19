@@ -7,6 +7,9 @@
 
 
   /*----------- HEADER --------------*/
+  header {
+    justify-content: space-between;
+  }
 
   header img {
     width: 100%;
@@ -20,6 +23,10 @@
   m {
     letter-spacing: 1.5pt;
     font-size: .9rem;
+  }
+
+  .social {
+    display: block;
   }
 
   /*----------- NAVIGATION --------------*/
@@ -51,10 +58,93 @@
   }
 
   /*----------- MAIN --------------*/
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "h1 h1"
+      "hero hero"
+      "news news"
+      "spotlight spotlight"
+      "join join"
+      "event weather";
+    gap: .5rem;
+  }
 
+  h1 {
+    grid-area: h1;
+  }
+
+  .hero {
+    grid-area: hero;
+  }
+
+  .news {
+    grid-area: news;
+  }
+
+  .spot:nth-of-type(3) {
+    display: none;
+  }
+
+  .spotlight {
+    grid-area: spotlight;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "spot1 spot2";
+    gap: .5rem;
+  }
+
+  .spot:nth-last-of-type(1) {
+    grid-area: spot1;
+  }
+  .spot:nth-last-of-type(2) {
+    grid-area: spot2;
+  }
+
+  .join {
+    grid-area: join;
+  }
+
+  .event {
+    grid-area: event;
+  }
+
+  .weather {
+    grid-area: weather;
+  }
 
 
   /*----------- FOOTER --------------*/
+  footer * {
+    outline: 0;
+    outline: 1px dashed red;
+  }
+  .fTop {
+    display: flex;
+    /* flex-flow: row; */
+    justify-content: space-between;
+    /* align-items: baseline; */
+    pad: 0;
+  }
+
+  .fLeft {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .fLeft p {
+    text-align: left;
+    margin: 0;
+    padding: .5rem;
+  }
+  .fRight p:first-of-type {
+    margin-top: 0;
+  }
+  .fRight p {
+    padding: .5rem;
+    text-align:right;
+  }
 
 }
 

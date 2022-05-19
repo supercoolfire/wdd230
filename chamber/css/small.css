@@ -1,20 +1,30 @@
 /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
-html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 2px;}
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 2px;
+}
 
 /*----------- apply a natural box layout model to all elements --------------*/
-* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
 
 :root {
-  --main-background-color: rgb(231, 254, 255);
-  --main-head-foot-color: rgb(181, 181, 214);
-  --head-foot-color: rgb(128, 128, 165);
+  --head-foot-color: rgb(174, 179, 81);
   --navbackground-color: #666;
   --navlink-color: rgb(133, 199, 201);
   --navlink-hoverbackground-color: rgb(6, 52, 19);
-  --navlink-activebackground-color: rgba(0,0,0,0.2);
+  --navlink-activebackground-color: rgba(0, 0, 0, 0.2);
   --navlink-active-color: #fff;
-  --navlink-hover-color: rgba(0,0,0,0.3);
+  --navlink-hover-color: rgba(0, 0, 0, 0.3);
   --navbutton-color: #555;
+  --main-background-color: rgb(231, 254, 255);
+  --main-head-foot-color: rgb(181, 181, 214);
+  --section-background-color: rgb(255, 241, 179);
 }
 
 /* fonts */
@@ -23,18 +33,20 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; margin: 2px;}
 }
 
 header,
+.date,
 nav,
 main,
 footer {
-  max-width: 900px;
-	margin: 0 auto;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 /* body rules here */
 body {
   font-size: 16px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 p button {
   border: 0px;
   background-color: rgb(133, 199, 201);
@@ -46,53 +58,77 @@ p button {
 /* header rulse here */
 header {
   padding: .5rem 2%;
-  background-color: lavender;
+  background-color: var(--head-foot-color);
   display: flex;
+  flex-flow: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: start;
   margin: 0 auto;
   border-bottom: 1 solid #bbb;
   border-radius: 20px 20px 0 0;
 }
+
 .logo {
   display: flex;
   align-items: center;
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: .2rem;
 }
+
 .logo img {
   width: 80px;
   height: auto;
 }
+
 .headings {
   display: flex;
   flex-direction: column;
   margin-left: .5rem;
 }
+
 .headings h1 {
   font-size: 1.5rem;
 }
+
+header h2 {
+  margin: 0;
+  font-weight: normal;
+}
+
 .m {
   letter-spacing: 1pt;
   color: forestgreen;
   font-weight: 700;
   font-size: .8rem;
 }
+
 .social {
   margin-right: 1.5rem;
+  display: none;
 }
+
 .social svg {
   width: 25px;
   height: auto;
 }
-/* header div {
-  margin-left: 10px;
-} */
+
 header a {
   text-decoration: none;
   color: #000;
 }
-header h1 {margin: 0;}
-header h2 {margin: 0; font-weight: normal;}
+
+.date {
+  text-align: center;
+  background-color: var(--head-foot-color);
+  padding: .8rem 2vw;
+  margin-top: 0;
+  /* margin-left: 1rem;
+  margin-right: 1rem; */
+
+  /* border: 1px solid gray; */
+}
 
 /* navigation rules here */
 
@@ -102,9 +138,12 @@ nav button {
   background-color: transparent;
   border: none;
 
-  font-size: 2rem; /*googel recommends 48 tall, apple 44 tall*/
-  color: var(--navbutton-color); /*soften the contrast*/
+  font-size: 2rem;
+  /*googel recommends 48 tall, apple 44 tall*/
+  color: var(--navbutton-color);
+  /*soften the contrast*/
 }
+
 nav {
   display: block;
   background-color: var(--navbackground-color);
@@ -114,6 +153,7 @@ nav {
   border-right: 5px solid lavender; */
   box-shadow: 0 -5px 30px 2px rgb(64, 59, 59);
 }
+
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -121,17 +161,22 @@ nav ul {
 }
 
 nav ul li a {
-  display: block; /*make entire width clickable*/
-  padding: .8rem 2vw; /*make finger fit*/
-  text-decoration: none; /*remove underline*/
-  color: var(--navlink-color); /*almonst black*/
+  display: block;
+  /*make entire width clickable*/
+  padding: .8rem 2vw;
+  /*make finger fit*/
+  text-decoration: none;
+  /*remove underline*/
+  color: var(--navlink-color);
+  /*almonst black*/
   border-top: 1px solid var(--navlink-color);
   /* font-size: .9rem; */
   /* text-align: center; */
   /* border-left: 5px solid rgb(133, 199, 201); */
 }
 
-nav ul li.active a { /*must place before hover*/
+nav ul li.active a {
+  /*must place before hover*/
   background-color: var(--navlink-activebackground-color);
   color: var(--navlink-color);
   border-radius: 20px;
@@ -141,24 +186,40 @@ nav ul li a:hover {
   background-color: var(--navlink-hover-color);
   border-radius: 20px;
 }
-nav ul {display: none;}
-nav ul.open {display: block;}
 
-#hamburgerBtn span:nth-child(1) {display: block;}
-#hamburgerBtn span:nth-child(2) {display: none;}
- 
-#hamburgerBtn.open span:nth-child(1) {display: none;}
-#hamburgerBtn.open span:nth-child(2) {display: block;}
+nav ul {
+  display: none;
+}
+
+nav ul.open {
+  display: block;
+}
+
+#hamburgerBtn span:nth-child(1) {
+  display: block;
+}
+
+#hamburgerBtn span:nth-child(2) {
+  display: none;
+}
+
+#hamburgerBtn.open span:nth-child(1) {
+  display: none;
+}
+
+#hamburgerBtn.open span:nth-child(2) {
+  display: block;
+}
 
 #hamburgerBtn:hover {
-    background-color: var(--navlink-hover-color);
-    border-radius: 3rem;
+  background-color: var(--navlink-hover-color);
+  border-radius: 3rem;
 }
 
 /* main rules here */
 main {
   display: block;
-  padding: 0 2%;
+  padding: 2% 2%;
   padding-top: 10px;
   margin-top: 0;
   min-height: 10rem;
@@ -167,22 +228,26 @@ main {
   background-color: rgb(133, 199, 201);
   min-height: 24rem;
 }
-main h1 {
-  margin-top: 0;
-  padding-top: 20px;
-}
-main  p:last-of-type {
-  margin-bottom: 0;
-  padding-bottom: 20px;
-}
 
-figure {
-  float: right;
+
+.placeholder-box {
+  width: 25%vh;
+  border: 1px solid blue;
+  margin-top: .5rem;
+  min-height: 5rem;
+  background-color: var(--section-background-color);
+  border-radius: .3rem;
+}
+.placeholder-box:nth-of-type(6) {
+  background-color: transparent;
   margin: 0;
 }
-.headingIndent {
-  display: flex;
-  
+.spotlight {
+  border: 0;
+}
+
+.window {
+  display: none;
 }
 /*----------- FOOTER --------------*/
 footer {
@@ -190,4 +255,12 @@ footer {
   padding: .5rem 2%;
   text-align: center;
   border-radius: 0 0 20px 20px;
+  text-align: center;
+}
+.fLeft picture img {
+  border: 1px solid black;
+  align-items: center;
+  border-radius: 1rem;
+  padding: .2rem;
+  width: 150px;
 }
