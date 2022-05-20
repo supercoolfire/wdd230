@@ -29,6 +29,13 @@
     display: block;
   }
 
+
+  .date {
+    /* border: 1px solid black; */
+    /* padding: .4rem 1vw; */
+  background-color: var(--date-background-color);
+  }
+
   /*----------- NAVIGATION --------------*/
   nav button {
     display: none;

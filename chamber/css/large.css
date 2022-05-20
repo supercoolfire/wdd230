@@ -2,7 +2,7 @@
 @media only screen and (min-width: 64rem) {
 
   header,
-  .date,
+  .dateWrapper,
   nav,
   main,
   footer {
@@ -28,9 +28,9 @@
   /*----------- MAIN --------------*/
   main {
     position: relative;
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 1fr 60% 1fr;
     grid-template-areas:
-      "h1 h1 h1"
+      "h1 h1  h1"
       "event hero spotlight"
       "weather hero spotlight"
       "join news news";
