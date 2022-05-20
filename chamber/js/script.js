@@ -16,6 +16,13 @@ const fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
 // datefield.innerHTML = `<em>${fulldate}</em>`;
 datefield.innerHTML = fulldate;
 
+// spam
+function closeSpam() {
+    console.log("it worked");
+    // document.getElementById("spams").classList.toggle("closeness");
+}
+
+document.getElementById("spamClose").addEventListener("click",closeSpam);
 
 
 // footer

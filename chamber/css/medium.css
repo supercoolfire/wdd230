@@ -78,7 +78,6 @@
   .hero {
     grid-area: hero;
   }
-
   .news {
     grid-area: news;
   }

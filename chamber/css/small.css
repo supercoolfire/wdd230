@@ -243,10 +243,17 @@ main {
   background-color: transparent;
   margin: 0;
 }
+.hero picture img{
+  width: 100%;
+}
 .spotlight {
   border: 0;
   padding: 0;
 }
+.spot picture img {
+  width: 100%;
+}
+
 
 .window {
   display: none;
