@@ -129,11 +129,13 @@ header a {
 
   /* border: 1px solid gray; */
 }
+
 .date {
   text-align: center;
   padding: .8rem 2vw;
 
 }
+
 /* navigation rules here */
 
 nav button {
@@ -143,7 +145,7 @@ nav button {
   border: none;
 
   font-size: 2rem;
-  /*googel recommends 48 tall, apple 44 tall*/
+  /*google recommends 48 tall, apple 44 tall*/
   color: var(--navbutton-color);
   /*soften the contrast*/
 }
@@ -153,8 +155,6 @@ nav {
   background-color: var(--navbackground-color);
   padding-bottom: 0;
   margin-bottom: 0;
-  /* border-left: 5px solid lavender;
-  border-right: 5px solid lavender; */
   box-shadow: 0 -5px 30px 2px rgb(64, 59, 59);
 }
 
@@ -174,9 +174,6 @@ nav ul li a {
   color: var(--navlink-color);
   /*almonst black*/
   border-top: 1px solid var(--navlink-color);
-  /* font-size: .9rem; */
-  /* text-align: center; */
-  /* border-left: 5px solid rgb(133, 199, 201); */
 }
 
 nav ul li.active a {
@@ -243,21 +240,75 @@ main {
   background-color: var(--section-background-color);
   border-radius: .3rem;
 }
+
 .placeholder-box:nth-of-type(6) {
   background-color: transparent;
   margin: 0;
 }
-.hero picture img{
+
+.hero picture img {
   width: 100%;
 }
+
 .spotlight {
   border: 0;
   padding: 0;
 }
+
 .spot picture img {
   width: 100%;
 }
 
+
+
+.joinContainer {
+  position: relative;
+  font-family: Arial;
+  max-width: 200px;
+}
+
+.joinContainer img {
+  width: 100%;
+}
+
+.join-text-block {
+  position: absolute;
+  top: 2vw;
+  left: .8vw;
+  width: 100%;
+  word-wrap: break-word;
+  font-size: xx-large;
+  font-weight: bold;
+  text-shadow: #555;
+  text-overflow: inherit;
+  color: rgb(47, 31, 189);
+
+  -moz-transform: skew(25deg, -17deg);
+  -webkit-transform: skew(25deg, -17deg);
+  -o-transform: skew(25deg, -17deg);
+  -ms-transform: skew(25deg, -17deg);
+  transform: skew(25deg, -17deg);
+}
+.join-text-block:hover {
+  display: none;
+}
+
+.joinLogin {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  height: 1rem;
+}
+
+.joinContainer a {
+  font-weight: bold;
+  font-size: .8rem;
+  text-decoration: none;
+}
+
+.joinContainer a:hover {
+  font-size: 1rem;
+}
 
 .window {
   display: none;
@@ -270,6 +321,7 @@ footer {
   border-radius: 0 0 20px 20px;
   text-align: center;
 }
+
 .fLeft picture img {
   border: 1px solid black;
   align-items: center;
