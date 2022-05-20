@@ -29,6 +29,14 @@ h1,
 p {
   margin: 0 2vw;
 }
+p button {
+    border: 0px;
+    background-color: rgb(133, 199, 201);
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    color: rgb(255, 234, 0);
+}
 
 nav button {
   margin: .2rem 2vw;
