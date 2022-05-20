@@ -131,7 +131,7 @@
     /* flex-flow: row; */
     justify-content: space-between;
     /* align-items: baseline; */
-    pad: 0;
+    padding: 0;
   }
 
   .fLeft {
