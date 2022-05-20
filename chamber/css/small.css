@@ -14,8 +14,10 @@ html {
 }
 
 :root {
-  --head-foot-color: rgb(174, 179, 81);
-  --date-background-color: rgb(192, 196, 120);
+  --head-foot-color: rgba(196, 212, 22, 0.326);
+  --tagline-color: rgb(0, 0, 0);
+  --date-background-color: rgba(243, 250, 116, 0.446);
+  --date-color: rgb(55, 74, 10);
   --navbackground-color: #666;
   --navlink-color: rgb(133, 199, 201);
   --navlink-hoverbackground-color: rgb(6, 52, 19);
@@ -30,6 +32,7 @@ html {
 
 /* fonts */
 .bold {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
 }
 
@@ -100,7 +103,7 @@ header h2 {
 
 .m {
   letter-spacing: 1pt;
-  color: forestgreen;
+  color: var(--tagline-color);
   font-weight: 700;
   font-size: .8rem;
 }
@@ -133,7 +136,7 @@ header a {
 .date {
   text-align: center;
   padding: .8rem 2vw;
-
+  color: var(--date-color);
 }
 
 /* navigation rules here */
@@ -320,6 +323,17 @@ footer {
   text-align: center;
   border-radius: 0 0 20px 20px;
   text-align: center;
+  color: black;
+  font-weight: bold;
+}
+footer a {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 1rem;
+}
+footer a:hover {
+  color: purple;
 }
 
 .fLeft picture img {
