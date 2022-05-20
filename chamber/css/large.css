@@ -57,7 +57,11 @@
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     padding: 0 0 3px;
-    -webkit-font-smoothing: antialiased
+    -webkit-font-smoothing: antialiased;
+    /* draggable */
+        position: absolute;
+        z-index: 9;
+        overflow: auto;
   }
 
   .window-body {
@@ -79,6 +83,10 @@
     border-top-left-radius: 8px;
     border-top-right-radius: 7px;
     text-shadow: 1px 1px #0f1089;
+    /* draggable */
+        cursor: move;
+        z-index: 10;
+
   }
 
   .title-bar-text {
