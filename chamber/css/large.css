@@ -58,6 +58,8 @@
     border-top-right-radius: 8px;
     padding: 0 0 3px;
     -webkit-font-smoothing: antialiased;
+    width: 350px;
+    height: 150px;
     /* draggable */
         position: absolute;
         z-index: 9;
