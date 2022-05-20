@@ -17,12 +17,14 @@ const fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
 datefield.innerHTML = fulldate;
 
 // spam
-function closeSpam() {
-    console.log("it worked");
-    // document.getElementById("spams").classList.toggle("closeness");
-}
+function toggleSpam() {
+    console.log("it not worked");
+    document.getElementById("spams").classList.toggle("closness");
+  }
+  
+  const y = document.getElementById("spamClose");
+  y.onclick = toggleSpam;
 
-document.getElementById("spamClose").addEventListener("click",closeSpam);
 
 
 // footer
