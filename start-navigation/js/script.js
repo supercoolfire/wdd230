@@ -17,6 +17,8 @@ document.getElementById("theYear").textContent = myYear;
 document.querySelector("#lu").textContent = `Last Modification:  ${document.lastModified}`;
 
 // custom
+let wayfind = document.querySelector(".wayfind");
+wayfind = document.querySelector(".active").textContent;
 document.querySelector(".myName").textContent = "Jayser Pilapil";
 let theTitle = document.querySelector("h1").textContent;
 let theTagline = document.querySelector("h2").textContent;
