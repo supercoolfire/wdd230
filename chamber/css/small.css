@@ -273,7 +273,7 @@ main {
 
 .join-text-block {
   position: absolute;
-  top: 2vw;
+  top: .5vw;
   left: .8vw;
   width: 100%;
   word-wrap: break-word;
