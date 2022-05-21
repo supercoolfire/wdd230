@@ -117,6 +117,15 @@ header h2 {
   height: auto;
 }
 
+.invisible {
+  /*add tis to image links*/
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
 header a {
   text-decoration: none;
   color: #000;
@@ -289,6 +298,7 @@ main {
   -ms-transform: skew(25deg, -17deg);
   transform: skew(25deg, -17deg);
 }
+
 .join-text-block:hover {
   display: none;
 }
@@ -313,6 +323,7 @@ main {
 .window {
   display: none;
 }
+
 /*----------- FOOTER --------------*/
 footer {
   background-color: var(--head-foot-color);
@@ -323,12 +334,14 @@ footer {
   color: black;
   font-weight: bold;
 }
+
 footer a {
   color: black;
   background-color: transparent;
   text-decoration: none;
   font-size: 1rem;
 }
+
 footer a:hover {
   color: purple;
 }
