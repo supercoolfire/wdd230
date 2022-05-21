@@ -99,4 +99,7 @@ myName.textContent = "Jayser Pilapil";
 let theTitle = document.querySelector("h1").textContent;
 let theTagline = document.querySelector("h2").textContent;
 document.querySelector("title").textContent = `${theTitle} ${theTagline}`;
-document.getElementById("rickRoll").onclick = window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank") //rick roll
+document.getElementById("rickRoll").onclick = () => window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank").focus();
+
+//fixing accessibility error
+// document.getElementById("illustrations").onclick = window.open("https://byui.spartandesignuniversity.com/examples/example04/WireframesModule4.pdf", "_blank");
