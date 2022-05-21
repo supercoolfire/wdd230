@@ -46,7 +46,7 @@ function dragElement(spamwindow) {
     pos2 = 0,
     pos3 = 0,
     pos4 = 0;
-  if (document.getElementById( "spamTitle")) {
+  if (document.getElementById("spamTitle")) {
     document.getElementById("spamTitle").onmousedown = dragMouseDown;
   } else {
     spamwindow.onmousedown = dragMouseDown;
@@ -99,3 +99,4 @@ myName.textContent = "Jayser Pilapil";
 let theTitle = document.querySelector("h1").textContent;
 let theTagline = document.querySelector("h2").textContent;
 document.querySelector("title").textContent = `${theTitle} ${theTagline}`;
+document.getElementById("rickRoll").onclick = window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank") //rick roll
