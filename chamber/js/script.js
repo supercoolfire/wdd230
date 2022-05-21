@@ -102,4 +102,4 @@ document.querySelector("title").textContent = `${theTitle} ${theTagline}`;
 document.getElementById("rickRoll").onclick = () => window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank").focus();
 
 //fixing accessibility error
-// document.getElementById("illustrations").onclick = window.open("https://byui.spartandesignuniversity.com/examples/example04/WireframesModule4.pdf", "_blank");
+document.getElementById("illustrations").onclick = () => window.open("https://byui.spartandesignuniversity.com/examples/example04/WireframesModule4.pdf", "_blank").focus();
