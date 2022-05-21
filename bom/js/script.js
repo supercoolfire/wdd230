@@ -18,70 +18,70 @@ const fulldate = new Intl.DateTimeFormat("en-US", {
 // datefield.innerHTML = `<em>${fulldate}</em>`;
 datefield.innerHTML = fulldate;
 
-// // spam
-// function toggleSpam() {
-//   console.log("it not worked");
-//   document.getElementById("spams").classList.toggle("closness");
-// }
-// document.getElementById("spamClose").onclick = toggleSpam;
+// spam
+function toggleSpam() {
+  console.log("it not worked");
+  document.getElementById("window1").classList.toggle("closness");
+}
+document.getElementById("spamClose").onclick = toggleSpam;
 
-// function toggleBtnJoinNow() {
-//   console.log("Tired of woking");
-//   document.getElementById("spams").classList.toggle("closness");
-//   document.getElementById("join").scrollIntoView();
-// }
-// document.getElementById("btnJoinNow").onclick = toggleBtnJoinNow;
+function toggleBtnJoinNow() {
+  console.log("Tired of woking");
+  document.getElementById("window1").classList.toggle("closness");
+  // document.getElementById("join").scrollIntoView();
+}
+document.getElementById("btnOk").onclick = toggleBtnJoinNow;
 
-// function toggleSignIn() {
-//   console.log("work again");
-//   document.getElementById("spams").classList.toggle("closness");
-//   document.getElementById("spams").scrollIntoView();
-// }
-// document.getElementById("signIn").onclick = toggleSignIn;
-// // spam draggable
-// dragElement(document.getElementById("spams"));
+function toggleSignIn() {
+  console.log("work again");
+  document.getElementById("window1").classList.toggle("closness");
+  document.getElementById("window1").scrollIntoView();
+}
+document.getElementById("openSpam").onclick = toggleSignIn;
+// spam draggable
+dragElement(document.getElementById("window1"));
 
-// function dragElement(spamwindow) {
-//   var pos1 = 0,
-//     pos2 = 0,
-//     pos3 = 0,
-//     pos4 = 0;
-//   if (document.getElementById( "spamTitle")) {
-//     document.getElementById("spamTitle").onmousedown = dragMouseDown;
-//   } else {
-//     spamwindow.onmousedown = dragMouseDown;
-//   }
+function dragElement(spamwindow) {
+  var pos1 = 0,
+    pos2 = 0,
+    pos3 = 0,
+    pos4 = 0;
+  if (document.getElementById("spamTitle")) {
+    document.getElementById("spamTitle").onmousedown = dragMouseDown;
+  } else {
+    spamwindow.onmousedown = dragMouseDown;
+  }
 
-//   function dragMouseDown(e) {
-//     e = e || window.event;
-//     e.preventDefault();
-//     // get the mouse cursor position at startup:
-//     pos3 = e.clientX;
-//     pos4 = e.clientY;
-//     document.onmouseup = closeDragElement;
-//     // call a function whenever the cursor moves:
-//     document.onmousemove = elementDrag;
-//   }
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
 
-//   function elementDrag(e) {
-//     e = e || window.event;
-//     e.preventDefault();
-//     // calculate the new cursor position:
-//     pos1 = pos3 - e.clientX;
-//     pos2 = pos4 - e.clientY;
-//     pos3 = e.clientX;
-//     pos4 = e.clientY;
-//     // set the element's new position:
-//     spamwindow.style.top = (spamwindow.offsetTop - pos2) + "px";
-//     spamwindow.style.left = (spamwindow.offsetLeft - pos1) + "px";
-//   }
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    spamwindow.style.top = (spamwindow.offsetTop - pos2) + "px";
+    spamwindow.style.left = (spamwindow.offsetLeft - pos1) + "px";
+  }
 
-//   function closeDragElement() {
-//     /* stop moving when mouse button is released:*/
-//     document.onmouseup = null;
-//     document.onmousemove = null;
-//   }
-// }
+  function closeDragElement() {
+    /* stop moving when mouse button is released:*/
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
 
 
 // footer
@@ -100,3 +100,5 @@ wayfind.textContent = active.textContent
 let theTitle = document.querySelector("h1").textContent;
 let theTagline = document.querySelector("h2").textContent;
 document.querySelector("title").textContent = `${theTitle} ${theTagline}`;
+
+
