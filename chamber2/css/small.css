@@ -14,18 +14,22 @@ html {
 }
 
 :root {
-  --theme: rgba(196, 212, 22, 0.326);
   --head-foot-color: rgba(196, 212, 22, 0.326);
   --tagline-color: rgb(0, 0, 0);
   --date-background-color: rgba(243, 250, 116, 0.446);
   --date-color: rgb(55, 74, 10);
   --navbackground-color: rgb(87, 74, 74);
-  --navlink-color: rgb(0, 247, 255);
-  --navlink-hoverbackground-color: rgb(6, 52, 19);
-  --navlink-activebackground-color: rgba(0, 0, 0, 0.2);
+  --hamburgerBtn-background-color: transparent;
+  --hamburgerBtn-color: #5600f6;
+  --hamburgerBtn-color-shadow: rgb(255, 255, 255) 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #5600f6 0px 0px 20px, #5600f6 0px 0px 30px, #5600f6 0px 0px 40px, #5600f6 0px 0px 50px, #5600f6 0px 0px 75px;
+  --hamburgerBtn-active-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+  --hamburgerBtn-hover-background-color: rgb(0, 255, 26);
+  --hamburgerBtn-hover-color: rgb(255, 222, 59);
+  --navlink-active-background-color: rgba(0, 0, 0, 0.2);
   --navlink-active-color: #fff;
+  --navlink-color: rgb(0, 247, 255);
+  --navlink-hover-background-color: rgb(6, 52, 19);
   --navlink-hover-color: rgba(0, 0, 0, 0.3);
-  --navbutton-color: #555;
   --main-background-color: rgb(231, 254, 255);
   --main-head-foot-color: rgb(181, 181, 214);
   --main-dateBanner-background-color: #0e01ff6a;
@@ -74,6 +78,12 @@ header {
   border-radius: 20px 20px 0 0;
 }
 
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-items: left;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -91,6 +101,7 @@ header {
 .headings {
   display: flex;
   flex-direction: column;
+  justify-content: left;
   margin-left: .5rem;
 }
 
@@ -147,16 +158,26 @@ header a {
 }
 
 /* navigation rules here */
-
-nav button {
+.hamburgerBtn {
   margin: .2rem 2vw;
   /* make the button look less buttonish */
-  background-color: transparent;
+  background-color: var(--hamburgerBtn-background-color);
   border: none;
   font-size: 2rem;
   /*google recommends 48 tall, apple 44 tall*/
-  color: var(--navbutton-color);
-  /*soften the contrast*/
+  color: var(--hamburgerBtn-color);
+  text-shadow: var(--hamburgerBtn-color-shadow)
+    /*soften the contrast*/
+}
+
+.hamburgerBtn:hover {
+  background-color: var(--hamburgerBtn-hover-background-color);
+  color: var(--hamburgerBtn-hover-color);
+  border-radius: 3rem;
+}
+
+.hamburgerBtn:active {
+  text-shadow: var(--hamburgerBtn-active-shadow)
 }
 
 nav {
@@ -165,6 +186,7 @@ nav {
   padding-bottom: 0;
   margin-bottom: 0;
   box-shadow: 0 -5px 30px 2px rgb(64, 59, 59);
+  z-index: 999;
 }
 
 nav ul {
@@ -205,6 +227,18 @@ nav ul.open {
   display: block;
 }
 
+nav.move {
+  position: absolute;
+  top: 38px;
+  left: 17px;
+  width: 276px;
+  text-align: center;
+}
+
+.close {
+  display: none;
+}
+
 #hamburgerBtn span:nth-child(1) {
   display: block;
 }
@@ -221,9 +255,21 @@ nav ul.open {
   display: block;
 }
 
-#hamburgerBtn:hover {
-  background-color: var(--navlink-hover-color);
-  border-radius: 3rem;
+
+#hamburgerBtn2.close span:nth-child(1) {
+  display: block;
+}
+
+#hamburgerBtn2.close span:nth-child(2) {
+  display: none;
+}
+
+#hamburgerBtn2 span:nth-child(1) {
+  display: none;
+}
+
+#hamburgerBtn2 span:nth-child(2) {
+  display: block;
 }
 
 /* main rules here */
@@ -246,7 +292,6 @@ div#dateBanner {
   left: 0;
   width: 100%;
   padding: .5rem 2%;
-  /* opacity: .5; */
   text-align: center;
   z-index: 99999;
   font-weight: 600;
@@ -274,8 +319,59 @@ div#dateBanner {
   margin: 0;
 }
 
-.hero picture img {
+main figure img {
   width: 100%;
+  height: auto;
+}
+
+main figure {
+  margin: 0;
+  width: 100%;
+}
+
+.hero {
+  position: relative;
+}
+
+.heroWelcome {
+  position: absolute;
+  top: 5%;
+  /* left: 30px; */
+  transform: translate(5%, 50%);
+  width: 90%;
+  font-family: cursive, sans-serif;
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #480971;
+  text-shadow: 2px 2px 12px #f2e200;
+}
+
+.joinNow {
+  position: absolute;
+  right: 10%;
+  bottom: 20%;
+  transform: translate(10%, 20%);
+  padding: 1.5rem;
+  font-family: fantasy;
+  border: 0;
+  border-radius: 150px;
+  background: linear-gradient(145deg, #eafa0c, #c5d30a);
+  box-shadow: 18px 18px 36px #585e04,
+    -18px -18px 36px #ffff12;
+}
+
+.joinNow:hover {
+  border-radius: 84px;
+  background: linear-gradient(145deg, #d3b80a, #fada0c);
+  box-shadow: 17px 17px 35px #5d5e04,
+    -17px -17px 35px #ffc012;
+}
+
+.joinNow:active {
+  border-radius: 84px;
+  background: #ea0b0b;
+  box-shadow: inset 17px 17px 35px #ff3212,
+    inset -17px -17px 35px #5e5804;
 }
 
 .spotlight {

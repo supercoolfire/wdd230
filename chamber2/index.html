@@ -23,15 +23,18 @@
 
 <body>
   <header>
-    <div class="logo">
-      <picture>
-        <img src="images/logo.png" alt="chamber logo">
-      </picture>
+    <div class="headerWrapper">
+      <button id="hamburgerBtn" class="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+      <div class="logo">
+        <picture>
+          <img src="images/logo.png" alt="chamber logo">
+        </picture>
+      </div>
+      <section class="headings">
+        <h1>Gas Chamber of Commerce</h1>
+        <h2 class="m">Dino-sour sauce</h2>
+      </section>
     </div>
-    <section class="headings">
-      <h1>Gas Chamber of Commerce</h1>
-      <h2 class="m">Dino-sour sauce</h2>
-    </section>
 
 
 
@@ -89,7 +92,7 @@
   </div>
 
   <nav>
-    <button id="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
+    <button id="hamburgerBtn2" class="hamburgerBtn close"><span>&#9776;</span><span>X</span></button>
     <ul id="primaryNav">
       <li class="active"><a href="index.html">Home</a></li>
       <li><a href="#">Discover</a></li>
@@ -104,31 +107,13 @@
     <div id="wayfind">wayfind</div>
     <div class="mainGrid">
       <div class="placeholder-box hero">
-        <p>Hero with site name and call to action</p>
-        <picture>
+        <figure>
           <img src="images/karuhatan.jpg" alt="town traffic jam">
-        </picture>
+        </figure>
+        <div class="heroWelcome">Welcome Suckers, mining is booming. Don't give up.</div>
+        <button class="joinNow rickRoll">Join the chamber now!</button>
         <!-- hero placeholder -->
-        <h2>W04 ✅ Assignment: Chamber Home Page Build</h2>
-        <p>📃&nbsp;<strong>Illustrations</strong>:&nbsp;<a id="illustrations" href="#" rel="noreferrer noopener">Example
-            screenshots&nbsp;(Links to an external site.)</a>&nbsp;for the chamber of
-          commerce project in three view sizes.</p>
-        <p>&nbsp;The&nbsp;<strong>head</strong>&nbsp;contains proper content and references. See the&nbsp;<a
-            title=" 230 Web Frontend Development Standards"
-            href="https://byui.instructure.com/courses/188932/pages/230-web-frontend-development-standards"
-            data-api-endpoint="https://byui.instructure.com/api/v1/courses/188932/pages/230-web-frontend-development-standards"
-            data-api-returntype="Page">Web Frontend Dev Standards</a>&nbsp;checklist.</p>
-        <p>🎦&nbsp;<strong>Video</strong>:&nbsp;<a href="https://video.byui.edu/media/t/0_ijk7nwi8" target="_blank"
-            rel="noreferrer noopener">Demonstration of using CSS Flex in a header&nbsp;(Links to an external
-            site.)</a><br />👨🏼&zwj;💻&nbsp;<strong>Code Example</strong>: This&nbsp;<a
-            href="https://codepen.io/blazzard-jason/pen/RXxNOZ" target="_blank"
-            rel="noreferrer noopener">CodePen&nbsp;(Links to an external site.)</a>&nbsp;example demonstrates how to use
-          flex to align the three items in a header.</p>
 
-        <p>👨🏼&zwj;💻&nbsp;<strong>Code Example</strong>: This&nbsp;<a
-            href="https://codepen.io/blazzard-jason/pen/ExvJBwO" target="_blank"
-            rel="noreferrer noopener">CodePen&nbsp;(Links to an external site.)</a>&nbsp;example utilizes a static
-          document property to automatically determine the date and time that the document was last changed.</p>
 
         <!-- end of hero placeholder -->
       </div>
@@ -177,7 +162,7 @@
             <h3>50% OFF if you join now!</h3>
           </div>
           <div class="joinLogin">
-            <a href="#" id="rickRoll">Register</a>
+            <a href="#" class="rickRoll">Register</a>
             <a id="signIn" href="#">Sign in</a>
           </div>
         </div>
