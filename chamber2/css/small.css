@@ -1,0 +1,372 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  margin: 2px;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+:root {
+  --theme: rgba(196, 212, 22, 0.326);
+  --head-foot-color: rgba(196, 212, 22, 0.326);
+  --tagline-color: rgb(0, 0, 0);
+  --date-background-color: rgba(243, 250, 116, 0.446);
+  --date-color: rgb(55, 74, 10);
+  --navbackground-color: rgb(87, 74, 74);
+  --navlink-color: rgb(0, 247, 255);
+  --navlink-hoverbackground-color: rgb(6, 52, 19);
+  --navlink-activebackground-color: rgba(0, 0, 0, 0.2);
+  --navlink-active-color: #fff;
+  --navlink-hover-color: rgba(0, 0, 0, 0.3);
+  --navbutton-color: #555;
+  --main-background-color: rgb(231, 254, 255);
+  --main-head-foot-color: rgb(181, 181, 214);
+  --main-dateBanner-background-color: rgba(72, 66, 2, 0.79);
+  --main-dateBanner-color: rgb(241, 234, 152);
+  --section-background-color: rgb(255, 241, 179);
+}
+
+/* fonts */
+.bold {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+header,
+.dateWrapper,
+nav,
+main,
+footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: .5rem 2%;
+}
+
+/* body rules here */
+body {
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p button {
+  border: 0px;
+  background-color: rgb(133, 199, 201);
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+}
+
+/* header rulse here */
+header {
+  background-color: var(--head-foot-color);
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  margin: 0 auto;
+  /* border-bottom: 1px solid #bbb; */
+  border-radius: 20px 20px 0 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  /* margin-left: 1rem; */
+  border: 1px solid black;
+  border-radius: 1rem;
+  padding: .2rem;
+}
+
+.logo img {
+  width: 80px;
+  height: auto;
+}
+
+.headings {
+  display: flex;
+  flex-direction: column;
+  margin-left: .5rem;
+}
+
+.headings h1 {
+  font-size: 1.5rem;
+}
+
+header h2 {
+  margin: 0;
+  font-weight: normal;
+}
+
+.m {
+  letter-spacing: 1pt;
+  color: var(--tagline-color);
+  font-weight: 700;
+  font-size: .8rem;
+}
+
+.social {
+  /* margin-right: 1.5rem; */
+  display: none;
+}
+
+.social svg {
+  width: 25px;
+  height: auto;
+}
+
+.invisible {
+  /*add tis to image links*/
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+header a {
+  text-decoration: none;
+  color: #000;
+}
+
+.dateWrapper {
+  background-color: var(--head-foot-color);
+  margin-top: 0;
+  /* border: 1px solid gray; */
+}
+
+.date {
+  text-align: center;
+  padding: .8rem 2vw;
+  color: var(--date-color);
+}
+
+/* navigation rules here */
+
+nav button {
+  margin: .2rem 2vw;
+  /* make the button look less buttonish */
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  /*google recommends 48 tall, apple 44 tall*/
+  color: var(--navbutton-color);
+  /*soften the contrast*/
+}
+
+nav {
+  display: block;
+  background-color: var(--navbackground-color);
+  padding-bottom: 0;
+  margin-bottom: 0;
+  box-shadow: 0 -5px 30px 2px rgb(64, 59, 59);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  display: block;
+  /*make entire width clickable*/
+  padding: .8rem 2vw;
+  /*make finger fit*/
+  text-decoration: none;
+  /*remove underline*/
+  color: var(--navlink-color);
+  /*almonst black*/
+  border-top: 1px solid var(--navlink-color);
+}
+
+nav ul li.active a {
+  /*must place before hover*/
+  background-color: var(--navlink-activebackground-color);
+  color: var(--navlink-color);
+  border-radius: 20px;
+}
+
+nav ul li a:hover {
+  background-color: var(--navlink-hover-color);
+  border-radius: 20px;
+}
+
+nav ul {
+  display: none;
+}
+
+nav ul.open {
+  display: block;
+}
+
+#hamburgerBtn span:nth-child(1) {
+  display: block;
+}
+
+#hamburgerBtn span:nth-child(2) {
+  display: none;
+}
+
+#hamburgerBtn.open span:nth-child(1) {
+  display: none;
+}
+
+#hamburgerBtn.open span:nth-child(2) {
+  display: block;
+}
+
+#hamburgerBtn:hover {
+  background-color: var(--navlink-hover-color);
+  border-radius: 3rem;
+}
+
+/* main rules here */
+main {
+  display: block;
+  margin-top: 0;
+  min-height: 10rem;
+  /* border-left: 5px solid lavender;
+  border-right: 5px solid lavender; */
+  background-color: rgb(133, 199, 201);
+  min-height: 24rem;
+}
+
+div#dateBanner {
+  overflow: hidden;
+  background-color: var(--main-dateBanner-background-color);
+  color: var(--main-dateBanner-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: .5rem 2%;
+  opacity: .5;
+  text-align: center;
+  z-index: 99999;
+  font-weight: 600;
+}
+
+.showme {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.placeholder-box {
+  border: 1px solid blue;
+  margin-top: .5rem;
+  padding: .5rem;
+  min-height: 5rem;
+  background-color: var(--section-background-color);
+  border-radius: .3rem;
+}
+
+.placeholder-box:nth-of-type(6) {
+  background-color: transparent;
+  margin: 0;
+}
+
+.hero picture img {
+  width: 100%;
+}
+
+.spotlight {
+  border: 0;
+  padding: 0;
+}
+
+.spot picture img {
+  width: 100%;
+}
+
+
+
+.joinContainer {
+  position: relative;
+  font-family: Arial;
+  max-width: 200px;
+}
+
+.joinContainer img {
+  width: 100%;
+}
+
+.join-text-block {
+  position: absolute;
+  top: .5vw;
+  left: .8vw;
+  width: 100%;
+  word-wrap: break-word;
+  font-size: xx-large;
+  font-weight: bold;
+  text-overflow: inherit;
+  color: rgb(47, 31, 189);
+
+  -moz-transform: skew(25deg, -17deg);
+  -webkit-transform: skew(25deg, -17deg);
+  -o-transform: skew(25deg, -17deg);
+  -ms-transform: skew(25deg, -17deg);
+  transform: skew(25deg, -17deg);
+}
+
+.join-text-block:hover {
+  display: none;
+}
+
+.joinLogin {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  height: 1rem;
+}
+
+.joinContainer a {
+  font-weight: bold;
+  font-size: .8rem;
+  text-decoration: none;
+}
+
+.joinContainer a:hover {
+  font-size: 1rem;
+}
+
+.window {
+  display: none;
+}
+
+/*----------- FOOTER --------------*/
+footer {
+  background-color: var(--head-foot-color);
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+}
+
+footer a {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+footer a:hover {
+  color: purple;
+}
+
+.fLeft picture img {
+  border: 1px solid black;
+  align-items: center;
+  border-radius: 1rem;
+  padding: .2rem;
+  width: 150px;
+}
