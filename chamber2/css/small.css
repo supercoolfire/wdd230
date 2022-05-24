@@ -28,8 +28,8 @@ html {
   --navbutton-color: #555;
   --main-background-color: rgb(231, 254, 255);
   --main-head-foot-color: rgb(181, 181, 214);
-  --main-dateBanner-background-color: rgba(72, 66, 2, 0.79);
-  --main-dateBanner-color: rgb(241, 234, 152);
+  --main-dateBanner-background-color: #0e01ff6a;
+  --main-dateBanner-color: #FFF700;
   --section-background-color: rgb(255, 241, 179);
 }
 
@@ -246,7 +246,7 @@ div#dateBanner {
   left: 0;
   width: 100%;
   padding: .5rem 2%;
-  opacity: .5;
+  /* opacity: .5; */
   text-align: center;
   z-index: 99999;
   font-weight: 600;
