@@ -3,12 +3,10 @@ function toggleMenu() {
   console.log("it worked");
   document.getElementById("primaryNav").classList.toggle("open");
   document.getElementById("hamburgerBtn").classList.toggle("open");
-  document.getElementById("hamburgerBtn2").classList.toggle("close");
-  document.querySelector("nav").classList.toggle("move");
 }
 
-document.getElementById("hamburgerBtn").onclick = toggleMenu;
-document.getElementById("hamburgerBtn2").onclick = toggleMenu;
+const x = document.getElementById("hamburgerBtn");
+x.onclick = toggleMenu;
 
 //current date
 // select the elements to manipulate (output to)
@@ -107,7 +105,7 @@ myName.textContent = "Jayser Pilapil";
 let theTitle = document.querySelector("h1").textContent;
 let theTagline = document.querySelector("h2").textContent;
 document.querySelector("title").textContent = `${theTitle} ${theTagline}`;
-document.querySelector(".rickRoll").onclick = () => window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank").focus();
+document.getElementById("rickRoll").onclick = () => window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank").focus();
 
 //fixing accessibility error
 document.getElementById("illustrations").onclick = () => window.open("https://byui.spartandesignuniversity.com/examples/example04/WireframesModule4.pdf", "_blank").focus();
