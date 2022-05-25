@@ -59,8 +59,8 @@
     position: relative;
     grid-template-columns: 1fr 50% 1fr;
     grid-template-areas:
-      "event hero spotlight"
-      "weather hero spotlight"
+      "eventWeather hero spotlight"
+      "eventWeather hero spotlight"
       "join news news";
     gap: .5rem;
   }
@@ -71,8 +71,17 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "spot1""spot2";
+    margin-top: .5rem;
+    gap: 1rem;
   }
 
+  
+.eventWeather {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 5px;
+}
   /* Windows XP */
   .window {
     display: block;

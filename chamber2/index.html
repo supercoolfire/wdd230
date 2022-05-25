@@ -114,7 +114,7 @@
           <button class="joinNow rickRoll">Join the chamber now!</button>
         </figure>
         <!-- hero placeholder -->
-        <textarea name="" id="" cols="30" rows="10"></textarea>
+        <textarea cols="30" rows="10"></textarea>
 
         <!-- end of hero placeholder -->
       </div>
@@ -135,62 +135,64 @@
             Team</a>. As your team meets this week, discuss challenges and provide feedback to each other.</p>
         <!-- end of news placeholder -->
       </div>
-      <div class="placeholder-box event">
-        <h2>Event</h2>
-        <!-- event placeholder -->
-        <p>&nbsp;<strong>Code Example</strong>:&nbsp;<a href="https://codepen.io/blazzard-jason/pen/ZEWjeaw"
-            target="_blank" rel="noreferrer noopener">JavaScript Current Date Formatting</a></p>
-        <!-- end of event placeholder -->
-      </div>
-      <div class="placeholder-box weather">
-        <h2>Weather</h2>
-        <!-- weather placeholder -->
-        <div class="currentWeather">
-          <div class="weatherInputContainer">
-            <div class="weatherRow">
-              <div class="latlong">
-                <span class="latlongLabel">Lat</span>
-                <input type="text" class="inputCoordinate" inputmode="numeric" id="latitude" placeholder="latitude"
-                  aria-label="latitude" value="13.2548" />
+      <div class="eventWeather">
+        <div class="placeholder-box event">
+          <h2>Event</h2>
+          <!-- event placeholder -->
+          <p>&nbsp;<strong>Code Example</strong>:&nbsp;<a href="https://codepen.io/blazzard-jason/pen/ZEWjeaw"
+              target="_blank" rel="noreferrer noopener">JavaScript Current Date Formatting</a></p>
+          <!-- end of event placeholder -->
+        </div>
+        <div class="placeholder-box weather">
+          <h2>Weather</h2>
+          <!-- weather placeholder -->
+          <div class="currentWeather">
+            <div class="weatherInputContainer">
+              <div class="weatherRow">
+                <div class="latlong">
+                  <span class="latlongLabel">Lat</span>
+                  <input type="text" class="inputCoordinate" inputmode="numeric" id="latitude" placeholder="latitude"
+                    aria-label="latitude" value="13.2548" />
+                </div>
+                <div class="latlong">
+                  <span class="latlongLabel">Lon</span>
+                  <input type="text" class="inputCoordinate" inputmode="numeric" id="longitude" placeholder="longitude"
+                    aria-label="longitude" value="123.6861" />
+                </div>
               </div>
-              <div class="latlong">
-                <span class="latlongLabel">Lon</span>
-                <input type="text" class="inputCoordinate" inputmode="numeric" id="longitude" placeholder="longitude"
-                  aria-label="longitude" value="123.6861" />
+              <div class="weatherRow">
+                <div class="buttons">
+                  <button id="btnGet" type="button" class="">
+                    Get Weather
+                  </button>
+                  <button id="btnCurrent" type="button" class="">
+                    Current Location
+                  </button>
+                </div>
               </div>
             </div>
-            <div class="weatherRow">
-              <div class="buttons">
-                <button id="btnGet" type="button" class="">
-                  Get Weather
-                </button>
-                <button id="btnCurrent" type="button" class="">
-                  Current Location
-                </button>
-              </div>
-            </div>
-          </div>
-          <!-- results for weather data -->
-          <div class="weather weatherRow">
-            <div class="col">
-              <div class="card">
-                <h4 class="card-title">Thu May 26 2022</h4>
-                <picture class="weatherPicture">
-                  <img src="https://openweathermap.org/img/wn/10d@2x.png" class="card-img-top" alt="light rain">
-                  <h3 class="card-title">API ERROR</h3>
-                </picture>
-                <div class="card-body">
-                  <p class="card-text">High: <span class="weatherInfo">API ERROR</span> Low <span
-                      class="weatherInfo">API ERROR</span></p>
-                  <p class="card-text">High Feels like: <span class="weatherInfo">API ERROR</span></p>
-                  <p class="card-text">Humidity: <span class="weatherInfo">API ERROR</span></p>
-                  <p class="card-text">Wind: <span class="weatherInfo">API ERROR</span></p>
+            <!-- results for weather data -->
+            <div class="weather weatherRow">
+              <div class="col">
+                <div class="card">
+                  <h4 class="card-title">Thu May 26 2022</h4>
+                  <div class="weatherPicture">
+                    <img src="https://openweathermap.org/img/wn/10d@2x.png" class="card-img-top" alt="light rain">
+                    <h3 class="card-title">API ERROR</h3>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">High: <span class="weatherInfo">API ERROR</span> Low <span
+                        class="weatherInfo">API ERROR</span></p>
+                    <p class="card-text">High Feels like: <span class="weatherInfo">API ERROR</span></p>
+                    <p class="card-text">Humidity: <span class="weatherInfo">API ERROR</span></p>
+                    <p class="card-text">Wind: <span class="weatherInfo">API ERROR</span></p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- end of weather placeholder -->
         </div>
-        <!-- end of weather placeholder -->
       </div>
       <div class="placeholder-box join">
         <h2 id="join">Join</h2>
@@ -262,6 +264,9 @@
   </footer>
   <script src="js/script.js"></script>
   <script src="js/weather.js"></script>
+  <!-- no api -->
+  <!-- <script src="js/weather2.js"></script> -->
+  <script src="js/autofetch.js"></script>
 </body>
 
 </html>
