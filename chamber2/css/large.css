@@ -19,22 +19,53 @@
 
 
   /*----------- NAVIGATION --------------*/
+  .hamburgerBtn  {
+    display: none;
+  }
+
+  #primaryNav {
+    display: flex;
+    position: relative;
+    /*display side by side*/
+    /* justify-content: flex-end; */
+    margin-left: 2vw;
+    border-left: 1px solid rgba(0, 0, 0, .3);
+  }
+  nav.move {
+    position: unset;
+    top: unset;
+    left: unset;
+    width: unset;
+    text-align: unset;
+  }
 
   nav ul li a {
     padding: .5rem 1rem;
+    border: none;
+    border-right: 1px solid rgba(0, 0, 0, .3);
   }
 
+  nav ul li.active a {
+    /*must place before hover*/
+    border-radius: 0;
+  }
+
+  nav ul li a:hover {
+    border-radius: 0;
+  }
 
   /*----------- MAIN --------------*/
   .mainGrid {
     position: relative;
-    grid-template-columns: 1fr 60% 1fr;
+    grid-template-columns: 1fr 50% 1fr;
     grid-template-areas:
       "event hero spotlight"
       "weather hero spotlight"
       "join news news";
     gap: .5rem;
   }
+
+
 
   .spotlight {
     grid-template-columns: 1fr;
