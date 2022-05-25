@@ -64,7 +64,7 @@ const app = {
                 <h4 class="card-title">${dt.toDateString()}</h4>
                 <picture class="weatherPicture">
                   <img
-                    src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png"
+                    src="https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png"
                     class="card-img-top"
                     alt="${day.weather[0].description}"
                   />
