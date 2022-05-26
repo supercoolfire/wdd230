@@ -19,7 +19,7 @@
 
 
   /*----------- NAVIGATION --------------*/
-  .hamburgerBtn  {
+  .hamburgerBtn {
     display: none;
   }
 
@@ -31,6 +31,7 @@
     margin-left: 2vw;
     border-left: 1px solid rgba(0, 0, 0, .3);
   }
+
   nav.move {
     position: unset;
     top: unset;
@@ -75,13 +76,14 @@
     gap: 1rem;
   }
 
-  
-.eventWeather {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  gap: 5px;
-}
+
+  .eventWeather {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 5px;
+  }
+
   /* Windows XP */
   .window {
     display: block;
@@ -99,9 +101,9 @@
     width: 350px;
     height: 150px;
     /* draggable */
-        position: absolute;
-        z-index: 9;
-        overflow: auto;
+    position: absolute;
+    z-index: 9;
+    overflow: auto;
   }
 
   .window-body {
@@ -124,8 +126,8 @@
     border-top-right-radius: 7px;
     text-shadow: 1px 1px #0f1089;
     /* draggable */
-        cursor: move;
-        z-index: 10;
+    cursor: move;
+    z-index: 10;
 
   }
 

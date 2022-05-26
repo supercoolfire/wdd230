@@ -7,7 +7,7 @@ const app = {
     document
       .getElementById('btnCurrent')
       .addEventListener('click', app.getLocation);
-  // app.fetchWeather();
+    // app.fetchWeather();
   },
   fetchWeather: (ev) => {
     //use the values from latitude and longitude to fetch the weather
@@ -54,7 +54,7 @@ const app = {
     // row.innerHTML = '';
     row.innerHTML = resp.daily
       .map((day, idx) => {
-          // console.log(day)
+        // console.log(day)
         if (idx <= 0) { //number of days
           let dt = new Date(day.dt * 1000); //timestamp * 1000
           let sr = new Date(day.sunrise * 1000).toTimeString();
@@ -74,16 +74,16 @@ const app = {
                 </picture>
                 <div class="card-body">
                   <p class="card-text">High: <span class="weatherInfo">${day.temp.max}&deg;C</span> Low <span class="weatherInfo">${day.temp.min}&deg;C</span></p>
-                  <p class="card-text">High Feels like: <span class="weatherInfo">${day.feels_like.day}&deg;C</span></p>`+
-                  // <p class="card-text">Pressure <span class="weatherInfo">${day.pressure}mb</span></p>
-                  `<p class="card-text">Humidity: <span class="weatherInfo">${day.humidity}%</span></p>`+
-                  // <p class="card-text">UV Index <span class="weatherInfo">${day.uvi}</span></p>
-                  // <p class="card-text">Precipitation <span class="weatherInfo">${day.pop * 100}%</span></p>
-                  // <p class="card-text">Dewpoint <span class="weatherInfo">${day.dew_point}</span></p>
-                  `<p class="card-text">Wind: <span class="weatherInfo">${day.wind_speed}m/s, ${day.wind_deg}&deg;</span></p>`+
-                  // <p class="card-text">Sunrise <span class="weatherInfo">${sr}</span></p>
-                  // <p class="card-text">Sunset <span class="weatherInfo">${ss}</span></p>
-                `</div>
+                  <p class="card-text">High Feels like: <span class="weatherInfo">${day.feels_like.day}&deg;C</span></p>` +
+            // <p class="card-text">Pressure <span class="weatherInfo">${day.pressure}mb</span></p>
+            `<p class="card-text">Humidity: <span class="weatherInfo">${day.humidity}%</span></p>` +
+            // <p class="card-text">UV Index <span class="weatherInfo">${day.uvi}</span></p>
+            // <p class="card-text">Precipitation <span class="weatherInfo">${day.pop * 100}%</span></p>
+            // <p class="card-text">Dewpoint <span class="weatherInfo">${day.dew_point}</span></p>
+            `<p class="card-text">Wind: <span class="weatherInfo">${day.wind_speed}m/s, ${day.wind_deg}&deg;</span></p>` +
+            // <p class="card-text">Sunrise <span class="weatherInfo">${sr}</span></p>
+            // <p class="card-text">Sunset <span class="weatherInfo">${ss}</span></p>
+            `</div>
               </div>
             </div>
           </div>`;

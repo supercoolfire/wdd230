@@ -130,4 +130,3 @@ if (dayNumber === 6 || dayNumber === 3) {
 }
 const dateBannerClose = document.getElementById("dateBannerClose");
 dateBannerClose.addEventListener("click", () => dateBanner.style.display = "none");
-
