@@ -114,7 +114,7 @@
           <button class="joinNow rickRoll">Join the chamber now!</button>
         </figure>
         <!-- hero placeholder -->
-        <textarea cols="30" rows="10"></textarea>
+        <!-- <textarea cols="30" rows="10"></textarea> -->
 
         <!-- end of hero placeholder -->
       </div>
@@ -124,7 +124,7 @@
 
         <h3>Additional Requirements</h3>
         <input type="checkbox" class="read-more-state" id="post-1" />
-        <section class="read-more-wrap">
+        <div class="read-more-wrap">
           <p>► Use at least one&nbsp;<a href="https://developers.google.com/fonts/" target="_blank"
               rel="noreferrer noopener">Google Fonts API&nbsp;(Links to an external site.)</a>&nbsp;font or an
             equivalent
@@ -136,9 +136,9 @@
           <p>►&nbsp;<strong>Teaching Team Peer Review</strong>: Commit and push your town page as early as possible for
             review within your&nbsp;<a title="People" href="https://byui.instructure.com/courses/188932/users">Teaching
               Team</a>. As your team meets this week, discuss challenges and provide feedback to each other.</p>
-        </section>
+        </div>
         <!-- end of news placeholder -->
-        <label for="post-1" class="read-more-trigger"></label>
+        <label for="post-1" class="read-more-trigger"><span class="invisible">See me if you can</span></label>
 
       </div>
       <div class="eventWeather">
@@ -157,12 +157,12 @@
               <div class="weatherRow">
                 <div class="latlong">
                   <span class="latlongLabel">Lat</span>
-                  <input type="text" class="inputCoordinate" inputmode="numeric" id="latitude" placeholder="latitude"
-                    aria-label="latitude" value="13.2548" />
+                  <input type="text" class="inputCoordinate" id="latitude" placeholder="latitude" aria-label="latitude"
+                    value="13.2548" />
                 </div>
                 <div class="latlong">
                   <span class="latlongLabel">Lon</span>
-                  <input type="text" class="inputCoordinate" inputmode="numeric" id="longitude" placeholder="longitude"
+                  <input type="text" class="inputCoordinate" id="longitude" placeholder="longitude"
                     aria-label="longitude" value="123.6861" />
                 </div>
               </div>

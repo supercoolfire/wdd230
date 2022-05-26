@@ -494,7 +494,7 @@ main figure {
 }
 
 .currentWeather {
-  background: radial-gradient(rgb(125, 135, 232), #8781fc);
+  background: radial-gradient(#d4d8bc, #bfd434);
   padding: 10px;
 }
 
@@ -519,7 +519,7 @@ main figure {
 .latlongLabel {
   font-weight: bold;
   font-size: larger;
-  color: red;
+  color: rgb(0, 0, 0);
 }
 
 .inputCoordinate {
@@ -586,7 +586,6 @@ main figure {
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: inherit;
-  transition: 0.1 ease;
 }
 
 .read-more-state~.read-more-trigger:before {

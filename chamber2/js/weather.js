@@ -13,6 +13,7 @@ const app = {
     //use the values from latitude and longitude to fetch the weather
     let lat = document.getElementById('latitude').value;
     let lon = document.getElementById('longitude').value;
+    // let key = '40892fcd23eff123bc5dec810bc513b6';  //first
     let key = 'e016d968218e8d05c1da6eb7b6e32df2';
     let lang = 'en';
     let units = 'metric';
