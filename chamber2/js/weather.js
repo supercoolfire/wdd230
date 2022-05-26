@@ -62,8 +62,8 @@ const app = {
           let ss = new Date(day.sunset * 1000).toTimeString();
           return `<div class="col">
               <div class="card">
-              <h4 class="card-title">${dt.toDateString()}</h4>
-              <h3 class="timeZone">${resp.timezone}</h3>
+              <h3 class="card-title">${dt.toDateString()}</h3>
+              <h4 class="timeZone">${resp.timezone}</h4>
               <picture class="weatherPicture">
                 <img
                   src="https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png"
