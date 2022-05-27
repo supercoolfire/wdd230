@@ -58,9 +58,40 @@
     <main class="clearfix">
         <h1>Products</h1>
         <picture class="photoA">
+            <source media="(max-width: 400px)"
+                srcset="https://fakeimg.pl/300x150 1x, https://fakeimg.pl/300x150 2x, https://fakeimg.pl/300x150 3x">
+            <source media="(min-width: 401px) and (max-width: 500px)"
+                srcset="https://fakeimg.pl/400x225 1x, https://fakeimg.pl/400x225 2x, https://fakeimg.pl/400x225 3x">
+            <source media="(min-width: 501px) and (max-width: 600px)"
+                srcset="https://fakeimg.pl/500x300 1x, https://fakeimg.pl/500x300 2x, https://fakeimg.pl/500x300 3x">
+            <source media="(min-width: 601px) and (max-width: 700px)"
+                srcset="https://fakeimg.pl/600x350 1x, https://fakeimg.pl/600x350 2x, https://fakeimg.pl/600x350 3x">
+            <source media="(min-width: 701px) and (max-width: 800px)"
+                srcset="https://fakeimg.pl/700x400 1x, https://fakeimg.pl/700x400 2x, https://fakeimg.pl/700x400 3x">
+            <source media="(min-width: 801px) and (max-width: 900px)"
+                srcset="https://fakeimg.pl/800x450 1x, https://fakeimg.pl/800x450 2x, https://fakeimg.pl/800x450 3x">
+            <img src="https://fakeimg.pl/1100x650" alt="numbers">
+        </picture>
+        <div>Mix together</div>
+
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quidem, omnis qui similique molestias facere
+            dolore amet fugiat nihil provident dolorum ad iste voluptate beatae ducimus! Nostrum autem reiciendis nihil.
+            Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quasi eius. Numquam provident ipsum sequi, enim
+            expedita fugiat mollitia dolores, nam incidunt obcaecati modi nulla ut placeat dolorem laboriosam. Earum.
+            Lorem
+            ipsum dolor sit, amet consectetur adipisicing elit. Ex adipisci soluta cumque veniam voluptatem sunt cum
+            laboriosam nihil unde repellendus commodi possimus velit quasi tempora optio, eum debitis deserunt
+            provident!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore commodi consequatur officiis qui illo
+            aliquid
+            necessitatibus accusantium rem temporibus saepe harum magnam, ipsum voluptas iure consequuntur tenetur totam
+            tempore ratione!</p>
+
+        <picture class="photoA">
             <source media="(max-width: 200px)" srcset="images/golgotha200.jpg">
             <source media="(max-width: 500px)" srcset="images/golgotha500.jpg">
-            <source media="(max-width: 800px)" srcset="images/golgotha800.jpg">
+            <source media="(min-width: 501px) and (max-width: 800px)" srcset="images/golgotha800.jpg">
             <img src="images/golgotha1100.jpg" alt="church">
         </picture>
         <div>Church of the Beatitudes</div>
