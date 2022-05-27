@@ -12,8 +12,19 @@
 
   /*----------- BODY --------------*/
 
+/* news */
+.news-wrap {
+  height: 12rem;
+}
+/* end news */
 
-
+.event-wrap {
+  height: 214px;
+}.eventOverlay {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 90%;}
   /*----------- HEADER --------------*/
 
 

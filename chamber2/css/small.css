@@ -34,7 +34,7 @@ html {
   --main-head-foot-color: rgb(181, 181, 214);
   --main-dateBanner-background-color: #0e01ff6a;
   --main-dateBanner-color: #FFF700;
-  --section-background-color: rgb(255, 241, 179);
+  --section-background-color: rgb(235, 240, 222);
 }
 
 h2,
@@ -220,11 +220,24 @@ header a {
 
 nav {
   display: block;
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+  top: 38px;
+  left: 17px;
+  width: 276px;
+  text-align: center;
   background-color: var(--navbackground-color);
   padding-bottom: 0;
   margin-bottom: 0;
   box-shadow: 0 -5px 30px 2px rgb(64, 59, 59);
   z-index: 999;
+  transition: visibility 1s, height 1s;
+}
+
+nav.move {
+  visibility: visible;
+  height: 280px;
 }
 
 nav ul {
@@ -263,14 +276,6 @@ nav ul {
 
 nav ul.open {
   display: block;
-}
-
-nav.move {
-  position: absolute;
-  top: 38px;
-  left: 17px;
-  width: 276px;
-  text-align: center;
 }
 
 .close {
@@ -357,6 +362,54 @@ div#dateBanner {
   margin: 0;
 }
 
+/* read more */
+
+.read-more-state {
+  display: none;
+}
+/* default */
+.read-more-wrap{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 1rem;
+}
+/* reset */
+.read-more-state:checked~.read-more-wrap {
+  height: unset;
+  white-space: unset;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: inherit;
+}
+
+.read-more-state~.read-more-trigger:before {
+  content: 'Read more';
+}
+
+.read-more-state:checked~.read-more-trigger:before {
+  content: 'Read less';
+}
+
+.read-more-trigger {
+  font-weight: bold;
+  cursor: pointer;
+  padding: .5rem;
+  font-size: .9em;
+  line-height: 2;
+  border: 1px solid #ddd;
+  border-radius: 66px;
+  background: linear-gradient(145deg, #ffffc0, #e6d9a1);
+  box-shadow: 6px 6px 12px #dbcf9a,
+    -6px -6px 12px #ffffcc;
+}
+
+.read-more-trigger:hover {
+  border-radius: 66px;
+  background: linear-gradient(145deg, #e6d9a1, #ffffc0);
+  box-shadow: 6px 6px 12px #dbcf9a,
+    -6px -6px 12px #ffffcc;
+}
+/* end of read more */
 main figure img {
   width: 100%;
   height: auto;
@@ -385,6 +438,7 @@ main figure {
 }
 
 .joinNow {
+  cursor: pointer;
   position: absolute;
   right: 10%;
   bottom: 20%;
@@ -477,7 +531,10 @@ main figure {
 
 
 .eventWeather {
+  position: relative;
+  max-width: 100%;
   display: flex;
+  flex: 0 1 auto;
   flex-direction: column;
   align-content: center;
   gap: 5px;
@@ -486,7 +543,7 @@ main figure {
 .event {
   flex-grow: 1;
 }
-
+/* event p */
 
 .weather {
   max-width: 250px;
@@ -525,6 +582,7 @@ main figure {
 .inputCoordinate {
   flex-grow: 1;
   min-width: 30px;
+  padding: .5rem;
 }
 
 .buttons {
@@ -568,64 +626,62 @@ main figure {
 
 /* end weather */
 /* news */
-.read-more-state {
-  display: none;
-}
-
-.read-more-wrap {
-
+.news-wrap{
   height: 5rem;
-  /* white-space: nowrap; */
+}
+/* end news */
+
+/* event */
+
+/* default */
+.event-wrap{
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.event-wrap section {
+  position: relative;
+}
+.eventOverlay {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  width: 90%;
+  /* translate: transpose(50%, 30%); */
+  color: white;
+  text-align: center;
+  font-weight: bolder;
+  padding: 1rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgba(100, 87, 122, 0.29);
+}
+/* reset */
+.read-more-state:checked~event-wrap~section~h2{
 
-.read-more-state:checked~.read-more-wrap {
+  position: relative;
+}
+
+.read-more-state:checked~.event-wrap{
+  position: relative;
   height: unset;
   white-space: unset;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: inherit;
 }
-
-.read-more-state~.read-more-trigger:before {
-  content: 'Read more';
+.event-wrap {
+  height: 330px;
 }
 
-.read-more-state:checked~.read-more-trigger:before {
-  content: 'Read less';
+.eventImg {
+  max-width: 100%;
 }
-
-.read-more-trigger {
-  /* background-color: rgb(2, 227, 204); */
-  font-weight: bold;
-  cursor: pointer;
-  /* display: inline-block; */
-  padding: .5rem;
-  /* color: #666; */
-  font-size: .9em;
-  line-height: 2;
-  border: 1px solid #ddd;
-  border-radius: .25em;
-  border-radius: 66px;
-  background: linear-gradient(145deg, #ffffc0, #e6d9a1);
-  box-shadow: 6px 6px 12px #dbcf9a,
-    -6px -6px 12px #ffffcc;
-}
-
-.read-more-trigger:hover {
-  border-radius: 66px;
-  background: linear-gradient(145deg, #e6d9a1, #ffffc0);
-  box-shadow: 6px 6px 12px #dbcf9a,
-    -6px -6px 12px #ffffcc;
-}
-
-/* end news */
-
+/* end event */
 .window {
   display: none;
 }
-
+button {
+  cursor: pointer;
+}
 /*----------- FOOTER --------------*/
 footer {
   background-color: var(--head-foot-color);

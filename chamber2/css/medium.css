@@ -60,7 +60,9 @@
   .news {
     grid-area: news;
   }
-
+  .event-wrap {
+    height: 375px;
+  }
   .spot:nth-of-type(3) {
     display: none;
   }

@@ -120,11 +120,11 @@
       </div>
       <div class="placeholder-box news">
         <h2>News and Olds</h2>
-        <!-- news placeholder -->
+        <input type="checkbox" class="read-more-state" id="read-more-state-1" />
+        <div class="read-more-wrap news-wrap">
+          <!-- news placeholder -->
 
-        <h3>Additional Requirements</h3>
-        <input type="checkbox" class="read-more-state" id="post-1" />
-        <div class="read-more-wrap">
+          <h3>Additional Requirements</h3>
           <p>► Use at least one&nbsp;<a href="https://developers.google.com/fonts/" target="_blank"
               rel="noreferrer noopener">Google Fonts API&nbsp;(Links to an external site.)</a>&nbsp;font or an
             equivalent
@@ -136,18 +136,33 @@
           <p>►&nbsp;<strong>Teaching Team Peer Review</strong>: Commit and push your town page as early as possible for
             review within your&nbsp;<a title="People" href="https://byui.instructure.com/courses/188932/users">Teaching
               Team</a>. As your team meets this week, discuss challenges and provide feedback to each other.</p>
+          <!-- end of news placeholder -->
         </div>
-        <!-- end of news placeholder -->
-        <label for="post-1" class="read-more-trigger"><span class="invisible">See me if you can</span></label>
+        <label for="read-more-state-1" class="read-more-trigger"><span class="invisible">See me if you
+            can</span></label>
 
       </div>
       <div class="eventWeather">
         <div class="placeholder-box event">
-          <h2>Event</h2>
-          <!-- event placeholder -->
-          <p>&nbsp;<strong>Code Example</strong>:&nbsp;<a href="https://codepen.io/blazzard-jason/pen/ZEWjeaw"
-              target="_blank" rel="noreferrer noopener">JavaScript Current Date Formatting</a></p>
-          <!-- end of event placeholder -->
+          <input type="checkbox" class="read-more-state" id="read-more-event-state-1" />
+          <div class="read-more-wrap event-wrap">
+            <!-- default -->
+            <!--set hight-->
+            <h2>Event</h2>
+            <!-- event placeholder -->
+            <section>
+              <img class="eventImg" src="images/gasDepot.jpg" alt="Gas depot">
+              <h2 class="eventOverlay">Old gas depot to be repainted soon</h2>
+              <h3>Invitation to bid:</h3>
+              <p>download <a href="#">here</a></p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam sit nobis voluptate magni ducimus,
+                facere quod dolores inventore, maxime aut nihil quidem cumque quaerat velit. Unde rem aperiam voluptatum
+                qui.</p>
+            </section>
+            <!-- end of event placeholder -->
+          </div>
+          <label for="read-more-event-state-1" class="read-more-trigger"><span class="invisible">See me if you
+              can</span></label>
         </div>
         <div class="placeholder-box weather">
           <h2>Weather</h2>
@@ -272,7 +287,7 @@
   <script src="js/weather.js"></script>
   <!-- no api -->
   <!-- <script src="js/weather2.js"></script> -->
-  <script src="js/autofetch.js"></script>
+  <!-- <script src="js/autofetch.js"></script> -->
 </body>
 
 </html>
