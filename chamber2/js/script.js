@@ -99,7 +99,7 @@ let wayfind = document.querySelector("#wayfind");
 let active = document.querySelector(".active").textContent;
 // breadcrumbs
 // wayfind
-wayfind.innerHTML = `<h1>${active}<h1>`;
+wayfind.innerHTML = `<h1>${active}</h1>`;
 
 
 let myName = document.querySelector(".myName");
