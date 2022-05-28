@@ -33,6 +33,15 @@
   .hamburgerBtn {
     display: none;
   }
+nav{
+  visibility: visible;
+  height: unset;
+  position: unset;
+  top: unset;
+  left: unset;
+  width: unset;
+  text-align: unset;
+}
 
   #primaryNav {
     display: flex;
@@ -49,6 +58,9 @@
     left: unset;
     width: unset;
     text-align: unset;
+    
+  visibility: visible;
+  height: 280px;
   }
 
   nav ul li a {
