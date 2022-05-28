@@ -135,7 +135,10 @@ header {
   width: 80px;
   height: auto;
 }
-
+figure {
+  margin: 0;
+  padding: 0;
+}
 .headings {
   display: flex;
   flex-direction: column;
@@ -410,18 +413,26 @@ div#dateBanner {
     -6px -6px 12px #ffffcc;
 }
 /* end of read more */
-main figure img {
+.lesson6  img {
   width: 100%;
   height: auto;
 }
-
-main figure {
-  margin: 0;
-  width: 100%;
+.lesson6 > p {
+font-size: 2rem;
+font-weight: 900;
+margin: .5rem;
 }
 
 #heroFigure {
   position: relative;
+  margin: 0;
+  width: 100%;
+  transition: transform 2s;
+}
+
+#heroFigure img {
+  width: 100%;
+  height: auto;
 }
 
 .heroWelcome {

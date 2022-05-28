@@ -22,13 +22,15 @@
 </head>
 
 <body>
-  <header>
+  <header class="clearfix">
     <div class="headerWrapper">
       <button id="hamburgerBtn" class="hamburgerBtn"><span>&#9776;</span><span>X</span></button>
       <div class="logo">
-        <picture>
-          <img src="images/logo.png" alt="chamber logo">
-        </picture>
+        <figure>
+          <img src="images/logo75.webp" alt="logo" srcset="images/logo75.webp 1x,
+    images/logo150.webp 2x,
+    images/logo255.webp 3x">
+        </figure>
       </div>
       <section class="headings">
         <h1>Gas Chamber of Commerce</h1>
@@ -105,11 +107,29 @@
       id="dateBannerClose">❌</button></div>
 
   <main>
-    <div id="wayfind">wayfind</div>
+    <div class="placeholder-box lesson6">
+      <picture>
+        <source media="(min-width: 1px) and (max-width: 400px)"
+          srcset="images/heroSrc_400.jpg 1x, images/heroSrc_400_2x.jpg 2x, images/heroSrc_400_3x.jpg 3x">
+        <source media="(min-width: 401px) and (max-width: 650px)"
+          srcset="images/heroSrc_650.jpg 1x, images/heroSrc_650_2x.jpg 2x, images/heroSrc_650_3x.jpg 3x">
+        <source media="(min-width: 651px) and (max-width: 900px)"
+          srcset="images/heroSrc_900.jpg 1x, images/heroSrc_900_2x.jpg 2x, images/heroSrc_900_3x.jpg 3x">
+        <img src="images/heroSrc_1050.jpg" alt="week 6 assignment">
+      </picture>
+      <p>Lesson 6 only</p>
+    </div>
+    <div id="wayfind"><span class="invisible">See me if you can</span></div>
+
     <div class="mainGrid">
       <div class="placeholder-box hero">
         <figure id="heroFigure">
-          <img src="images/karuhatan.jpg" alt="town traffic jam">
+          <img src="images/karuhatan.jpg" alt="town traffic jam" sizes="100vw" srcset="
+          images/karuhatan_400.jpg 400w,
+          images/karuhatan_650.jpg 650w,
+          images/karuhatan_900.jpg 900w,
+          images/karuhatan_1050.jpg 1050w
+          ">
           <div class="heroWelcome">Welcome Suckers, mining is booming. Don't give up.</div>
           <button class="joinNow rickRoll">Join the chamber now!</button>
         </figure>

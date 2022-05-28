@@ -121,7 +121,7 @@ console.log(dayNumber);
 
 const dateBanner = document.getElementById("dateBanner")
 
-if (dayNumber === 6 || dayNumber === 3) {
+if (dayNumber === 1 || dayNumber === 2) {
   dateBanner.classList.add("showme");
   console.log("today is day 6");
 } else {
