@@ -575,9 +575,12 @@ margin: .5rem;
   font-size: .8rem;
 }
 
-#card-btnGet, #card-btnCurrent {
+#card-btnGet {
   padding: .5rem;
 }
+ #card-btnCurrent {
+   padding: 0 .5rem;
+ }
 
 .weatherRow {
   display: block;
