@@ -551,6 +551,10 @@ margin: .5rem;
   gap: 5px;
 }
 
+.temperature {
+  font-size: 2rem;
+}
+
 .event {
   flex-grow: 1;
 }
@@ -571,8 +575,8 @@ margin: .5rem;
   font-size: .8rem;
 }
 
-.btnGet {
-  background-color: palegreen;
+#card-btnGet, #card-btnCurrent {
+  padding: .5rem;
 }
 
 .weatherRow {
@@ -600,8 +604,15 @@ margin: .5rem;
   display: block;
 }
 
-.timeZone {
+
+#card-date {
   margin: 0;
+  text-align: center;
+  padding: 5px;
+}
+
+#card-timeZone {
+  margin: 5px;
   padding-left: 1rem;
 }
 
@@ -616,12 +627,6 @@ margin: .5rem;
   /* border: 1px solid blue; */
   align-self: center;
 }
-
-.card-title {
-  margin: 0;
-  text-align: center;
-}
-
 .card-text {
   margin: .5rem;
 }

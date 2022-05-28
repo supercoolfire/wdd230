@@ -203,10 +203,10 @@
               </div>
               <div class="weatherRow">
                 <div class="buttons">
-                  <button id="btnGet" type="button" class="">
+                  <button id="card-btnGet" type="button" class="">
                     Get Weather
                   </button>
-                  <button id="btnCurrent" type="button" class="">
+                  <button id="card-btnCurrent" type="button" class="">
                     Current Location
                   </button>
                 </div>
@@ -216,17 +216,22 @@
             <div class="weather weatherRow">
               <div class="col">
                 <div class="card">
-                  <h4 class="card-title">Thu May 26 2022</h4>
-                  <div class="weatherPicture">
-                    <img src="https://openweathermap.org/img/wn/10d@2x.png" class="card-img-top" alt="light rain">
-                    <h3 class="card-title">API ERROR</h3>
-                  </div>
+                  <h3 id="card-date">Sat May 28 2022</h3>
+                  <h4 id="card-timeZone">Asia/Manila</h4>
+                  <picture class="weatherPicture">
+                    <span id="card-image"></span>
+                    <p class="temperature" id="card-temperature">N/A</p>
+                  </picture>
                   <div class="card-body">
-                    <p class="card-text">High: <span class="weatherInfo">API ERROR</span> Low <span
-                        class="weatherInfo">API ERROR</span></p>
-                    <p class="card-text">High Feels like: <span class="weatherInfo">API ERROR</span></p>
-                    <p class="card-text">Humidity: <span class="weatherInfo">API ERROR</span></p>
-                    <p class="card-text">Wind: <span class="weatherInfo">API ERROR</span></p>
+                    <p class="card-text"><span id="card-prhase">N/A</span> "<span id="card-reprhase">N/A</span>"</p>
+                    <p class="card-text">High: <span class="weatherInfo" id="card-hiTemp">N/A</span> Low: <span
+                        class="weatherInfo" id="card-lowTemp">N/A</span></p>
+                    <p class="card-text">High Feels like: <span class="weatherInfo" id="card-feelTemp">N/A</span>
+                    </p>
+                    <p class="card-text">Humidity: <span class="weatherInfo" id="card-humidity">N/A</span></p>
+                    <p class="card-text">Wind speed: <span class="weatherInfo" id="card-windSpeed">N/A</span>
+                    </p>
+                    <p class="card-text">Wind Chill: <span class="weatherInfo" id="card-windChill">N/A</span></p>
                   </div>
                 </div>
               </div>
@@ -305,9 +310,10 @@
   </footer>
   <script src="js/script.js"></script>
   <script src="js/weather.js"></script>
+  <script src="js/windchill.js"></script>
   <!-- no api -->
   <!-- <script src="js/weather2.js"></script> -->
-  <!-- <script src="js/autofetch.js"></script> -->
+  <script src="js/autofetch.js"></script>
 </body>
 
 </html>
