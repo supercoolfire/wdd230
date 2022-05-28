@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Fill Me In">
+  <meta name="author" content="Jayser Pilapil">
+
+  <!-- This start file was build by Paul Cheney  -->
+  <title>Weather summary: Wind Chill</title>
+
+  <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+  <!-- STYLE SHEETS -->
+  <link href="css/normalize.css" rel="stylesheet">
+  <!-- phone-default -->
+  <link href="css/small.css" rel="stylesheet">
+  <!-- enhance-tablet -->
+  <link href="css/medium.css" rel="stylesheet">
+  <!-- enhance-desktop -->
+  <link href="css/large.css" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+  <!-- HEADER HERE -->
+  <header>
+    <h1>Weathery stone</h1>
+    <h2>If the stone is wet, it's raining</h2>
+  </header>
+
+
+  <!-- NAVIGATION HERE -->
+  <nav class="clearfix">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li class="active"><a href="#">Products</a></li>
+      <li><a href="#">Location</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <!-- CONTENT HERE -->
+  <main>
+    <h1>Weather Summary Example</h1>
+    <p>Current Temperature is <span id="temp">30</span>&deg;</p>
+    <p>Current Wind Speed is <span id="speed">60</span>mph</p>
+    <p id="chill">message</p>
+
+    <h2>Weather Forcast</h2>
+    <div class="table">
+      <table>
+        <tbody>
+          <tr>
+            <th>
+              <h3>Condition</h3>
+            </th>
+            <th>
+              <h3>Forecast</h3>
+            </th>
+          </tr>
+          <tr>
+            <td>Stone is wet</td>
+            <td>Rain</td>
+          </tr>
+          <tr>
+            <td>Stone is Dry</td>
+            <td>Not raining</td>
+          </tr>
+          <tr>
+            <td>Shadow on the ground</td>
+            <td>Sunny</td>
+          </tr>
+          <tr>
+            <td>White on top</td>
+            <td>Snowing</td>
+          </tr>
+          <tr>
+            <td>Can't see stone</td>
+            <td>Foggy</td>
+          </tr>
+          <tr>
+            <td>Swinning stone</td>
+            <td>Windy</td>
+          </tr>
+          <tr>
+            <td>Stone jumping up and down</td>
+            <td>Earthquake</td>
+          </tr>
+          <tr>
+            <td>Stone gone</td>
+            <td>Tornado</td>
+          </tr>
+        </tbody>
+      </table>
+      <img src="images/stone_100.png" class="stony-stark" alt="stone cold">
+    </div>
+  </main>
+
+  <script>
+    const T = parseFloat(document.getElementById("temp").textContent);
+    console.log(T);
+
+    const V = parseFloat(document.getElementById("speed").textContent);
+    console.log(V);
+
+    let wind_chill = 35.74 + (0.6215 * T) - (35.75 * Math.pow(V, 0.16)) + (0.4275 * T * Math.pow(V, 0.16));
+    console.log(wind_chill);
+
+    wind_chill = Math.round(wind_chill);
+    console.log(wind_chill);
+
+    if (T <= 50 && V > 3) {
+      document.getElementById("chill").textContent = "Wwind Chill is " + wind_chill + "\xB0F"
+    } else {
+      document.getElementById("chill").textContent = "No wind Chill Today"
+
+    }
+  </script>
+</body>
+<!-- FOOTER HERE -->
+<footer>
+  <p>&copy; <span id="theYear"> </span> | Weather Summary | <a class="myName bold" href="../index.html">Jayser
+      Pilapil</a> |
+    WDD 230 Project
+    |
+    <span id="lu"></span></p>
+</footer>
+<script src="js/script.js"></script>
+
+</html>
