@@ -12,19 +12,6 @@
 
   /*----------- BODY --------------*/
 
-/* news */
-.news-wrap {
-  height: 12rem;
-}
-/* end news */
-
-.event-wrap {
-  height: 214px;
-}.eventOverlay {
-  position: absolute;
-  top: 10%;
-  left: 5%;
-  width: 90%;}
   /*----------- HEADER --------------*/
 
 
@@ -33,15 +20,16 @@
   .hamburgerBtn {
     display: none;
   }
-nav{
-  visibility: visible;
-  height: unset;
-  position: unset;
-  top: unset;
-  left: unset;
-  width: unset;
-  text-align: unset;
-}
+
+  nav {
+    visibility: visible;
+    height: unset;
+    position: unset;
+    top: unset;
+    left: unset;
+    width: unset;
+    text-align: unset;
+  }
 
   #primaryNav {
     display: flex;
@@ -58,9 +46,9 @@ nav{
     left: unset;
     width: unset;
     text-align: unset;
-    
-  visibility: visible;
-  height: 280px;
+
+    visibility: visible;
+    height: 280px;
   }
 
   nav ul li a {
@@ -100,12 +88,32 @@ nav{
   }
 
 
+  /* news */
+  .news-wrap {
+    height: 12rem;
+  }
+
+  /* end news */
+
+  .event-wrap {
+    height: 214px;
+  }
+
+  .eventOverlay {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    font-size: 1.5rem;
+  }
+
   .eventWeather {
     display: flex;
     flex-direction: column;
     align-content: center;
     gap: 5px;
   }
+
 
   /* Windows XP */
   .window {
@@ -222,7 +230,7 @@ nav{
 
 
   /*----------- FOOTER --------------*/
-  
+
 
 }
 
