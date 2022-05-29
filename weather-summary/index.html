@@ -3,10 +3,11 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Fill Me In">
+  <meta name="description"
+    content="Assignment: Chamber of Commerce: Gas Chamber of Commerce Weather Summary Widget, Weather Summary Widget, Wind Chill, for Jayser Pilapil in WDD 230: Web Frontend Development at Brigham Young University - Idaho">
   <meta name="author" content="Jayser Pilapil">
-
-  <!-- This start file was build by Paul Cheney  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="blue">
   <title>Weather summary: Wind Chill</title>
 
   <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
@@ -118,7 +119,7 @@
     console.log(wind_chill);
 
     if (T <= 50 && V > 3) {
-      document.getElementById("chill").textContent = "Wwind Chill is " + wind_chill + "\xB0F"
+      document.getElementById("chill").textContent = "Wind Chill is " + wind_chill + "\xB0F"
     } else {
       document.getElementById("chill").textContent = "No wind Chill Today"
 
