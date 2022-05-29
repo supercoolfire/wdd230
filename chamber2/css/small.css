@@ -433,6 +433,7 @@ margin: .5rem;
 #heroFigure img {
   width: 100%;
   height: auto;
+  display: block;
 }
 
 .heroWelcome {
