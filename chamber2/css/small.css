@@ -135,10 +135,12 @@ header {
   width: 80px;
   height: auto;
 }
+
 figure {
   margin: 0;
   padding: 0;
 }
+
 .headings {
   display: flex;
   flex-direction: column;
@@ -370,12 +372,14 @@ div#dateBanner {
 .read-more-state {
   display: none;
 }
+
 /* default */
-.read-more-wrap{
+.read-more-wrap {
   overflow: hidden;
   text-overflow: ellipsis;
   margin-bottom: 1rem;
 }
+
 /* reset */
 .read-more-state:checked~.read-more-wrap {
   height: unset;
@@ -412,11 +416,13 @@ div#dateBanner {
   box-shadow: 6px 6px 12px #dbcf9a,
     -6px -6px 12px #ffffcc;
 }
+
 /* end of read more */
-.lesson6  img {
+.lesson6 img {
   width: 100%;
   height: auto;
 }
+
 /* .lesson6 > p {
 font-size: 2rem;
 font-weight: 900;
@@ -559,6 +565,7 @@ margin: .5rem;
 .event {
   flex-grow: 1;
 }
+
 /* event p */
 
 .weather {
@@ -576,7 +583,10 @@ margin: .5rem;
   font-size: .8rem;
 }
 
-.buttons button {height: 3rem;}
+.buttons button {
+  height: 3rem;
+  background-color: #f1eded;
+}
 
 .weatherRow {
   display: block;
@@ -627,6 +637,7 @@ margin: .5rem;
   /* border: 1px solid blue; */
   align-self: center;
 }
+
 .card-text {
   margin: .5rem;
 }
@@ -642,21 +653,24 @@ margin: .5rem;
 
 /* end weather */
 /* news */
-.news-wrap{
+.news-wrap {
   height: 5rem;
 }
+
 /* end news */
 
 /* event */
 
 /* default */
-.event-wrap{
+.event-wrap {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .event-wrap section {
   position: relative;
 }
+
 .eventOverlay {
   position: absolute;
   top: 30%;
@@ -670,13 +684,14 @@ margin: .5rem;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   background-color: rgba(100, 87, 122, 0.29);
 }
+
 /* reset */
-.read-more-state:checked~event-wrap~section~h2{
+.read-more-state:checked~event-wrap~section~h2 {
 
   position: relative;
 }
 
-.read-more-state:checked~.event-wrap{
+.read-more-state:checked~.event-wrap {
   position: relative;
   height: unset;
   white-space: unset;
@@ -684,6 +699,7 @@ margin: .5rem;
   text-overflow: ellipsis;
   font-size: inherit;
 }
+
 .event-wrap {
   height: 330px;
 }
@@ -691,13 +707,16 @@ margin: .5rem;
 .eventImg {
   max-width: 100%;
 }
+
 /* end event */
 .window {
   display: none;
 }
+
 button {
   cursor: pointer;
 }
+
 /*----------- FOOTER --------------*/
 footer {
   background-color: var(--head-foot-color);
