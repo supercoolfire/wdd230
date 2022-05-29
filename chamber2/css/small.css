@@ -24,7 +24,7 @@ html {
   --hamburgerBtn-color-shadow: rgb(255, 255, 255) 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #5600f6 0px 0px 20px, #5600f6 0px 0px 30px, #5600f6 0px 0px 40px, #5600f6 0px 0px 50px, #5600f6 0px 0px 75px;
   --hamburgerBtn-active-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
   --hamburgerBtn-hover-background-color: rgb(0, 255, 26);
-  --hamburgerBtn-hover-color: rgb(255, 222, 59);
+  --hamburgerBtn-hover-color: rgb(121, 104, 20);
   --navlink-active-background-color: rgba(0, 0, 0, 0.2);
   --navlink-active-color: #fff;
   --navlink-color: rgb(0, 247, 255);
