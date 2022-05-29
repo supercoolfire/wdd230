@@ -552,7 +552,7 @@ margin: .5rem;
 }
 
 .temperature {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .event {
@@ -575,12 +575,7 @@ margin: .5rem;
   font-size: .8rem;
 }
 
-#card-btnGet {
-  padding: .5rem;
-}
- #card-btnCurrent {
-   padding: 0 .5rem;
- }
+.buttons button {height: 3rem;}
 
 .weatherRow {
   display: block;
@@ -589,6 +584,7 @@ margin: .5rem;
 .latlong {
   display: flex;
   max-width: 95px;
+  height: 3rem;
 }
 
 .latlongLabel {

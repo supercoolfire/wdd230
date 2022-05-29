@@ -143,7 +143,7 @@
         <input type="checkbox" class="read-more-state" id="read-more-state-1" />
         <div class="read-more-wrap news-wrap">
           <!-- news placeholder -->
-
+          <div id="newsBody">...</div>
           <h3>Additional Requirements</h3>
           <p>► Use at least one&nbsp;<a href="https://developers.google.com/fonts/" target="_blank"
               rel="noreferrer noopener">Google Fonts API&nbsp;(Links to an external site.)</a>&nbsp;font or an
@@ -192,11 +192,15 @@
               <div class="weatherRow">
                 <div class="latlong">
                   <span class="latlongLabel">Lat</span>
+                  <!-- <input type="text" class="inputCoordinate" id="latitude" placeholder="latitude" aria-label="latitude"
+                    value="82" /> -->
                   <input type="text" class="inputCoordinate" id="latitude" placeholder="latitude" aria-label="latitude"
                     value="13.2548" />
                 </div>
                 <div class="latlong">
                   <span class="latlongLabel">Lon</span>
+                  <!-- <input type="text" class="inputCoordinate" id="longitude" placeholder="longitude"
+                    aria-label="longitude" value="135" /> -->
                   <input type="text" class="inputCoordinate" id="longitude" placeholder="longitude"
                     aria-label="longitude" value="123.6861" />
                 </div>
@@ -220,7 +224,11 @@
                   <h4 id="card-timeZone">Asia/Manila</h4>
                   <div class="weatherPicture">
                     <span id="card-image">N/A</span>
-                    <p class="temperature" id="card-temperature">N/A</p>
+                    <p class="temperature">
+                      <span id="card-hotness">N/A</span>&deg;C
+                      <!-- <span id="card-hotness">82</span>&deg;C -->
+                      <span id="card-fahrenheit">N/A</span>&deg;F
+                    </p>
                   </div>
                   <div class="card-body">
                     <p class="card-text"><span id="card-prhase">N/A</span> "<span id="card-reprhase">N/A</span>"</p>
@@ -229,9 +237,12 @@
                     <p class="card-text">High Feels like: <span class="weatherInfo" id="card-feelTemp">N/A</span>
                     </p>
                     <p class="card-text">Humidity: <span class="weatherInfo" id="card-humidity">N/A</span></p>
-                    <p class="card-text">Wind speed: <span class="weatherInfo" id="card-windSpeed">N/A</span>
-                    </p>
-                    <p class="card-text">Wind Chill: <span class="weatherInfo" id="card-windChill">N/A</span></p>
+                    <!-- <p class="card-text">Wind Speed: <span id="speedy-gonzales">N/A</span>m/s, <span
+                        id="card-speedDegree">N/A</span>&deg;</p> -->
+                    <p class="card-text">Wind Speed: <span id="speedy-gonzales">135</span>m/s, <span
+                        id="card-speedDegree">N/A</span>&deg;</p>
+                    <p class="card-text">Wind Chill: <span id="card-windChill">N/A</span></p>
+
                   </div>
                 </div>
               </div>
@@ -311,9 +322,11 @@
   <script src="js/script.js"></script>
   <script src="js/weather.js"></script>
   <script src="js/windchill.js"></script>
+  <!-- <script src="js/news.js"></script> -->
   <!-- no api -->
   <!-- <script src="js/weather2.js"></script> -->
-  <script src="js/autofetch.js"></script>
+
+  <!-- <script src="js/autofetch.js"></script> -->
 </body>
 
 </html>

@@ -1,13 +1,20 @@
 // https://www.youtube.com/watch?v=nGVoHEZojiQ
 const app = {
   init: () => {
+    document.getElementById('latitude').addEventListener('change', app.fetchWeather);
+    document.getElementById('longitude').addEventListener('change',app.fetchWeather);
     document
       .getElementById('card-btnGet')
       .addEventListener('click', app.fetchWeather);
     document
       .getElementById('card-btnCurrent')
-      .addEventListener('click', app.getLocation);
-    // app.fetchWeather();
+      .addEventListener('click', () => {
+        app.getLocation();
+        app.fetchWeather();
+      });
+      
+      app.fetchWeather();
+    
   },
   fetchWeather: (ev) => {
     //use the values from latitude and longitude to fetch the weather
@@ -54,7 +61,7 @@ const app = {
     //clear out the old weather and add the new
     // row.innerHTML = '';
     resp.daily.map((day, idx) => {
-        // console.log(day)
+        console.log(day)
         if (idx <= 0) { //number of days
           let dt = new Date(day.dt * 1000); //timestamp * 1000
           document.getElementById("card-date").textContent = dt.toDateString();
@@ -64,17 +71,20 @@ const app = {
           class="card-img-top"
           alt="${day.weather[0].description}"
         />`;
-          document.getElementById("card-temperature").innerHTML = `<span id="card-hotness">${day.temp.max}</span>&deg;C`;
+        document.getElementById("card-hotness").textContent = day.temp.max;
+        document.getElementById("card-fahrenheit").textContent = (day.temp.max * 9/5 + 32).toFixed(2);
           document.getElementById("card-prhase").textContent = day.weather[0].main;
           document.getElementById("card-reprhase").textContent = day.weather[0].description;
           document.getElementById("card-hiTemp").innerHTML = `${day.temp.max}&deg;C`;
           document.getElementById("card-lowTemp").innerHTML = `${day.temp.min}&deg;C`;
           document.getElementById("card-feelTemp").innerHTML = `${day.feels_like.day}&deg;C`;
           document.getElementById("card-humidity").textContent = `${day.humidity}%`;
-          document.getElementById("card-windSpeed").innerHTML = `<span ="speedy-gonzales">${day.wind_speed}</span>m/s, ${day.wind_deg}&deg;`;
+          document.getElementById("speedy-gonzales").textContent = day.wind_speed;
+          document.getElementById("card-speedDegree").textContent = day.wind_deg;
         }
       })
-      .join(' ');
+
+      ape.init();
   },
 };
 
