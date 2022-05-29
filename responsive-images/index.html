@@ -2,171 +2,170 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="description"
-        content="Assignment: W06 🏃🏽‍♂️ Activity: Working with Responsive Images for Jayser Pilapil in WDD 230: Web Frontend Development at Brigham Young University - Idaho">
-    <meta name="author" content="Jayser Pilapil">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="description"
+    content="Assignment: W06 🏃🏽‍♂️ Activity: Working with Responsive Images for Jayser Pilapil in WDD 230: Web Frontend Development at Brigham Young University - Idaho">
+  <meta name="author" content="Jayser Pilapil">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>W06 🏃🏽‍♂️ Activity: Working with Responsive Images</title>
+  <title>W06 🏃🏽‍♂️ Activity: Working with Responsive Images</title>
 
-    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-
+  <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
-    <!-- STYLE SHEETS -->
-    <link href="css/normalize.css" rel="stylesheet">
-    <!-- phone-default -->
-    <link href="css/small.css" rel="stylesheet">
-    <!-- enhance-tablet -->
-    <link href="css/medium.css" rel="stylesheet">
-    <!-- enhance-desktop -->
-    <link href="css/large.css" rel="stylesheet">
+
+
+  <!-- STYLE SHEETS -->
+  <link href="css/normalize.css" rel="stylesheet">
+  <!-- phone-default -->
+  <link href="css/small.css" rel="stylesheet">
+  <!-- enhance-tablet -->
+  <link href="css/medium.css" rel="stylesheet">
+  <!-- enhance-desktop -->
+  <link href="css/large.css" rel="stylesheet">
 
 
 
 </head>
 
 <body>
-    <!-- HEADER HERE -->
-    <header class="clearfix">
-        <figure class="logo">
-            <img src="images/logo75.png" alt="logo" srcset="images/logo75.png 1x,
+  <!-- HEADER HERE -->
+  <header class="clearfix">
+    <figure class="logo">
+      <img src="images/logo75.png" alt="logo" srcset="images/logo75.png 1x,
       images/logo150.png 2x,
       images/logo255.png 3x">
-        </figure>
-        <h1>Responsive Images</h1>
-        <h2>Reduce page weight</h2>
-    </header>
+    </figure>
+    <h1>Responsive Images</h1>
+    <h2>Reduce page weight</h2>
+  </header>
 
 
-    <!-- NAVIGATION HERE -->
-    <nav class="clearfix">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li class="active"><a href="#">Products</a></li>
-            <li><a href="#">Location</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+  <!-- NAVIGATION HERE -->
+  <nav class="clearfix">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li class="active"><a href="#">Products</a></li>
+      <li><a href="#">Location</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
 
 
-    <!-- CONTENT HERE -->
-    <main class="clearfix">
-        <h1>Products</h1>
-        <picture class="photoA">
-            <source media="(max-width: 400px)"
-                srcset="images/ri300x150.jpg 1x, images/ri300x150.jpg 2x, images/ri300x150.jpg 3x">
-            <source media="(min-width: 401px) and (max-width: 500px)"
-                srcset="images/ri400x225.jpg 1x, images/ri400x225.jpg 2x, images/ri400x225.jpg 3x">
-            <source media="(min-width: 501px) and (max-width: 600px)"
-                srcset="images/ri500x300.jpg 1x, images/ri500x300.jpg 2x, images/ri500x300.jpg 3x">
-            <source media="(min-width: 601px) and (max-width: 700px)"
-                srcset="images/ri600x350.jpg 1x, images/ri600x350.jpg 2x, images/ri600x350.jpg 3x">
-            <source media="(min-width: 701px) and (max-width: 800px)"
-                srcset="images/ri700x400.jpg 1x, images/ri700x400.jpg 2x, images/ri700x400.jpg 3x">
-            <source media="(min-width: 801px) and (max-width: 900px)"
-                srcset="images/ri800x450.jpg 1x, images/ri800x450.jpg 2x, images/ri800x450.jpg 3x">
-            <img src="images/ri1100x650.png" alt="numbers">
-        </picture>
-        <div>Mix together</div>
+  <!-- CONTENT HERE -->
+  <main class="clearfix">
+    <h1>Products</h1>
+    <picture class="photoA">
+      <source media="(max-width: 400px)"
+        srcset="images/ri300x150.jpg 1x, images/ri300x150.jpg 2x, images/ri300x150.jpg 3x">
+      <source media="(min-width: 401px) and (max-width: 500px)"
+        srcset="images/ri400x225.jpg 1x, images/ri400x225.jpg 2x, images/ri400x225.jpg 3x">
+      <source media="(min-width: 501px) and (max-width: 600px)"
+        srcset="images/ri500x300.jpg 1x, images/ri500x300.jpg 2x, images/ri500x300.jpg 3x">
+      <source media="(min-width: 601px) and (max-width: 700px)"
+        srcset="images/ri600x350.jpg 1x, images/ri600x350.jpg 2x, images/ri600x350.jpg 3x">
+      <source media="(min-width: 701px) and (max-width: 800px)"
+        srcset="images/ri700x400.jpg 1x, images/ri700x400.jpg 2x, images/ri700x400.jpg 3x">
+      <source media="(min-width: 801px) and (max-width: 900px)"
+        srcset="images/ri800x450.jpg 1x, images/ri800x450.jpg 2x, images/ri800x450.jpg 3x">
+      <img src="images/ri1100x650.png" alt="numbers">
+    </picture>
+    <div>Mix together</div>
 
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quidem, omnis qui similique molestias facere
-            dolore amet fugiat nihil provident dolorum ad iste voluptate beatae ducimus! Nostrum autem reiciendis nihil.
-            Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quasi eius. Numquam provident ipsum sequi, enim
-            expedita fugiat mollitia dolores, nam incidunt obcaecati modi nulla ut placeat dolorem laboriosam. Earum.
-            Lorem
-            ipsum dolor sit, amet consectetur adipisicing elit. Ex adipisci soluta cumque veniam voluptatem sunt cum
-            laboriosam nihil unde repellendus commodi possimus velit quasi tempora optio, eum debitis deserunt
-            provident!
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore commodi consequatur officiis qui illo
-            aliquid
-            necessitatibus accusantium rem temporibus saepe harum magnam, ipsum voluptas iure consequuntur tenetur totam
-            tempore ratione!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quidem, omnis qui similique molestias facere
+      dolore amet fugiat nihil provident dolorum ad iste voluptate beatae ducimus! Nostrum autem reiciendis nihil.
+      Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quasi eius. Numquam provident ipsum sequi, enim
+      expedita fugiat mollitia dolores, nam incidunt obcaecati modi nulla ut placeat dolorem laboriosam. Earum.
+      Lorem
+      ipsum dolor sit, amet consectetur adipisicing elit. Ex adipisci soluta cumque veniam voluptatem sunt cum
+      laboriosam nihil unde repellendus commodi possimus velit quasi tempora optio, eum debitis deserunt
+      provident!
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore commodi consequatur officiis qui illo
+      aliquid
+      necessitatibus accusantium rem temporibus saepe harum magnam, ipsum voluptas iure consequuntur tenetur totam
+      tempore ratione!</p>
 
-        <picture class="photoA">
-            <source media="(max-width: 200px)" srcset="images/golgotha200.jpg">
-            <source media="(max-width: 500px)" srcset="images/golgotha500.jpg">
-            <source media="(min-width: 501px) and (max-width: 800px)" srcset="images/golgotha800.jpg">
-            <img src="images/golgotha1100.jpg" alt="church">
-        </picture>
-        <div>Church of the Beatitudes</div>
+    <picture class="photoA">
+      <source media="(max-width: 200px)" srcset="images/golgotha200.jpg">
+      <source media="(max-width: 500px)" srcset="images/golgotha500.jpg">
+      <source media="(max-width: 800px)" srcset="images/golgotha800.jpg">
+      <img src="images/golgotha1100.jpg" alt="church">
+    </picture>
+    <div>Church of the Beatitudes</div>
 
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quidem, omnis qui similique molestias facere
-            dolore amet fugiat nihil provident dolorum ad iste voluptate beatae ducimus! Nostrum autem reiciendis nihil.
-            Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quasi eius. Numquam provident ipsum sequi, enim
-            expedita fugiat mollitia dolores, nam incidunt obcaecati modi nulla ut placeat dolorem laboriosam. Earum.
-            Lorem
-            ipsum dolor sit, amet consectetur adipisicing elit. Ex adipisci soluta cumque veniam voluptatem sunt cum
-            laboriosam nihil unde repellendus commodi possimus velit quasi tempora optio, eum debitis deserunt
-            provident!
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore commodi consequatur officiis qui illo
-            aliquid
-            necessitatibus accusantium rem temporibus saepe harum magnam, ipsum voluptas iure consequuntur tenetur totam
-            tempore ratione!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quidem, omnis qui similique molestias facere
+      dolore amet fugiat nihil provident dolorum ad iste voluptate beatae ducimus! Nostrum autem reiciendis nihil.
+      Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quasi eius. Numquam provident ipsum sequi, enim
+      expedita fugiat mollitia dolores, nam incidunt obcaecati modi nulla ut placeat dolorem laboriosam. Earum.
+      Lorem
+      ipsum dolor sit, amet consectetur adipisicing elit. Ex adipisci soluta cumque veniam voluptatem sunt cum
+      laboriosam nihil unde repellendus commodi possimus velit quasi tempora optio, eum debitis deserunt
+      provident!
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore commodi consequatur officiis qui illo
+      aliquid
+      necessitatibus accusantium rem temporibus saepe harum magnam, ipsum voluptas iure consequuntur tenetur totam
+      tempore ratione!</p>
 
-        <picture class="photoB">
-            <source media="(max-width: 400px)" srcset="images/golgotha200.jpg">
-            <source media="(max-width: 1000px)" srcset="images/golgotha500.jpg">
-            <source media="(max-width: 1600px)" srcset="images/golgotha800.jpg">
-            <img src="images/golgotha1100.jpg" alt="church">
-        </picture>
-        <div>Church of the Beatitudes</div>
+    <picture class="photoB">
+      <source media="(max-width: 400px)" srcset="images/golgotha200.jpg">
+      <source media="(max-width: 1000px)" srcset="images/golgotha500.jpg">
+      <source media="(max-width: 1600px)" srcset="images/golgotha800.jpg">
+      <img src="images/golgotha1100.jpg" alt="church">
+    </picture>
+    <div>Church of the Beatitudes</div>
 
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quidem, omnis qui similique molestias facere
-            dolore amet fugiat nihil provident dolorum ad iste voluptate beatae ducimus! Nostrum autem reiciendis nihil.
-            Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quasi eius. Numquam provident ipsum sequi, enim
-            expedita fugiat mollitia dolores, nam incidunt obcaecati modi nulla ut placeat dolorem laboriosam. Earum.
-            Lorem
-            ipsum dolor sit, amet consectetur adipisicing elit. Ex adipisci soluta cumque veniam voluptatem sunt cum
-            laboriosam nihil unde repellendus commodi possimus velit quasi tempora optio, eum debitis deserunt
-            provident!
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore commodi consequatur officiis qui illo
-            aliquid
-            necessitatibus accusantium rem temporibus saepe harum magnam, ipsum voluptas iure consequuntur tenetur totam
-            tempore ratione!</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quidem, omnis qui similique molestias facere
+      dolore amet fugiat nihil provident dolorum ad iste voluptate beatae ducimus! Nostrum autem reiciendis nihil.
+      Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quasi eius. Numquam provident ipsum sequi, enim
+      expedita fugiat mollitia dolores, nam incidunt obcaecati modi nulla ut placeat dolorem laboriosam. Earum.
+      Lorem
+      ipsum dolor sit, amet consectetur adipisicing elit. Ex adipisci soluta cumque veniam voluptatem sunt cum
+      laboriosam nihil unde repellendus commodi possimus velit quasi tempora optio, eum debitis deserunt
+      provident!
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore commodi consequatur officiis qui illo
+      aliquid
+      necessitatibus accusantium rem temporibus saepe harum magnam, ipsum voluptas iure consequuntur tenetur totam
+      tempore ratione!</p>
 
-        <figure class="myphoto">
-            <img src="images/golgotha.jpg" alt="golgotha" sizes="50vw" srcset="
+    <figure class="myphoto">
+      <img src="images/golgotha.jpg" alt="golgotha" sizes="50vw" srcset="
       images/golgotha200.jpg 200w,
       images/golgotha500.jpg 500w,
       images/golgotha800.jpg 800w,
       images/golgotha1100.jpg 1100w
       ">
-            <figcaption class="">The Garden with Plants</figcaption>
-        </figure>
+      <figcaption class="">The Garden with Plants</figcaption>
+    </figure>
 
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quidem, omnis qui similique molestias facere
-            dolore amet fugiat nihil provident dolorum ad iste voluptate beatae ducimus! Nostrum autem reiciendis nihil.
-            Lorem
-            ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quasi eius. Numquam provident ipsum sequi, enim
-            expedita fugiat mollitia dolores, nam incidunt obcaecati modi nulla ut placeat dolorem laboriosam. Earum.
-            Lorem
-            ipsum dolor sit, amet consectetur adipisicing elit. Ex adipisci soluta cumque veniam voluptatem sunt cum
-            laboriosam nihil unde repellendus commodi possimus velit quasi tempora optio, eum debitis deserunt
-            provident!
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore commodi consequatur officiis qui illo
-            aliquid
-            necessitatibus accusantium rem temporibus saepe harum magnam, ipsum voluptas iure consequuntur tenetur totam
-            tempore ratione!</p>
-    </main>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod quidem, omnis qui similique molestias facere
+      dolore amet fugiat nihil provident dolorum ad iste voluptate beatae ducimus! Nostrum autem reiciendis nihil.
+      Lorem
+      ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quasi eius. Numquam provident ipsum sequi, enim
+      expedita fugiat mollitia dolores, nam incidunt obcaecati modi nulla ut placeat dolorem laboriosam. Earum.
+      Lorem
+      ipsum dolor sit, amet consectetur adipisicing elit. Ex adipisci soluta cumque veniam voluptatem sunt cum
+      laboriosam nihil unde repellendus commodi possimus velit quasi tempora optio, eum debitis deserunt
+      provident!
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore commodi consequatur officiis qui illo
+      aliquid
+      necessitatibus accusantium rem temporibus saepe harum magnam, ipsum voluptas iure consequuntur tenetur totam
+      tempore ratione!</p>
+  </main>
 
-    <!-- FOOTER HERE -->
-    <footer>
-
-        <p>&copy; <span id="theYear"> </span> | Responsive Images | <a class="myName bold" href="../index.html">Jayser
-                Pilapil</a> |
-            WDD 230 Project
-            |
-            <span id="lu"></span></p>
-    </footer>
-    <script src="js/script.js"></script>
+  <!-- FOOTER HERE -->
+  <footer>
+    <p>&copy; <span id="theYear"> </span> | Responsive Images | <a class="myName bold" href="../index.html">Jayser
+        Pilapil</a> |
+      WDD 230 Project
+      |
+      <span id="lu"></span></p>
+  </footer>
+  <script src="js/script.js"></script>
 
 </body>
 
