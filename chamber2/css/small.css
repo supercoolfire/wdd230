@@ -417,11 +417,11 @@ div#dateBanner {
   width: 100%;
   height: auto;
 }
-.lesson6 > p {
+/* .lesson6 > p {
 font-size: 2rem;
 font-weight: 900;
 margin: .5rem;
-}
+} */
 
 #heroFigure {
   position: relative;
