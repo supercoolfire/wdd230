@@ -1,4 +1,3 @@
-// https://www.youtube.com/watch?v=nGVoHEZojiQ
 const app = {
   init: () => {
     document.getElementById('latitude').addEventListener('change', app.fetchWeather);
