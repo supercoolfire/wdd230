@@ -1,0 +1,148 @@
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* outline: 1px dashed red; */
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.searchBox {
+
+    display: flex;
+    
+    justify-content: space-between; 
+}
+a {
+    text-decoration: none;
+}
+#pokemonContainer{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    background-color: aqua;
+    padding: 10px;
+    width: 100%;
+}
+
+.card {
+    display: block;
+    /* border: 1px solid black; */
+    position: relative;
+    background-color: blueviolet;
+    /* min-width: 400px;
+    max-width: 400px;
+    min-height: 600px;
+    max-height: 600px; */
+    margin: 5px;
+    padding: 1rem;
+}
+.poopUp {
+    display: block;
+    display: none;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    /* opacity: 0.5; */
+    width: 90%;
+    height: 90%;
+    overflow:auto;
+    background-color: aqua;
+}
+.buttonPoopWrapper {
+    top: 0;
+    position: sticky;
+    background-color: aqua;
+}
+
+.buttonPoop{
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+    margin-right: .5rem;
+    /* background-color: aquamarine; */
+}
+.pPoopTitle {
+    font-weight: bold;
+}
+
+.pPoopContent {
+    display: block;
+    padding: 5px;
+    /* overflow:auto; */
+}
+
+.show {
+    display: block;
+}
+
+.mainey p{
+    width: 300px;
+}
+/* blur placeholder */
+img[data-src] {
+    filter: blur(.5rem);
+  }
+
+img {
+    width: 300px;
+    border-bottom: 1px solid black ;
+    filter: blur(0rem);
+    transition: filter 0.5s;
+    margin-bottom: 1rem;
+}
+p {
+    padding: 0%;
+    margin: .5rem 0;
+    font-size: .8rem;
+}
+.labelName {
+    font-weight: bolder;
+    color: rgb(217, 217, 47);
+}
+
+.pokeName {
+    font-family:sans-serif;
+    color: white;
+}
+
+.pokeNameInfo {
+    font-weight: 900;
+    font-size: 1.3rem;
+}
+
+
+
+.readmore {
+    height: 200px;
+    overflow: scroll;
+}
+
+.readmoreButton {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    color: lightblue;
+}
+.readmoreButton:hover {
+    font-weight: bold;
+}
+.open {
+    display: block;
+}
+.close {
+    display: none;
+}
+
+
+header, footer {    
+    display: block;
+    max-width: 600px;
+    margin: 0 auto;
+
+    /* background-color: rgb(133, 199, 201); */
+}
