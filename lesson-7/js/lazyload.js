@@ -10,7 +10,7 @@ let myObserver = new IntersectionObserver((myListA, myObserver) => {
         myObserver.unobserve(cupX.target);
     }
     });
-}, {rootMargin: "0px 0px -100px 0px"});
+}, {rootMargin: "0px 0px -200px 0px"});
 
 // make a list of all images with a data source and send that list to myObserver
 document.querySelectorAll('img[data-src]').forEach(img => {myObserver.observe(img) });
