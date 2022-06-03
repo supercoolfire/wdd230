@@ -151,7 +151,7 @@ const app = {
     divCardMain.className = "mainey";
     divCardMain.id = `mainey${pokeData.id}`;
 
-    // the main
+    // picture
     let pictureCardMain = document.createElement("picture");
     divCardMain.append(pictureCardMain);
     pictureCardMain.className = "pictureCardMain";

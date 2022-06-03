@@ -48,6 +48,7 @@ a {
     height: 90%;
     overflow:auto;
     background-color: aqua;
+    z-index: 999;
 }
 .buttonPoopWrapper {
     top: 0;
