@@ -72,6 +72,13 @@ main ul li {
     padding-left: 15px;
     /* font-size: 1.5rem; */
 }
+li img {
+    width: 1rem;
+}
+.pokemonIcon{
+    width: 1rem;
+    display: inline;
+}
 .rapper {
     display: flex;
 }
