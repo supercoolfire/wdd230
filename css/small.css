@@ -5,6 +5,13 @@
     /* outline: 1px dotted red; */
 }
 
+body a {
+    text-decoration: none;
+    color: blue;
+}
+body a:hover {
+color: blue ;
+}
 body {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
@@ -47,8 +54,9 @@ h2 {
     font-size: 1rem;
 }
 
-nav ul li{
+li{
     list-style-type: none;
+    padding: .2rem;
 }
 
 main {
@@ -62,7 +70,7 @@ main ul {
 main ul li {
     list-style-type: none;
     padding-left: 15px;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
 }
 
 footer {
