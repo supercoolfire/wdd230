@@ -148,6 +148,16 @@
     text-align: right;
   }
 
+/* bouncy bounce */
+.arrow {
+  margin-top: -307px;
+  margin-left: -20px;
+}
+/* end of bouncy bounce */
 }
 
 /* end of media query */
+
+
+
+

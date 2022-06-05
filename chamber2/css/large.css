@@ -231,7 +231,17 @@
 
   /*----------- FOOTER --------------*/
 
+  
+
+/* bouncy bounce */
+.arrow {
+  margin-top: -309px;
+  margin-left: -18px;
+}
+/* end of bouncy bounce */
 
 }
 
 /* end of media query */
+
+

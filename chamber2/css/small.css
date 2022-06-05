@@ -14,6 +14,7 @@ html {
 }
 
 :root {
+  --a-active-color: #0000ff;;
   --head-foot-color: rgba(196, 212, 22, 0.326);
   --tagline-color: rgb(0, 0, 0);
   --date-background-color: rgba(243, 250, 116, 0.446);
@@ -35,6 +36,16 @@ html {
   --main-dateBanner-background-color: #0e01ff6a;
   --main-dateBanner-color: #FFF700;
   --section-background-color: rgb(235, 240, 222);
+}
+
+a:focus {
+  outline: 2px solid var(--a-active-color);
+  outline-offset: 5px;
+}
+
+button:focus{
+  box-shadow: 0 0 0 5px var(--a-active-color),
+  0 0 0 10px var(var(--a-active-color));
 }
 
 h2,
@@ -746,6 +757,35 @@ footer a:hover {
   width: 150px;
 }
 
+/* lazyload */
+  /* blur placeholder */
+  img[data-src] {
+    filter: blur(.5rem);
+  }
+  
+  img {
+    filter: blur(0rem);
+    transition: filter 0.5s
+  }
+
+  
+  .fade-in {
+    animation-name: fadeIn;
+    animation-duration: 1.3s;
+    animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+/* end of lazyload */
 
 
 
@@ -753,10 +793,13 @@ footer a:hover {
 
 
 
+/* bouncy bounce */
 .arrow {
   position: absolute;
   text-align: center;
-  margin: -313px 0;
+  margin-top: -311px;
+  margin-left: -20px;
+  width: 229px;
   z-index: 999;
 	background: #88b7d585;
 	border: 4px solid #c2e1f5;
@@ -819,3 +862,4 @@ footer a:hover {
     transform: translateY(-15px);
   }
 }
+/* end of bouncy bounce */

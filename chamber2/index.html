@@ -8,7 +8,7 @@
   <meta name="author" content="Jayser Pilapil">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="rgba(196, 212, 22)">
-  <title>Gas Chamber of Commerce and Industry</title>
+  <title>Home - Gas Chamber of Commerce and Industry</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,11 +29,11 @@
         <figure>
           <img src="images/logo75.webp" alt="logo ut then logi n" srcset="images/logo75.webp 1x,
     images/logo150.webp 2x,
-    images/logo255.webp 3x">
+    images/logo255.webp 3x" loading="lazy">
         </figure>
       </div>
       <section class="headings">
-        <h1>Gas Chamber of Commerce</h1>
+        <h1 class="companyName">Gas Chamber of Commerce</h1>
         <h2 class="m">Dino-sour sauce</h2>
       </section>
     </div>
@@ -97,7 +97,7 @@
     <button id="hamburgerBtn2" class="hamburgerBtn close"><span>&#9776;</span><span>X</span></button>
     <ul id="primaryNav">
       <li class="active"><a href="index.html">Home</a></li>
-      <li><a href="#">Discover</a></li>
+      <li><a href="discover.html">Discover</a></li>
       <li><a href="#">Directory</a></li>
       <li><a href="#">Join</a></li>
       <li><a href="#">Contact</a></li>
@@ -107,29 +107,35 @@
       id="dateBannerClose">❌</button></div>
 
   <main>
-    <div class="placeholder-box lesson6">
+    <!-- <div class="placeholder-box lesson6">
       <picture>
-        <source media="(min-width: 1px) and (max-width: 400px)"
+        <source src="images/lesson6.jpg" media="(min-width: 1px) and (max-width: 400px)"
           srcset="images/heroSrc_400.jpg 1x, images/heroSrc_400_2x.jpg 2x, images/heroSrc_400_3x.jpg 3x">
-        <source media="(min-width: 401px) and (max-width: 650px)"
+        <source src="images/lesson6.jpg" media="(min-width: 401px) and (max-width: 650px)"
           srcset="images/heroSrc_650.jpg 1x, images/heroSrc_650_2x.jpg 2x, images/heroSrc_650_3x.jpg 3x">
-        <source media="(min-width: 651px) and (max-width: 900px)"
+        <source src="images/lesson6.jpg" media="(min-width: 651px) and (max-width: 900px)"
           srcset="images/heroSrc_900.jpg 1x, images/heroSrc_900_2x.jpg 2x, images/heroSrc_900_3x.jpg 3x">
-        <img src="images/heroSrc_1050.jpg" alt="week 6 assignment">
+        <img src="images/lesson6.jpg" data-src="images/heroSrc_1050.jpg" alt="week 6 assignment" loading="lazy">
       </picture>
       <h1>Lesson 6 only</h1>
-    </div>
+    </div> -->
     <div id="wayfind"><span class="invisible">See me if you can</span></div>
 
     <div class="mainGrid">
       <div class="placeholder-box hero">
         <figure id="heroFigure">
-          <img src="images/karuhatan.jpg" alt="town traffic jam" sizes="100vw" srcset="
+          <!-- <img src="images/placeHolder_hero.jpg" srcset="
           images/karuhatan_400.jpg 400w,
           images/karuhatan_650.jpg 650w,
           images/karuhatan_900.jpg 900w,
           images/karuhatan_large.jpg 1050w
-          ">
+          " loading="lazy" sizes="100vw" alt="town traffic jam"> -->
+          <img src="images/placeHolder_hero.jpg" data-src="images/karuhatan_large.jpg" data-srcset="
+          images/karuhatan_400.jpg 400w,
+          images/karuhatan_650.jpg 650w,
+          images/karuhatan_900.jpg 900w,
+          images/karuhatan_large.jpg 1000w
+          " sizes="100vw" alt="town traffic jam">
           <div class="heroWelcome">Welcome Suckers, mining is booming. Don't give up.</div>
           <button class="joinNow rickRoll">Join the chamber now!</button>
         </figure>
@@ -176,7 +182,8 @@
             <h2>Event</h2>
             <!-- event placeholder -->
             <section>
-              <img class="eventImg" src="images/gasDepot.jpg" alt="Gas depot">
+              <img class="eventImg" src="images/placeHolder_gasDepot.jpg" data-src="images/gasDepot.jpg"
+                alt="Gas depot">
               <h2 class="eventOverlay">Old gas depot to be repainted soon</h2>
               <h3>Invitation to bid:</h3>
               <p>download <a href="#">here</a></p>
@@ -225,7 +232,7 @@
             <div class="weather weatherRow">
 
               <div class="arrow bounce">
-                <p class="arrow-p">Hi Cindy,<br>Wind Chill is working fine.
+                <p class="arrow-p">Hi guys,<br>play arround with it.
                   Just change the coordinate.</p>
                 <p class="arrow-p">Antartica:<br><span class="arrow-p-span"> lat = <span
                       class="arrow-p-span-red ">82</span>, lon =
@@ -272,7 +279,7 @@
       <div class="placeholder-box join">
         <h2 id="join">Join</h2>
         <div class="joinContainer">
-          <img src="images/50pOff.jpg" alt="must join">
+          <img src="images/placeHolder_225x225.jpg" data-src="images/50pOff.jpg" alt="must join">
           <div class="join-text-block">
             <h3>50% OFF if you join now!</h3>
           </div>
@@ -287,7 +294,7 @@
         <div class="placeholder-box spot">
           <h2>Tiny spot makes difference</h2>
           <picture>
-            <img src="images/spot1.jpg" alt="spotlight image 1">
+            <img src="images/placeHolder_250x125.jpg" data-src="images/spot1.jpg" alt="spotlight image 1">
           </picture>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, fugit? Lorem ipsum dolor sit amet
             consectetur, adipisicing elit. Dolor quidem nemo ratione facere dolores asperiores? Vel, est
@@ -298,7 +305,7 @@
         <div class="placeholder-box spot">
           <h2>Spot the difference</h2>
           <picture>
-            <img src="images/spot2.jpg" alt="spotlight image 1">
+            <img src="images/placeHolder_250x125.jpg" data-src="images/spot2.jpg" alt="spotlight image 1">
           </picture>
           <p>Spot the difference. Lorem ipsum dsit ar adipi Ducimus, fugit? Lorem ipsum
             dolor sit amet consectetur, adipisicing elit. Autem, nam fuga? Accusamus, explicabo. Natus magnam, nihil
@@ -338,10 +345,12 @@
         <p><a href="https://goo.gl/maps/9iaYvdgLgRP9hn1F6">Link to map</a></p>
       </div>
     </div>
-    <p>&copy; <span id="theYear"> </span> | Chamber | <a class="myName bold" href="../index.html"></a> | WDD 230 Project
+    <p>&copy; <span id="theYear"> </span> | Chamber | <a class="bold" href="../index.html">Jayser Pilapil</a> | WDD 230
+      Project
       |
       <span id="lu"></span></p>
   </footer>
+  <script src="js/lazyload.js"></script>
   <script src="js/script.js"></script>
   <script src="js/windchill.js"></script>
   <script src="js/weather.js"></script>

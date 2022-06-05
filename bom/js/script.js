@@ -73,7 +73,10 @@ function dragElement(spamwindow) {
     pos4 = e.clientY;
     // set the element's new position:
     spamwindow.style.top = (spamwindow.offsetTop - pos2) + "px";
+    if (spamwindow.style.top == "1px") {pos4 = 25}
     spamwindow.style.left = (spamwindow.offsetLeft - pos1) + "px";
+    // console.log("spamwindow.style.top: " + spamwindow.style.top);
+    // console.log("pos4: " + pos4);
   }
 
   function closeDragElement() {

@@ -60,14 +60,14 @@ const app = {
     //clear out the old weather and add the new
     // row.innerHTML = '';
     resp.daily.map((day, idx) => {
-        console.log(day)
+        // console.log(day)
         if (idx <= 0) { //number of days
           let dt = new Date(day.dt * 1000); //timestamp * 1000
           document.getElementById("card-date").textContent = dt.toDateString();
           document.getElementById("card-timeZone").textContent = resp.timezone;
           document.getElementById("card-image").innerHTML = `<img
           src="https://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png"
-          class="card-img-top"
+          class;="card-img-top"
           alt="${day.weather[0].description}"
         />`;
         document.getElementById("card-hotness").textContent = day.temp.max;
