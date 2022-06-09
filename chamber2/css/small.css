@@ -797,8 +797,33 @@ footer a:hover {
   grid-area: demographic;
 }
 
+table{
+  padding: 1rem;
+margin: 1rem;
+}
+tbody{
+  padding: .5rem;
+  border: 1px solid black;
+}
+tr {
+  width: 100%;
+}
+tr:nth-child(even) {
+  background-color: #b9b3f4;
+}
+tr:nth-child(odd) {
+  background-color: #c7c3ea;
+}
+thead th {
+  padding: 1rem;
+  background-color: #5b5bf0;}
+td {padding: .5rem;}
+
 .spotDiscover1 {
   grid-area: spotDiscover1;
+}
+tbody th { 
+  font-weight: bold;
 }
 
 .spotDiscover2 {
