@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description"
-        content="Assignment: Chamber of Commerce: Gas Chamber of Commerce and Industryt for Jayser Pilapil in WDD 230: Web Frontend Development at Brigham Young University - Idaho">
+        content="Assignment: Chamber of Commerce: Gas Chamber of Commerce and Industryt for Jayser Pilapil in WDD 230: Web Frontend Development at Brigham Young University - Idaho, Demographic Data from https://www.philatlas.com/ and other sources">
     <meta name="author" content="Jayser Pilapil">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="rgba(196, 212, 22)">
@@ -113,51 +113,416 @@
 
         <div id="wayfind"><span class="invisible">See me if you can</span></div>
 
-        <div class="mainGrid">
-            <div class="placeholder-box hero">
-                <h2>Gallery</h2>
-                <p> Add a "discover.html" page that, in part, will display at least five images about the city/town.
-                    Each image should have a brief description and should take up only one column in larger views.</p>
-                <p>Make sure the images that you use are optimized for the layout.</p>
-                <p>The images must not load until the user scrolls. Use a lazy loading technique.</p>
-                <p>Incorporate the some CSS property effect when a user hovers over the images in the gallery. This
-                    effect is your choice. Do not apply this effect to the images in the small view.</p>
-                <p>💡 Reference:&nbsp;<a class="external" href="http://codepen.io/blazzard-jason/pen/jBaoLr/"
+        <div class="mainGridDiscovery">
+            <!-- old news -->
+            <div class="placeholdit-box demographic">
+                <h2>Demographic</h2>
+                <div class="populaiton">
+                    <h3>Statistics</h3>
+
+                    <picture class="demoPic">
+                        <img class="demoImg" src="images/placeHolder_300x400.jpg" data-src="images/demo_population.jpg"
+                            alt="population image">
+                    </picture>
+
+                    <h4>Population by age group</h4>
+                    <picture class="demoPic">
+                        <img class="demoImg" src="images/placeHolder_300x400.jpg"
+                            data-src="images/demo_population_pyramid.jpg" alt="population image">
+                    </picture>
+                    <p>Combining age groups together, those aged 14 and below, consisting of the young dependent
+                        population which include infants/babies, children and young adolescents/teenagers, make up an
+                        aggregate of 27.77% (172,289). Those aged 15 up to 64, roughly, the economically active
+                        population and actual or potential members of the work force, constitute a total of 68.79%
+                        (426,788). Finally, old dependent population consisting of the senior citizens, those aged 65
+                        and over, total 3.44% (21,345) in all.</p>
+                    <p>The computed Age Dependency Ratios mean that among the population of Valenzuela, there are 40
+                        youth dependents to every 100 of the working age population; there are 5 aged/senior citizens to
+                        every 100 of the working population; and overall, there are 45 dependents (young and old-age) to
+                        every 100 of the working population.</p>
+                    <p>The median age of 26 indicates that half of the entire population of Valenzuela are aged less
+                        than 26 and the other half are over the age of 26.</p>
+                    <table>
+                        <thead>
+                            <tr title="Click to sort">
+                                <th scope="col">Age group&nbsp;▾</th>
+                                <th scope="col">Population (2015)</th>
+                                <th scope="col">Age group percentage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" data-sorttable_customkey="0">Under 1</th>
+                                <td>10,927</td>
+                                <td>1.76%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">1 to 4</th>
+                                <td>44,994</td>
+                                <td>7.25%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5 to 9</th>
+                                <td>58,939</td>
+                                <td>9.50%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">10 to 14</th>
+                                <td>57,429</td>
+                                <td>9.26%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">15 to 19</th>
+                                <td>60,771</td>
+                                <td>9.80%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">20 to 24</th>
+                                <td>63,791</td>
+                                <td>10.28%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">25 to 29</th>
+                                <td>61,439</td>
+                                <td>9.90%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">30 to 34</th>
+                                <td>54,456</td>
+                                <td>8.78%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">35 to 39</th>
+                                <td>49,424</td>
+                                <td>7.97%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">40 to 44</th>
+                                <td>40,065</td>
+                                <td>6.46%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">45 to 49</th>
+                                <td>33,320</td>
+                                <td>5.37%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">50 to 54</th>
+                                <td>26,871</td>
+                                <td>4.33%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">55 to 59</th>
+                                <td>20,728</td>
+                                <td>3.34%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">60 to 64</th>
+                                <td>15,923</td>
+                                <td>2.57%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">65 to 69</th>
+                                <td>10,036</td>
+                                <td>1.62%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">70 to 74</th>
+                                <td>5,204</td>
+                                <td>0.84%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">75 to 79</th>
+                                <td>3,391</td>
+                                <td>0.55%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" data-sorttable_customkey="80 to 80+">80 and over</th>
+                                <td>2,714</td>
+                                <td>0.44%</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row">Total</th>
+                                <td>620,422</td>
+                                <td>100.00%</td>
+                            </tr>
+                            <tr>
+                                <th colspan="3" scope="row">
+                                    <ul>
+                                        <li><abbr title="Ages 14 and under">Youth</abbr>&nbsp;Dependency
+                                            Ratio:&nbsp;40.37</li>
+                                        <li><abbr title="Ages 65 and over">Old Age</abbr>&nbsp;Dependency Ratio:&nbsp;5
+                                        </li>
+                                        <li>Total Dependency Ratio:&nbsp;45.37</li>
+                                        <li>Median Age:&nbsp;26.09</li>
+                                    </ul>
+                                </th>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+
+                    <picture class="demoPic">
+                        <img class="demoImg" src="images/placeHolder_300x400.jpg" data-src="images/demo_pop_by_age.jpg"
+                            alt="population image">
+                    </picture>
+
+                    <h4>Historical population</h4>
+
+                    <picture class="demoPic">
+                        <img class="demoImg" src="images/placeHolder_300x400.jpg" data-src="images/demo_growth_rate.jpg"
+                            alt="population image">
+                    </picture>
+                    <p>The population grew from 8,183 in 1903 to 714,978 in 2020, an increase of 706,795
+                        people over the course of 117 years. The latest census figures in 2020 denote a positive growth
+                        rate of 3.03%, or an increase of 94,556 people, from the previous population of 620,422 in 2015.
+                    </p>
+
+                    <h4>Household population</h4>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th scope="col">Census date</th>
+                                <th scope="col">Household population</th>
+                                <th scope="col">Number of households</th>
+                                <th scope="col">Average household size</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row"><time datetime="1990-05-01">1990 May&nbsp;1</time></th>
+                                <td>339,786</td>
+                                <td>69,643</td>
+                                <td>4.88</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><time datetime="1995-09-01">1995&nbsp;<abbr
+                                            title="September">Sep</abbr>&nbsp;1</time></th>
+                                <td>436,059</td>
+                                <td>94,377</td>
+                                <td>4.62</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><time datetime="2000-05-01">2000 May&nbsp;1</time></th>
+                                <td>481,047</td>
+                                <td>106,382</td>
+                                <td>4.52</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><time datetime="2007-08-01">2007&nbsp;<abbr
+                                            title="August">Aug</abbr>&nbsp;1</time></th>
+                                <td>568,796</td>
+                                <td>128,802</td>
+                                <td>4.42</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><time datetime="2010-05-01">2010 May&nbsp;1</time></th>
+                                <td>574,840</td>
+                                <td>137,834</td>
+                                <td>4.17</td>
+                            </tr>
+                            <tr>
+                                <th scope="row"><time datetime="2015-08-01">2015&nbsp;<abbr
+                                            title="August">Aug</abbr>&nbsp;1</time></th>
+                                <td>619,324</td>
+                                <td>153,041</td>
+                                <td>4.05</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>The household population in the 2015 Census was 619,324 broken down into 153,041
+                        households or an average of 4.05 members per household.</p>
+                </div>
+
+                <!-- <p>💡 Reference:&nbsp;<a class="external" href="http://codepen.io/blazzard-jason/pen/jBaoLr/"
                         target="_blank" rel="noreferrer noopener">WDD 230: Image Effects<span
-                            class="screenreader-only">&nbsp;(Links to an external site.)</span></a>&nbsp;- codepen.io
-                </p>
+                            class="screenreader-only">&nbsp;(Links to an external site.)</span></a>&nbsp;-
+                    codepen.io
+                </p> -->
+
+                <label for="comment">Cemment:</label>
+                <textarea name="comment" id="comment" cols="30" rows="5"
+                    title="I only use this for grammarly"></textarea>
             </div>
-            <div class="placeholder-box news">
-                <h2>demographic</h2>
-                <p> Include some demographic data which can include statistical information about the city/location. The
-                    design of this page is up to you but stay true to your site plan and the formatting of your home
-                    page content.</p>
-            </div>
-            <div class="eventWeather">
-                <div class="placeholder-box event">
+            <div class="colorizeVisit">
+                <!-- old event -->
+                <div class="placeholdit-box colorize">
+                    <h2>Colorize</h2>
+                    <label>body:
+                        <input type="color" id="colorBody"></label>
+                    <span id="hexColorBody"></span>
+                    <br>
+                    <label>main:
+                        <input type="color" id="colorMain"></label>
+                    <span id="hexColorMain"></span>
+                    <br>
+                    <label>section:
+                        <input type="color" id="colorSection"></label>
+                    <span id="hexColorSection"></span>
+                    <br>
+                    <label>header/footer:
+                        <input type="color" id="colorHeadFoot"></label>
+                    <span id="hexColorHeadFoot"></span>
+                    <br>
+                    <label>Gallery P:
+                        <input type="color" id="colorgalP"></label>
+                    <span id="hexColorgalP"></span>
+                </div>
+                <!-- old weather -->
+                <div class="placeholdit-box visit">
                     <h2>Visits</h2>
                     <p><span class="label">Number of Visits: </span><span class="visits bold"></span></p>
                     <p>Days since last visit <span class="today bold"></span></p>
 
                 </div>
-                <div class="placeholder-box weather">
-                </div>
-            </div>
-            <div class="placeholder-box join">
-
             </div>
 
-            <div class="placeholder-box spotlight">
-                <div class="placeholder-box spot">
-                    <p>&nbsp;Make sure to maintain a proper page weight as per the&nbsp;<a
-                            title=" 230 Web Frontend Development Standards"
-                            href="https://byui.instructure.com/courses/188932/pages/230-web-frontend-development-standards"
-                            data-api-endpoint="https://byui.instructure.com/api/v1/courses/10157/pages/230-web-frontend-development-standards"
-                            data-api-returntype="Page">230 Development Standards</a>&nbsp;list on performance.</p>
-                </div>
-                <div class="placeholder-box spot">
+            <!-- old join -->
+            <!-- <div class="placeholdit-box joint">
+                <h2>nothing</h2>
+            </div> -->
+            <!-- old spot 1 -->
+            <!-- <div class="placeholdit-box spotDiscover1">
+            </div> -->
+            <!-- old spot 2 -->
+            <!-- <div class="placeholdit-box spotDiscover2">
+            </div> -->
 
+            <!-- old hero -->
+            <div class="placeholdit-box gallery">
+                <h2>Gallery</h2>
+                <div class="cardsWrapper">
+                    <div class="cardGallery">
+                        <picture class="floatLeft galPic">
+                            <img class="effects galImgLeft galImg fx1" src="images/placeHolder_300x400.jpg"
+                                data-src="images/gallery_relax.jpg" alt="relax image">
+                        </picture>
+                        <p class="clearfix galP">Whatever you need, from permits to capital, we got you covered and you
+                            can relax all day. Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
+                            laudantium, dignissimos neque ullam numquam quas dolore alias odio mollitia dolorem impedit
+                            asperiores vero beatae obcaecati sunt illum quibusdam illo eaque.</p>
+                    </div>
+
+                    <div class="cardGallery">
+                        <picture class="floatRight galPic">
+                            <img class="effects galImgRight galImg fx2" src="images/placeHolder_300x400.jpg"
+                                data-src="images/gallery_bus.jpg" alt="bus image">
+                        </picture>
+                        <p class="clearfix galP">Ride a bus and save gas. Ride a bike and save money. We promote healthy
+                            alternatives. Are you
+                            tired of walking? get on the bike now on the bicycle lane. Lorem ipsum, dolor sit amet
+                            consectetur adipisicing elit. Ipsum, minus mollitia. Nisi fugiat quia, tempore reiciendis
+                            optio
+                            voluptatem nulla omnis aliquam obcaecati placeat nesciunt nihil sit autem enim totam! Non!
+                        </p>
+
+                    </div>
+
+                    <div class="cardGallery">
+                        <picture class="floatLeft galPic">
+                            <img class="effects galImgLeft galImg" src="images/placeHolder_300x400.jpg"
+                                data-src="images/gallery_lab_equipment.jpg" alt="laboratory image">
+                        </picture>
+                        <p class="clearfix galP">One of the laboratories makes sure that the quality is
+                            beyond
+                            exception.
+                            Lorem ipsum
+                            dolor sit, amet consectetur adipisicing elit. Ipsum quis dolorum quos ea. Cupiditate sed
+                            ipsum
+                            ut natus, rem dicta quam nostrum ad fuga earum nemo libero itaque aliquam soluta.</p>
+
+                    </div>
+                    <div class="cardGallery">
+                        <picture class="floatRight galPic">
+                            <img class="effects galImgRight galImg" src="images/placeHolder_300x400.jpg"
+                                data-src="images/gallery_peoplesPark.jpg" alt="bus image">
+                        </picture>
+                        <p class="clearfix galP">
+                            One of the night attractions is the fountain and the Christmas cone that appear every
+                            season.
+                            Lorem ipsum, dolor sit amet
+                            consectetur adipisicing elit. Ipsum, minus mollitia. Nisi fugiat quia, tempore reiciendis
+                            optio
+                            voluptatem nulla omnis aliquam obcaecati placeat nesciunt nihil sit autem enim totam! Non!
+                        </p>
+                    </div>
+
+                    <div class="cardGallery">
+                        <picture class="floatLeft galPic">
+                            <img class="effects galImgLeft galImg" src="images/placeHolder_300x400.jpg"
+                                data-src="images/gallery_gas_lift.jpg" alt="gaslift image">
+                        </picture>
+                        <p class="clearfix galP">Gas lift in different sizes
+                            Lorem ipsum
+                            dolor sit, amet consectetur adipisicing elit. Ipsum quis dolorum quos ea. Cupiditate sed
+                            ipsum
+                            ut natus, rem dicta quam nostrum ad fuga earum nemo libero itaque aliquam soluta.</p>
+                    </div>
+
+                    <div class="cardGallery">
+                        <picture class="floatRight galPic">
+                            <img class="effects galImgRight galImg" src="images/placeHolder_300x400.jpg"
+                                data-src="images/gallery_town_center.jpg" alt="bus image">
+                        </picture>
+                        <p class="clearfix galP">
+                            Aerial photo of the town center where people go when the need to be in the center of
+                            attraction.
+                            Lorem ipsum, dolor sit amet
+                            consectetur adipisicing elit. Ipsum, minus mollitia. Nisi fugiat quia, tempore reiciendis
+                            optio
+                            voluptatem nulla omnis aliquam obcaecati placeat nesciunt nihil sit autem enim totam! Non!
+                        </p>
+                    </div>
+
+                    <div class="cardGallery">
+                        <picture class="floatLeft galPic">
+                            <img class="effects galImgLeft galImg" src="images/placeHolder_300x400.jpg"
+                                data-src="images/gallery_solar_farm.jpg" alt="alternative energy image">
+                        </picture>
+                        <p class="clearfix galP">
+                            Alternative renewal source of energy. A rice farm retrofitted with solar panels to become a
+                            solar farm is the new trend. Farmers are now planting chemical elements with the symbol Si
+                            and atomic number 14 that are processed into an electrical device that converts the energy
+                            of light directly into electricity yielding profit more than the real plant.
+                            Lorem ipsum
+                            dolor sit, amet consectetur adipisicing elit. Ipsum quis dolorum quos ea. Cupiditate sed
+                            ipsum
+                            ut natus, rem dicta quam nostrum ad fuga earum nemo libero itaque aliquam soluta.</p>
+                    </div>
+
+                    <div class="cardGallery">
+                        <picture class="floatRight galPic">
+                            <img class="effects galImgRight galImg" src="images/placeHolder_300x400.jpg"
+                                data-src="images/gallery_horse.jpg" alt="pump image">
+                        </picture>
+                        <p class="clearfix galP">
+                            It's not a horse, it's not a donkey, it's a giraffe. This is how the mama giraffe teaches
+                            the baby giraffe to eat spaghetti. And the papa giraffe's nose looking around.
+                            Lorem ipsum, dolor sit amet
+                            consectetur adipisicing elit. Ipsum, minus mollitia. Nisi fugiat quia, tempore reiciendis
+                            optio
+                            voluptatem nulla omnis aliquam obcaecati placeat nesciunt nihil sit autem enim totam! Non!
+                        </p>
+                    </div>
+
+                    <div class="cardGallery">
+                        <picture class="floatLeft galPic">
+                            <img class="effects galImgLeft galImg" src="images/placeHolder_300x400.jpg"
+                                data-src="images/gallery_smoke.jpg" alt="smokefigthers image">
+                        </picture>
+                        <p class="clearfix galP">
+                            When there's smoke, there's a fire. When you're hanging out at work, you get fired. Or
+                            burned. Or fired and burned
+                            Lorem ipsum
+                            dolor sit, amet consectetur adipisicing elit. Ipsum quis dolorum quos ea. Cupiditate sed
+                            ipsum
+                            ut natus, rem dicta quam nostrum ad fuga earum nemo libero itaque aliquam soluta.</p>
+                    </div>
                 </div>
+
             </div>
         </div>
     </main>

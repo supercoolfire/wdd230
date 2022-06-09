@@ -14,7 +14,9 @@ html {
 }
 
 :root {
-  --a-active-color: #0000ff;;
+  --body-background-color: #ffffff;
+  --body-color: #131111;
+  --a-active-color: #0000ff;
   --head-foot-color: rgba(196, 212, 22, 0.326);
   --tagline-color: rgb(0, 0, 0);
   --date-background-color: rgba(243, 250, 116, 0.446);
@@ -31,11 +33,12 @@ html {
   --navlink-color: rgb(0, 247, 255);
   --navlink-hover-background-color: rgb(6, 52, 19);
   --navlink-hover-color: rgba(0, 0, 0, 0.3);
-  --main-background-color: rgb(231, 254, 255);
+  --main-background-color: rgb(133, 199, 201);
   --main-head-foot-color: rgb(181, 181, 214);
   --main-dateBanner-background-color: #0e01ff6a;
   --main-dateBanner-color: #FFF700;
   --section-background-color: rgb(235, 240, 222);
+  --galP-background-color: #fdfdf6;
 }
 
 a:focus {
@@ -45,7 +48,7 @@ a:focus {
 
 button:focus{
   box-shadow: 0 0 0 5px var(--a-active-color),
-  0 0 0 10px var(var(--a-active-color));
+  0 0 0 10px var(--a-active-color);
 }
 
 h2,
@@ -53,6 +56,10 @@ h3 {
   margin-top: .5rem;
 }
 
+body {
+  background-color: var(--body-background-color);
+  color: var(--body-color);
+}
 /* anchor, birch tree, alaska, bear brand */
 main a {
   text-decoration: wavy;
@@ -338,7 +345,7 @@ main {
   min-height: 10rem;
   /* border-left: 5px solid lavender;
   border-right: 5px solid lavender; */
-  background-color: rgb(133, 199, 201);
+  background-color: var(--main-background-color);
   min-height: 24rem;
 }
 
@@ -728,6 +735,10 @@ button {
   cursor: pointer;
 }
 
+textarea {
+  width: 100%;
+  padding: .5rem;
+}
 /*----------- FOOTER --------------*/
 footer {
   background-color: var(--head-foot-color);
@@ -755,6 +766,140 @@ footer a:hover {
   border-radius: 1rem;
   padding: .2rem;
   width: 150px;
+}
+
+/* discover page */
+
+.mainGridDiscovery {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "colorizeVisit"
+    "gallery"
+    "demographic"
+    ;
+  gap: .5rem;
+}
+
+.colorizeVisit {
+  grid-area: colorizeVisit;
+}
+
+.joint {
+  grid-area: joint;
+}
+.gallery {
+  grid-area: gallery;
+}
+
+.demographic {
+  grid-area: demographic;
+}
+
+.spotDiscover1 {
+  grid-area: spotDiscover1;
+}
+
+.spotDiscover2 {
+  grid-area: spotDiscover2;
+}
+
+
+.colorize {
+  font-size: .7rem;
+}
+.placeholdit-box {
+  /* border: 1px solid blue; */
+  margin-top: .5rem;
+  padding: .5rem;
+  /* min-height: 5rem; */
+  background-color: var(--section-background-color);
+  border-radius: .3rem;
+} 
+
+.colorizeVisit {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: .5rem;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+
+}
+.colorize {
+  flex-grow: 1;
+}
+
+.gallery {
+  display: block;
+  /* outline: 1px dashed orange; */
+  /* font-size: 1.5rem; */
+}
+
+.floatLeft {
+  float: left;
+  margin-right: 16px;
+  border-right: 8px solid transparent;
+}
+
+.floatRight {
+  float: right;
+  margin-left: 16px;
+  border-left: 8px solid transparent;
+}
+
+.galPic {
+  /* outline: 1px dashed rgb(41, 38, 223); */
+  margin: 0;
+  padding: 0;
+}
+.galImg {
+  outline: 1px solid rgb(18, 19, 18);
+  margin: 0;
+  padding: 0;
+  box-shadow:  10px 10px 15px #a5a89b,
+               -10px -10px 15px #ffffff;
+}
+.galImgLeft {
+  border-radius: 20px 0 0 20px;
+
+}
+.galImgRight {
+  border-radius: 0 20px 20px 0;
+}
+
+.galP {
+  color: black;
+  background: var(--galP-background-color);
+  /* outline: 1px solid rgb(18, 19, 18); */
+  border-radius: 10px;
+  box-shadow:  10px 10px 15px #a5a89b,
+               -10px -10px 15px #ffffff;
+  padding: .5rem;
+}
+.visitMessage {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.demoPic{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.demoImg {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* end of discover page */
+
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* lazyload */
@@ -787,12 +932,6 @@ footer a:hover {
   }
 /* end of lazyload */
 
-
-
-
-
-
-
 /* bouncy bounce */
 .arrow {
   position: absolute;
@@ -812,7 +951,7 @@ footer a:hover {
 	height: 0;
 	width: 0;
 	position: absolute;
-	pointer-events: none;
+	/* pointer-events: none; */
 }
 
 .arrow:after {

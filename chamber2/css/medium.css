@@ -148,6 +148,85 @@
     text-align: right;
   }
 
+
+  /*----------- Discover --------------*/
+  
+.cardsWrapper {
+  display: flex;  
+  position: relative;
+  max-width: 100%;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  /* outline: 1px solid green; */
+}
+
+  .cardGallery {
+    margin: 0 auto;
+    position: relative;
+    /* outline: 1px dashed violet; */
+    padding: .5rem 0;
+    display: flex;
+    flex-direction: column;  
+    align-items: flex-start; 
+    width: 300px;
+  }
+  
+  
+.colorizeVisit {
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  gap: .5rem;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+
+}
+
+.effects {
+  transition: transform .2s;
+}
+.floatLeft {
+  float: unset;
+  border-right: unset;
+}
+
+.floatRight {
+  float: unset;
+  border-left: unset;
+}
+
+.galImg {
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  border: 0;
+  border-radius: 20px 20px 0 0 ;
+  /* width: 100%; */
+}
+.galImg:hover {
+  z-index: 999;
+  -moz-transform: scale(1.2);
+-webkit-transform: scale(1.2);
+-o-transform: scale(1.2);
+-ms-transform: scale(1.2);
+transform: scale(1.2);
+}
+ .fx1:hover {
+  clip-path: polygon(13% 92%, 13% 92%, 38% 84%, 38% 84%, 9% 65%, 9% 65%, 9% 54%, 9% 54%, 19% 46%, 19% 46%, 22% 33%, 22% 33%, 32% 27%, 32% 27%, 46% 15%, 46% 15%, 24% 2%, 24% 2%, 95% 4%, 95% 4%, 92% 16%, 92% 16%, 72% 16%, 72% 16%, 62% 25%, 62% 28%, 99% 25%, 99% 25%, 99% 44%, 99% 44%, 52% 37%, 52% 37%, 57% 54%, 57% 54%, 78% 48%, 78% 48%, 98% 63%, 98% 67%, 96% 76%, 96% 76%, 77% 97%, 77% 97%, 12% 99%, 12% 99%);
+ }
+ 
+ .fx2:hover {
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+ }
+
+.galP {
+  max-width: 300px;
+  margin: 0;
+  border-radius: 0 0 20px 20px;
+}
+  /*----------- End of Discover --------------*/
+  
 /* bouncy bounce */
 .arrow {
   margin-top: -307px;

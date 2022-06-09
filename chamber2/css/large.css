@@ -1,5 +1,5 @@
 /* 64em is also 1028px (if basefont is 16px) */
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 1030px) {
 
   header,
   .dateWrapper,
@@ -227,6 +227,99 @@
   .window-body pre {
     margin: -8px
   }
+
+
+  /*----------- discover --------------*/
+  
+  .mainGridDiscovery {
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: fit-content(100%);
+    grid-template-areas:
+      "colorizeVisit colorizeVisit"
+      "demographic gallery"
+      /* "spotDiscover2 gallery gallery" */
+      /* "demographic demographic demographic" */
+      ;
+    gap: .5rem;
+    max-width: 100%;
+    grid-auto-rows: minmax(min-content, max-content);
+  }
+  .gallery {
+    display: block;
+  }
+  .cardsWrapper {
+    display: block; 
+    width: 90%;
+  }
+  .cardGallery {
+    width: 100%;
+    display: block;
+  }
+  
+.colorizeVisit {
+  display: flex;
+  position: relative;
+  flex-direction: row-reverse;
+  gap: .5rem;
+  margin: 0;
+  padding: 0;
+  align-items: stretch;
+
+}
+
+.floatLeft {
+  float: left;
+  margin-right: 16px;
+  border-right: 8px solid transparent;
+}
+
+.floatRight {
+  float: left;
+  margin-right: 16px;
+  border-right: 8px solid transparent;
+}
+
+.galImg {
+  border-radius: 20px 0 0 20px;
+}
+
+
+.galP {
+  border-radius: 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 1rem;
+  padding-right: 1rem;
+}
+/* .effects:hover {
+  z-index: 999;
+  -webkit-transform: scale(1.5);
+  transform: scale(1.5); 
+}*/
+/* .floatLeft:hover {
+  z-index: 999;
+  -moz-transform: scale(1.5);
+-webkit-transform: scale(1.5);
+-o-transform: scale(1.5);
+-ms-transform: scale(1.5);
+transform: scale(1.5);
+} */
+
+.demoPic:hover {
+  z-index: 999;
+}
+.demoImg:hover {
+
+  z-index: 999;
+  -moz-transform: scale(1.5) translateX(50px);
+-webkit-transform: scale(1.5) translateX(50px);
+-o-transform: scale(1.5) translateX(50px);
+-ms-transform: scale(1.5) translateX(50px);
+transform: scale(1.5) translateX(50px);
+}
+  /*----------- end of discover --------------*/
 
 
   /*----------- FOOTER --------------*/
