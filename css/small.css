@@ -119,6 +119,33 @@ img {
     padding: .5rem;
 }
 
+.monkey::before {
+    content: "🙈 ";
+}
+.monkey:hover::before {
+    content: "🙉 ";
+}
+.monkey:active::before {
+    content: "🍌 ";
+}
+.bone::before {
+    content: "🍗 ";
+}
+.bone:hover::before {
+    content: "🍖 ";
+}
+.bone:active::before {
+    content: "🦴 ";
+}
+.lip::before {
+    content: "👄 ";
+}
+.lip:hover::before {
+    content: "👅 ";
+}
+.lip:active::before {
+    content: "🍦 ";
+}
 @media screen and (max-width: 700px) {
     header {
         position: relative;
