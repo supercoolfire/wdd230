@@ -132,5 +132,5 @@ function sortSection() {
 
 window.onload = () => {
   document.getElementById("search").addEventListener("keyup", findIt);
-  document.querySelector("#sortBy").addEventListener("keyup", sortSection());
+  document.querySelector("#sortBy").addEventListener("change", sortSection());
 }
