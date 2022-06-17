@@ -8,8 +8,8 @@ const pro = {
       let response = await fetch(URL);
       if (response.ok) {
         let data = await response.json();
-        // console.log("%c getProphet data", "color: red");
-        // console.log(data);
+        console.log("%c getProphet data", "color: red");
+        console.log(data);
         pro.displayProphets(data);
       } else {
         throw Error(response.statusText);
@@ -55,15 +55,31 @@ const pro = {
       divy.appendChild(lengthP);
       lengthP.textContent = `Length as prophet: ${prophet.length}`;
 
+      const nth = function(d) {
+        if (d > 3 && d < 21) return 'th';
+        switch (d % 10) {
+          case 1:  return "st";
+          case 2:  return "nd";
+          case 3:  return "rd";
+          default: return "th";
+        }
+      }
+      order = prophet.order;
+      console.log("%c order", "color: red")
+      console.log(order)
+
+      let orderP = document.createElement('p');
+      divy.appendChild(orderP);
+      orderP.textContent = `${order}${nth(order)} Latter-day President`;
+
       let childrenP = document.createElement('p');
       divy.appendChild(childrenP);
       childrenP.textContent = `Number of children: ${prophet.numofchildren}`;
 
-
       let portrait = document.createElement('img');
       divy.appendChild(portrait);
       portrait.setAttribute('src', prophet.imageurl);
-      portrait.setAttribute('alt', `Portait of ${prophet.name} ${prophet.lastname}`);
+      portrait.setAttribute('alt', `${prophet.name} ${prophet.lastname} - ${order}${nth(order)} Latter-day President`);
       portrait.setAttribute('loading', 'lazy');
 
 
