@@ -8,8 +8,8 @@ const pro = {
       let response = await fetch(URL);
       if (response.ok) {
         let data = await response.json();
-        console.log("%c getProphet data", "color: red");
-        console.log(data);
+        // console.log("%c getProphet data", "color: red");
+        // console.log(data);
         pro.displayProphets(data);
       } else {
         throw Error(response.statusText);
@@ -65,8 +65,8 @@ const pro = {
         }
       }
       order = prophet.order;
-      console.log("%c order", "color: red")
-      console.log(order)
+      // console.log("%c prophet order", "color: red")
+      // console.log(order)
 
       let orderP = document.createElement('p');
       divy.appendChild(orderP);
