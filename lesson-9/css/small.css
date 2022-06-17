@@ -1,0 +1,471 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    margin: 2px;
+}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Ubuntu, sans-serif;
+}
+
+:root {
+    --body-background-color: #ffffff;
+    --body-color: #131111;
+    --a-active-color: #0000ff;
+    --head-foot-color: rgba(196, 212, 22, 0.326);
+    --tagline-color: rgb(0, 0, 0);
+    --date-background-color: rgba(243, 250, 116, 0.446);
+    --date-color: rgb(55, 74, 10);
+    --navbackground-color: rgb(87, 74, 74);
+    --hamburgerBtn-background-color: transparent;
+    --hamburgerBtn-color: #5600f6;
+    --hamburgerBtn-color-shadow: rgb(255, 255, 255) 0px 0px 5px, #FFF 0px 0px 10px, #FFF 0px 0px 15px, #5600f6 0px 0px 20px, #5600f6 0px 0px 30px, #5600f6 0px 0px 40px, #5600f6 0px 0px 50px, #5600f6 0px 0px 75px;
+    --hamburgerBtn-active-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #49ff18, 0 0 30px #49FF18, 0 0 40px #49FF18, 0 0 55px #49FF18, 0 0 75px #49ff18;
+    --hamburgerBtn-hover-background-color: rgb(0, 255, 26);
+    --hamburgerBtn-hover-color: rgb(121, 104, 20);
+    --navlink-active-background-color: rgba(0, 0, 0, 0.2);
+    --navlink-active-color: #fff;
+    --navlink-color: rgb(0, 247, 255);
+    --navlink-hover-background-color: rgb(6, 52, 19);
+    --navlink-hover-color: rgba(0, 0, 0, 0.3);
+    --main-background-color: rgb(133, 199, 201);
+    --main-head-foot-color: rgb(181, 181, 214);
+    --main-dateBanner-background-color: #0e01ff6a;
+    --main-dateBanner-color: #FFF700;
+    --section-background-color: rgb(235, 240, 222);
+    --galP-background-color: #fdfdf6;
+}
+
+a:focus {
+    outline: 2px solid var(--a-active-color);
+    outline-offset: 5px;
+}
+
+button:focus {
+    box-shadow: 0 0 0 5px var(--a-active-color),
+        0 0 0 10px var(--a-active-color);
+}
+
+h2,
+h3 {
+    margin-top: .5rem;
+}
+
+body {
+    background-color: var(--body-background-color);
+    color: var(--body-color);
+}
+
+/* anchor, birch tree, alaska, bear brand */
+main a {
+    text-decoration: wavy;
+    font-weight: 900;
+    color: #0c0078;
+}
+
+main a:hover {
+    color: #0000ff;
+}
+
+main a:active {
+    color: #0000ff;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+main a:visited {
+    color: #4f0335;
+}
+
+
+header,
+.dateWrapper,
+nav,
+main,
+footer {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* body rules here */
+
+/* header rulse here */
+header {
+    background-color: var(--head-foot-color);
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    margin: 0 auto;
+    /* border-bottom: 1px solid #bbb; */
+    border-radius: 20px 20px 0 0;
+}
+
+.headerWrapper {
+    display: flex;
+    align-items: center;
+    justify-items: left;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    /* margin-left: 1rem; */
+    /* border: 1px solid black; */
+    border-radius: 1rem;
+    padding: .2rem;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+.headings {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-left: .5rem;
+}
+
+.headings h1 {
+    font-size: 1.5rem;
+}
+
+header h2 {
+    margin: 0;
+    font-weight: normal;
+}
+
+.m {
+    letter-spacing: 1pt;
+    color: var(--tagline-color);
+    font-weight: 700;
+    font-size: .8rem;
+}
+
+.social {
+    /* margin-right: 1.5rem; */
+    display: none;
+}
+
+.social svg {
+    width: 25px;
+    height: auto;
+}
+
+.invisible {
+    /*add tis to image links*/
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+}
+
+header a {
+    text-decoration: none;
+    color: #000;
+}
+
+.dateWrapper {
+    background-color: var(--head-foot-color);
+    margin-top: 0;
+    /* border: 1px solid gray; */
+}
+
+.date {
+    text-align: center;
+    padding: .8rem 2vw;
+    color: var(--date-color);
+}
+
+/* navigation rules here */
+.hamburgerBtn {
+    margin: .2rem 2vw;
+    /* make the button look less buttonish */
+    background-color: var(--hamburgerBtn-background-color);
+    border: none;
+    font-size: 2rem;
+    /*google recommends 48 tall, apple 44 tall*/
+    color: var(--hamburgerBtn-color);
+    text-shadow: var(--hamburgerBtn-color-shadow)
+        /*soften the contrast*/
+}
+
+.hamburgerBtn:hover {
+    background-color: var(--hamburgerBtn-hover-background-color);
+    color: var(--hamburgerBtn-hover-color);
+    border-radius: 3rem;
+}
+
+.hamburgerBtn:active {
+    text-shadow: var(--hamburgerBtn-active-shadow)
+}
+
+nav {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    position: absolute;
+    top: 38px;
+    left: 17px;
+    width: 276px;
+    text-align: center;
+    background-color: var(--navbackground-color);
+    padding-bottom: 0;
+    margin-bottom: 0;
+    box-shadow: 0 -5px 30px 2px rgb(64, 59, 59);
+    z-index: 999;
+    transition: visibility 1s, height 1s;
+}
+
+nav.move {
+    visibility: visible;
+    height: 280px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    /*make entire width clickable*/
+    padding: .8rem 2vw;
+    /*make finger fit*/
+    text-decoration: none;
+    /*remove underline*/
+    color: var(--navlink-color);
+    /*almonst black*/
+    border-top: 1px solid var(--navlink-color);
+}
+
+nav ul li.active a {
+    /*must place before hover*/
+    background-color: var(--navlink-active-background-color);
+    color: var(--navlink-color);
+    border-radius: 20px;
+}
+
+nav ul li a:hover {
+    background-color: var(--navlink-hover-color);
+    border-radius: 20px;
+}
+
+nav ul {
+    display: none;
+}
+
+nav ul.open {
+    display: block;
+}
+
+.close {
+    display: none;
+}
+
+#hamburgerBtn span:nth-child(1) {
+    display: block;
+}
+
+#hamburgerBtn span:nth-child(2) {
+    display: none;
+}
+
+#hamburgerBtn.open span:nth-child(1) {
+    display: none;
+}
+
+#hamburgerBtn.open span:nth-child(2) {
+    display: block;
+}
+
+
+#hamburgerBtn2.close span:nth-child(1) {
+    display: block;
+}
+
+#hamburgerBtn2.close span:nth-child(2) {
+    display: none;
+}
+
+#hamburgerBtn2 span:nth-child(1) {
+    display: none;
+}
+
+#hamburgerBtn2 span:nth-child(2) {
+    display: block;
+}
+
+/* main rules here */
+main {
+    display: block;
+    margin-top: 0;
+    min-height: 10rem;
+    /* border-left: 5px solid lavender;
+    border-right: 5px solid lavender; */
+    background-color: var(--main-background-color);
+    min-height: 24rem;
+}
+
+div#dateBanner {
+    overflow: hidden;
+    background-color: var(--main-dateBanner-background-color);
+    color: var(--main-dateBanner-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: .5rem 2%;
+    text-align: center;
+    z-index: 99999;
+    font-weight: 600;
+}
+
+.showme {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+
+
+/*----------- TABLE BUILD --------------*/
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+
+table {
+    display: block;
+    position: relative;
+    width: 274px;
+    border-collapse: collapse;
+    background: linear-gradient(145deg, #8ed5d7, #78b3b5);
+    box-shadow:  16px 16px 32px #507779,
+                 -16px -16px 32px #baffff;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+caption {
+    /* background-color: rgb(127, 185, 194); */
+    background: linear-gradient(145deg, #72a7af, #88c6d0);
+    padding: .5rem;
+    font-weight: 900;
+    font-size: 1.6rem;
+    width: 274px;
+}
+
+thead {
+    background-color: rgb(98 140 166);
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+
+thead tr {
+    background-color: rgb(98, 140, 166);
+}
+
+tbody {
+    border: 1px solid white;
+    background-color: rgb(231, 240, 237);
+}
+
+tbody tr:nth-child(5) th:first-child {
+    font-style: italic;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: rgb(231, 255, 237);
+}
+
+th, td {
+    padding: .5rem;
+    text-align: center;
+    border: 1px solid lightgray;
+}
+
+tbody tr:nth-child(4) td:last-child {
+    background-color: rgb(98, 140, 166);
+    color: white;
+}
+
+
+tfoot {
+    background-color: #7fb9c2;
+    font-size: .8rem;
+}
+
+[scope="row"] {
+    font-weight: 500;
+}
+
+
+/*----------- end of TABLE BUILD --------------*/
+
+/*----------- FOOTER --------------*/
+footer {
+    background-color: var(--head-foot-color);
+    text-align: center;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+
+
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* lazyload */
+/* blur placeholder */
+img[data-src] {
+    filter: blur(.5rem);
+}
+
+img {
+    filter: blur(0rem);
+    transition: filter 0.5s
+}
+
+
+.fade-in {
+    animation-name: fadeIn;
+    animation-duration: 1.3s;
+    animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* end of lazyload */

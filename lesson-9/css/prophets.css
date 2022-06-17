@@ -1,0 +1,46 @@
+
+.cards {
+    display: flex;
+    justify-content: center;  
+    flex-direction: row;  
+    flex-wrap: wrap; 
+}
+
+main section {
+    width: 320px;
+    background-color: white;
+    padding: .5rem;
+    margin: 1rem;
+    box-shadow:  16px 16px 32px #507779,
+                 -16px -16px 32px #baffff;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;  
+    flex-wrap: wrap; 
+}
+select, input {
+    padding: .5rem;
+    margin: .5rem
+}
+
+option {
+    background-color: aqua;
+}
+
+.what {
+    font-weight: bold;
+}
+
+p {
+    font-size: .8rem;    
+}
+
+img {
+    width: 100%;
+}
+
+/* animation */
+
+/* end of animation */
