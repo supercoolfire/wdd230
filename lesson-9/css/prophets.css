@@ -1,4 +1,8 @@
 
+svg {
+    max-width: 100%;
+}
+
 .cards {
     display: flex;
     justify-content: center;  
@@ -21,12 +25,14 @@ main section {
     flex-wrap: wrap; 
     gap: .5rem;
     z-index: 10;
+    outline: 1px dashed red;
 }
 
 .sorting {
     background-color: white;
     border-radius: .5rem;
     padding: 0 .5rem;
+    overflow:auto;
 }
 select {
     padding: .5rem;
@@ -38,7 +44,11 @@ select {
   justify-content: center;
   align-items: center;
 }
-
+label:nth-of-type(0) {
+    font-size: 1rem;
+    background-color: transparent;
+    border: 0;
+}
 label {
     border-radius: 8px 0 0 8px;
     border: 0;
