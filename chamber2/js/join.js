@@ -43,12 +43,12 @@ const joints = {
         // membership.addEventListener("click", console.log("%c membership:", "color: red", membership.defaultValue));
         
         
-        const membership = document.querySelectorAll('input[name="membership"]:checked');
+        // const membership = document.querySelectorAll('input[name="membership"]:checked');
         
-        membership.addEventListener("change", () => {
-            console.log("%c membership", "color: red", membership.value);
-            sessionStorage.setItem("membership", membership.value);
-        });
+        // membership.addEventListener("change", () => {
+        //     console.log("%c membership", "color: red", membership.value);
+        //     sessionStorage.setItem("membership", membership.value);
+        // });
         
         
         const formDate = document.getElementById("formDate");
