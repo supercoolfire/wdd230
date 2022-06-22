@@ -15,7 +15,7 @@ const thePage = {
       dateStyle: "full"
     }).format(myDate);
     const dayNumber = myDate.getDay();
-    console.log(dayNumber);
+    // console.log(dayNumber);
 
     // calling functions
     thePage.today(fulldate);
@@ -29,16 +29,24 @@ const thePage = {
     if (document.querySelector("nav") && active === "Home") {
       thePage.spam();
     }
+
     thePage.footer(myYear);
     thePage.poopUpBanner(dayNumber);
 
     thePage.localStore_age(myDate);
 
-    thePage.localStore_ageColor();
+    
+    if (document.querySelector("nav") && active === "Discover") {
+      thePage.localStore_ageColor();
+    }
 
-    thePage.hover();
+    if (document.querySelector("nav") && active === "Join") {
+      thePage.form();
+    }
 
-    thePage.magic();
+    // thePage.hover();
+
+    // thePage.magic();
   },
   toggleMenu: () => {
     console.log("it worked");
@@ -145,10 +153,10 @@ const thePage = {
       const dateBanner = document.getElementById("dateBanner");
       if (dayNumber === 1 || dayNumber === 2) {
         dateBanner.classList.add("showme");
-        console.log("today is day 6");
+        // console.log("today is day 6");
       } else {
         dateBanner.classList.add("hide");
-        console.log("today is not day 6");
+        // console.log("today is not day 6");
       }
       const dateBannerClose = document.getElementById("dateBannerClose");
       dateBannerClose.addEventListener("click", () => dateBanner.style.display = "none");
@@ -345,6 +353,20 @@ function populateStorage() {
 
     // console.log("%c input values : ", "color: red")
     // console.log(colorBody.value, colorMain.value, colorSection.value, colorHeadFoot.value) 
+  },
+  form: () => {
+      const fname = document.getElementById("fname");
+      const lname = document.getElementById("lname");
+      const male = document.getElementById("email");
+      
+      fname.addEventListener("change", changing);
+      lname.addEventListener("change", changing);
+      
+      function changing() {
+          // console.log(fname.value);
+          // console.log(lname.value);
+          male.value = `${fname.value}.${lname.value}@snailmail.com`;
+      }
   },
   hover: () => {
     const imgTag = document.querySelector("img").src;

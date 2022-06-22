@@ -322,6 +322,19 @@ transform: scale(1.5) translateX(50px);
   /*----------- end of discover --------------*/
 
 
+  /*----------- JOIN --------------*/
+  form label.sbs {
+    padding: .4rem 0;
+  }
+
+  .benefitsWrapper {
+    background-color: white;
+    margin: .5rem;
+  }
+  /*----------- end of JOIN --------------*/
+
+
+
   /*----------- FOOTER --------------*/
 
   
@@ -332,6 +345,9 @@ transform: scale(1.5) translateX(50px);
   margin-left: -18px;
 }
 /* end of bouncy bounce */
+
+
+
 
 }
 

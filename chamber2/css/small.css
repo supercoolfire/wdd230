@@ -11,6 +11,7 @@ html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: 'Quicksand', sans-serif;
+  /* outline: 1px dashed red; */
 }
 
 :root {
@@ -925,28 +926,34 @@ tbody th {
 /* end of discover page */
 
 /*----------- JOIN PAGE --------------*/
-.joinFieldset {
+.joinForm {
+  margin-top: -2rem;
+}
+
+form fieldset {
   margin: 2rem 0;
   background-color: white;
   border: 1px solid blue;
   border-radius: 10px;
   padding: .5rem 2%;
+  border-top: .5rem solid blue;
 }
-.joinLegend {
-  background-color: pink;
-  color: blue;
-  margin: 0 rem;
-  padding: 0 .5rem;
+form legend {
+  background-color: blue;
+  color: white;
+  padding: .5rem;
+  border-radius: .5rem;
 }
 
-.joinLegend label, form div {
+form label.top, form div {
   display: block;
   padding-top: 1rem;
-  color: red;
-  font-size: .8rem;
+  /* color: red; */
+  /* font-size: .8rem; */
+  margin: 1rem 0;
 }
 
-.top input, .top select {
+form label.top input, form labe.top select, textarea, .submitBtn {
   -webkit-appearance: none;
   display: block;
   font-size: 1rem;
@@ -959,6 +966,18 @@ tbody th {
   background-color: rgba(0, 0, 0, .1);
 }
 
+.sbs {
+  display: block;
+  padding: .75rem;
+  color: #555;
+}
+
+.sbs:hover, .submitBtn:hover, input:focus, textarea:focus {
+  border-radius: 1rem;
+  background: linear-gradient(145deg, #ffffff, #e6e6e6);
+  box-shadow:  7px 7px 14px #858585,
+             -7px -7px 14px #ffffff;
+}
 
 .top input:required {
   border-left: 6px solid red;
@@ -968,10 +987,8 @@ tbody th {
   border-left: 6px solid green;
 }
 
-.sbs {
-  display: block;
-  padding: .75rem;
-  color: #555;
+input::placeholder, textarea::placeholder {
+  color: rgba(85, 0, 255, 0.4);
 }
 
 .submitBtn {
@@ -980,14 +997,41 @@ tbody th {
   color: white;
   border-radius: 1rem;
   padding: .75rem 1.5rem;
-  margin: 0 0 2rem 1.5rem;
+  /* margin: 0 0 2rem 1.5rem; */
+  margin: 0 auto 3rem auto;
   width: 96%;
   max-width: 28rem;
+  cursor: pointer;
 }
+
+
 input:focus, select:focus {
 background-color: rgba(51, 255, 0, 0.541);
 outline: 2px dashed #3e00fa71;
 outline-offset: 2px;
+}
+
+.benefits {
+  margin-top: -2rem;
+  margin-left: .5rem;
+}
+
+.benefitsFieldset {
+  margin: 2rem 0;
+  background-color: white;
+  border: 1px solid blue;
+  border-radius: 10px;
+  padding: .5rem 2%;
+  border-top: .5rem solid blue;
+}
+.joinLegend {
+  background-color: blue;
+  color: white;
+  padding: .5rem;
+  border-radius: .5rem;
+}
+#errorMessage {
+  color: red;
 }
 
 /*----------- end of JOIN PAGE --------------*/

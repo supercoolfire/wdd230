@@ -98,7 +98,7 @@
     <ul id="primaryNav">
       <li><a href="index.html">Home</a></li>
       <li><a href="discover.html">Discover</a></li>
-      <li><a href="#">Directory</a></li>
+      <li><a href="directory.html">Directory</a></li>
       <li class="active"><a href="join.html">Join</a></li>
       <li><a href="#">Contact</a></li>
     </ul>
@@ -109,78 +109,102 @@
   <main>
     <div id="wayfind"><span class="invisible">See me if you can</span></div>
 
-    <form class="joinForm" action="thankyou.html" method="get">
-      <fieldset class="joinFieldset">
-        <legend class="joinLegend">Applicant Information</legend>
-        <label class="top" for="fname">First Name* <input type="text" name="fname" id="fname" placeholder="Chimp"
-            title="Do you have a name?" required></label>
-        <label class="top" for="lname">Last Name* <input type="text" name="lname" id="lname" placeholder="panzie"
-            title="Do yo have a last name" required></label>
-        <label class="top" for="position">business position title<input type="text" name="position" id="position"
-            placeholder="panzie" title="Standing"></label>
-        <label class="top" for="email">Email* <input type="email" name="email" id="email" placeholder="gmail@hotmail.cc"
-            title="We are living in the future now. Everone have an email" required></label>
-        <label class="top" for="phone">Phone <input type="tel" name="phone" id="phone" placeholder="555sardines"
-            title="Im not gonna call you"></label>
-        <label class="top" for="bName">business name/title<input type="text" name="bName" id="bName"
-            placeholder="panzie" title="You must have business"></label>
-        <div>Membership Level</div>
-        <label class="sbs" for="mLevel1"><input type="radio" name="mLevel" id="mLevel1" value="beginner"
-            title="You've just started"> Non Profit</label>
-        <label class="sbs" for="mLevel2"><input type="radio" name="mLevel" id="mLevel2" value="beginner"
-            title="You've just started"> Bronze Membership</label>
-        <label class="sbs" for="mLevel3"><input type="radio" name="mLevel" id="mLevel3" value="beginner"
-            title="You've just started"> Silver Membership</label>
-        <label class="sbs" for="mLevel4"><input type="radio" name="mLevel" id="mLevel4" value="beginner"
-            title="You've just started"> Gold Membership</label>
+    <div class="joinWrap">
+      <form class="joinForm" action="thankyou.html" method="get">
+        <fieldset class="joinFieldset">
+          <legend class="joinLegend">Applicant Information</legend>
+          <label class="top" for="fname">First Name* <input type="text" name="fname" id="fname" placeholder="Chimp"
+              title="Do you have a name?" required></label>
+          <label class="top" for="lname">Last Name* <input type="text" name="lname" id="lname" placeholder="panzie"
+              title="Do yo have a last name" required></label>
 
-        <label class="top" for="url">Website <input type="url" name="url" id="url" placeholder="http://"
-            title="You have a website? That's awesome/"></label>
-      </fieldset>
-      <fieldset>
-        <legend>Course Information</legend>
-        <div>Audience</div>
-        <label class="sbs" for="audience1"><input type="radio" name="audience" id="audience1" value="beginner"
-            title="You've just started"> beginner</label>
-        <label class="sbs" for="audience2"><input type="radio" name="audience" id="audience2" value="Intermediate"
-            title="You are in the middle of soething"> Intermediate</label>
-        <label class="sbs" for="audience3"><input type="radio" name="audience" id="audience3" value="Advanced"
-            title="You are way in the future"> Advanced</label>
+          <label class="top" for="email">Email* <input type="email" name="email" id="email"
+              placeholder="gmail@hotmail.cc" title="We are living in the future now. Everone have an email"
+              required></label>
+          <label class="top" for="phone">Phone <input type="tel" name="phone" id="phone" placeholder="555sardines"
+              title="Im not gonna call you"></label>
 
-        <div>Softare Need</div>
-        <label class="sbs" for="editing"><input type="checkbox" name="editing" id="editing" value="yes"
-            title="Erase, replace, embrace new face"> Photo Editing</label>
-        <label class="sbs" for="code"><input type="checkbox" name="code" id="code" value="yes" title="Secret code">
-          Coding</label>
-        <label class="sbs" for="process"><input type="checkbox" name="process" id="process" value="yes"
-            title="Intel pentium I"> Preprocessor</label>
-        <label class="sbs" for="client"><input type="checkbox" name="client" id="client" value="yes"
-            title="Transfer file from the other side of the world "> FTP Client</label>
-      </fieldset>
+        </fieldset>
 
-      <fieldset>
-        <legend>Funding</legend>
-        <label class="top" for="dating">Application Completion Date<input type="date" name="dating" id="dating"
-            title="When is your birthday"></label>
-        <label class="top" for="subject">Course Subject
-          <select name="subject" id="subject" title="Probably not science">
-            <option value="" class="nish">-Please Select- &#9662;</option>
-            <option value="software">Software Development</option>
-            <option value="creative">Create Professional</option>
-            <option value="info">Information Technology</option>
-            <option value="data">Data Professional</option>
-            <option value="construction">Construction</option>
-            <option value="manufacturing">Manufacturing</option>
-            <option value="business">Business Professional</option>
-            <option value="security">Cyber Insecurity</option>
-          </select>
-        </label>
-        <label class="top" for="authors">How Many Authors?<input type="number" name="authors" id="authors"></label>
-      </fieldset>
+        <fieldset class="joinFieldset">
+          <legend class="joinLegend">Business Type and Position</legend>
+          <label class="top" for="bName">Business Name*<input type="text" name="bName" id="bName"
+              placeholder="Monkey Business" title="You must have business name" required></label>
+          <label class="top" for="position">Business Position Title<p id="errorMessage"></p><input type="text"
+              name="position" id="position" placeholder="" title="You could be hannging upside down on a tree"></label>
+          <label class="top" for="description">Business description
+            <textarea name="textarea" id="description"
+              placeholder="Bla bla bla black sheep have you any wool? Yes sir yes sir Three bags full."></textarea></label>
+        </fieldset>
 
-      <input type="submit" value="Propose My Course" class="submitBtn">
+        <fieldset class="joinFieldset">
+          <legend class="joinLegend">Membership Levels</legend>
+          <label class="sbs"><input type="radio" name="membership" value="NP Membership"> NP Membership
+            (Non-Profit)</label>
+          <label class="sbs"><input type="radio" name="membership" value="Bronze Membership"> Bronze Membership</label>
+          <label class="sbs"><input type="radio" name="membership" value="Silver Membership"> Silver Membership</label>
+          <label class="sbs"><input type="radio" name="membership" value="Gold Membership"> Gold Membership</label>
+        </fieldset>
 
-    </form>
+
+        <input type="hidden" id="formDate" name="date" value="CurrentTime">
+        <input type="hidden" id="fromTtime" name="time" value="CurrentDate">
+
+        <label for="submitBtn">
+          <input type="submit" id="submitBtn" value="Propose My Course" class="submitBtn"></label>
+
+      </form>
+
+      <section class="benefits">
+
+        <fieldset class="benefitsFieldset">
+          <legend class="joinLegend">Membership Benefits</legend>
+          <article>
+            <h2>NP Membership</h2>
+            <ul>
+              <li>It's like Gold Membership but is FREE.</li>
+              <li>This membership is for non profit organizations only.</li>
+            </ul>
+          </article>
+          <article>
+            <h2>Bronze Membership</h2>
+            <ul>
+              <li>$400 annual fee.</li>
+              <li>Free jackets on every event.</li>
+              <li>Discounts on selected items</li>
+              <li>Cup noodles with your branding are sold separately.</li>
+              <li>Ribbon cuttings advertized to newspapers.</li>
+              <li>Marketing through various channels.</li>
+            </ul>
+          </article>
+          <article>
+            <h2>Silver Membership</h2>
+            <ul>
+              <li>$950 annual fee</li>
+              <li>Free jackets and pants on every event</li>
+              <li>More discounts on selected items</li>
+              <li>Cup noodles with your branding are sold separately.</li>
+              <li>Ribbon cuttings advertized to newspapers and radios.</li>
+              <li>To include all benefits of Business Builder as well as&hellip;</li>
+              <li>Marketing&nbsp;through social media and communitiy events</li>
+              <li>More influence</li>
+            </ul>
+          </article>
+          <article>
+            <h2>Gold Membership</h2>
+            <ul>
+              <li>$3000</li>
+              <li>Free jackets, pants, and hats on every event</li>
+              <li>Most discounts on selected items</li>
+              <li>Cup noodles with your branding is free.</li>
+              <li>Ribbon cuttings advertized to newspapers and radios and TVs.</li>
+              <li>Marketing and promote business in all possible ways.</li>
+              <li>Most&nbsp;influence</li>
+            </ul>
+          </article>
+        </fieldset>
+      </section>
+    </div>
 
   </main>
   <footer>
@@ -209,6 +233,7 @@
   </footer>
   <script src="js/lazyload.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/join.js"></script>
   <!-- <script src="js/windchill.js"></script> -->
   <!-- <script src="js/weather.js"></script> -->
   <!-- <script src="js/news.js"></script> -->

@@ -114,6 +114,26 @@
   }
 
 
+  /*----------- JOIN --------------*/
+  .joinWrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: fit-content(100%);
+    grid-template-areas:
+      "form benefits"
+      ;
+
+  }
+  form {
+    grid-area: form;
+  }
+  .benefits {
+    grid-area: benefits;
+  }
+
+  /*----------- end of JOIN --------------*/
+
+
   /*----------- FOOTER --------------*/
   footer * {
     outline: 0;
