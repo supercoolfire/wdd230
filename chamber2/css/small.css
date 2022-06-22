@@ -974,7 +974,6 @@ form label.top input, form labe.top select, textarea, .submitBtn {
 
 .sbs:hover, .submitBtn:hover, input:focus, textarea:focus {
   border-radius: 1rem;
-  background: linear-gradient(145deg, #ffffff, #e6e6e6);
   box-shadow:  7px 7px 14px #858585,
              -7px -7px 14px #ffffff;
 }
