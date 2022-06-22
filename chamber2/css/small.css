@@ -972,6 +972,10 @@ form label.top input, form labe.top select, textarea, .submitBtn {
   color: #555;
 }
 
+.submitBtn {
+  font-weight: bold;
+}
+
 .sbs:hover, .submitBtn:hover, input:focus, textarea:focus {
   border-radius: 1rem;
   box-shadow:  7px 7px 14px #858585,
@@ -1005,7 +1009,7 @@ input::placeholder, textarea::placeholder {
 
 
 input:focus, select:focus {
-background-color: rgba(51, 255, 0, 0.541);
+background-color: rgba(51, 4, 181, 0.541);
 outline: 2px dashed #3e00fa71;
 outline-offset: 2px;
 }
