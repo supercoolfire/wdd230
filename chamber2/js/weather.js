@@ -36,21 +36,21 @@ const app = {
       .catch(console.err);
   },
   getLocation: (ev) => {
-    let opts = {
+    let optns = {
       enableHighAccuracy: true,
       timeout: 1000 * 10, //10 seconds
       maximumAge: 1000 * 60 * 5, //5 minutes
     };
-    navigator.geolocation.getCurrentPosition(app.ftw, app.wtf, opts);
+    navigator.geolocation.getCurrentPosition(app.success, app.fail, optns);
   },
-  ftw: (position) => {
+  success: (position) => {
     //got position
     document.getElementById('latitude').value =
       position.coords.latitude.toFixed(2);
     document.getElementById('longitude').value =
       position.coords.longitude.toFixed(2);
   },
-  wtf: (err) => {
+  fail: (err) => {
     //geolocation failed
     console.error(err);
   },

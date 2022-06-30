@@ -1008,7 +1008,7 @@ input::placeholder, textarea::placeholder {
 }
 
 
-input:focus, select:focus {
+form input:focus, form select:focus {
 background-color: rgba(51, 4, 181, 0.541);
 outline: 2px dashed #3e00fa71;
 /* outline-offset: 2px; */
