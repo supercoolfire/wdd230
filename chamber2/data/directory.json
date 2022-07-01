@@ -1,0 +1,76 @@
+{
+    "directory": [
+        {
+            "name" : "Baby Shark Lending",
+            "slogan" : "When money talks, everybody listen.",
+            "address": "5328/67, Hardhayan Singh Road, Gas City",
+            "phone": "1(800)LOANSHARK",
+            "imageurl": "images/placeHolder_225x225.jpg",
+            "website": "http://www.loanshark.com"
+        },
+        {
+            "name" : "Gauntlet Holdings Inc.",
+            "slogan" : "Securing stock pile of company",
+            "address": "Puerta Nueva 39, Gas City",
+            "phone": "+1-202-555-0186",
+            "imageurl": "images/placeHolder_225x225.jpg",
+            "website": "http://www.riddlewater.com"
+        },
+        {
+            "name" : "Rest To Run Restaurant",
+            "slogan" : "",
+            "address": "456-1200, Honcho, Gas City",
+            "phone": "+1-202-555-0165",
+            "imageurl": "images/placeHolder_225x225.jpg",
+            "website": "http://www.geostrip.com"
+        },
+        {
+            "name" : "Monney's Laundry Shop",
+            "slogan" : "",
+            "address": "55-11, Gajwa-dong, Gas City",
+            "phone": "+1-202-555-0110",
+            "imageurl": "images/placeHolder_225x225.jpg",
+            "website": "http://www.oceanwater.com"
+        },
+        {
+            "name" : "komdatdotcom",
+            "slogan" : "",
+            "address": "1478 Wood Duck Drive, Gas City",
+            "phone": "+1-202-555-0162",
+            "imageurl": "images/placeHolder_225x225.jpg",
+            "website": "http://www.komdat-dotkom.com"
+        },
+        {
+            "name" : "Choke Beverages",
+            "slogan" : "The only chocolate cola",
+            "address": "3589 Lakeland Terrace, Gas City",
+            "phone": "+1-202-555-0174",
+            "imageurl": "images/placeHolder_225x225.jpg",
+            "website": "http://www.chokeacola.com"
+        },
+        {
+            "name" : "Cobblerone Tannery",
+            "slogan" : "",
+            "address": "2074 Marion Street, Gas City",
+            "phone": "+1-202-555-0103",
+            "imageurl": "images/placeHolder_225x225.jpg",
+            "website": "http://www.cobblerone.com"
+        },
+        {
+            "name" : "Mon's Key Business",
+            "slogan" : "The only locksmith in town",
+            "address": "1706 White Avenue, Gas City",
+            "phone": "+1-202-555-0105",
+            "imageurl": "images/placeHolder_225x225.jpg",
+            "website": "http://www.monkeybusines.com"
+        },
+        {
+            "name" : "Time Machine",
+            "slogan" : "We will bring you to the future",
+            "address": "3995 Rainbow Road, Gas City",
+            "phone": "+1-202-555-0148",
+            "imageurl": "images/placeHolder_225x225.jpg",
+            "website": "http://www.tripplecore.com"
+        }
+    ]
+}

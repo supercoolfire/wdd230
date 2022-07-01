@@ -421,6 +421,8 @@ tfoot {
 
 /*----------- end of TABLE BUILD --------------*/
 
+wireframe-img {width: 100%;}
+
 /*----------- FOOTER --------------*/
 footer {
     background-color: var(--head-foot-color);

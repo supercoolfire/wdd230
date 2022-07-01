@@ -133,6 +133,17 @@
 
   /*----------- end of JOIN --------------*/
 
+  
+/*----------- DIRECTORY --------------*/
+	.list .directory-section div img {
+		display: none;
+	}
+
+  .list .directory-section div {
+    justify-content:space-between;
+  }
+/*----------- end of DIRECTORY --------------*/
+
 
   /*----------- FOOTER --------------*/
   footer * {

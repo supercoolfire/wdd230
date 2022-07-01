@@ -8,8 +8,7 @@ const pro = {
       let response = await fetch(URL);
       if (response.ok) {
         let data = await response.json();
-        // console.log("%c getProphet data", "color: red");
-        // console.log(data);
+        console.log("%c getProphet data", "color: red", data);
         pro.displayProphets(data);
       } else {
         throw Error(response.statusText);

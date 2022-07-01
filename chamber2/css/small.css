@@ -740,6 +740,9 @@ textarea {
   width: 100%;
   padding: .5rem;
 }
+
+
+
 /*----------- FOOTER --------------*/
 footer {
   background-color: var(--head-foot-color);
@@ -1039,6 +1042,154 @@ outline: 2px dashed #3e00fa71;
 
 /*----------- end of JOIN PAGE --------------*/
 
+/*----------- DIRECTORY --------------*/
+
+.directory-menu {
+  margin: 1rem auto;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 2rem;
+  background-color: white;
+  text-align: center;
+  max-width: 100%;
+  font-weight: 900;
+  font-size: 1rem;
+  
+  display: flex;
+  justify-content: space-between;  
+  flex-wrap: wrap; 
+  gap: 5px;
+  align-items: center; 
+}
+
+/* toggle */
+
+/* eo toggle */
+
+
+.directory-menu select, .directory-menu input {
+  padding: 1rem;
+  border-radius: .5rem;
+  background-color: #d8f8cf;
+}
+.directory-menu label select option{
+  background-color: #bfffad;
+}
+
+.directory-menu button {
+  padding: .3rem;
+  background-color: #d8f8cf;
+  border-radius: .5rem;
+}
+
+#search {
+  max-width: 100%;
+}
+
+.directory-menu #grid {
+  display: none;
+}
+/* .directory-menu .searching {
+  background-color: white;
+}
+.directory-menu input {
+  border: 0;
+} */
+
+.directory-section {
+  margin: 1rem 0.75rem 1.5rem .75rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .8rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  background-color: white;
+  box-shadow:  8px 8px 8px #507779,
+  -8px -8px 8px #baffff;
+  
+}
+
+.directory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* .list .directory-section {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+} */
+
+.list .directory-section div {
+  display: flex;
+  justify-content:center;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+  padding: 1rem 0;
+}
+
+
+.list .directory-section:nth-of-type(even) {
+  background-color: beige;
+}
+
+.list .directory-section:nth-of-type(odd) {
+  background-color: #fffff4;
+}
+
+
+.list .directory-section h2 {
+  font-size: 1.2rem;
+  /* max-width: 200px; */
+}
+
+/* directory address */
+/* .list .directory-section div p, .list .directory-section div a {
+  max-width: 100%;
+} */
+
+.directory-grid .directory-section div {
+  background-color: white;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+.directory-grid .directory-section div > * {
+  margin: 1rem;
+  /* text-align: center; */
+}
+
+.list div p, .list div a, .directory-grid .directory-section div a {
+  display: block;
+  padding: .5rem 0;
+}
+
+.list .directory-section div > * {
+  margin: 0 8px;
+  text-align: left;
+}
+
+.list .directory-section div img {
+  display: none;
+  /* smaller viewports only */
+}
+
+
+
+.directory-section div img {
+  height: 75px;
+  max-width: 100%;
+  /* Images are jerks - Seattle*/
+}
+
+
+/* I will move to medium later */
+@media (max-width: 700px) {
+  .list .directory-section div img {
+    display: block;
+  }
+}
+/*----------- end of DIRECTORY --------------*/
 
 .clearfix:after {
   content: "";
@@ -1146,3 +1297,4 @@ outline: 2px dashed #3e00fa71;
   }
 }
 /* end of bouncy bounce */
+
