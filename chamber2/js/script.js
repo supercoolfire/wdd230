@@ -452,7 +452,7 @@ const thePage = {
         img.setAttribute("class", "directory-img");
         // img.setAttribute("src", contact.imageurl);
         img.setAttribute("src", "images/placeHolder_225x225.jpg");
-        img.setAttribute("alt", `${contact.name} image`);
+        img.setAttribute("alt", `${contact.name} logo`);
         img.setAttribute("loading", "lazy");
         div.append(img);
     
