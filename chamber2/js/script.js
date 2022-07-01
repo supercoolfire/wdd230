@@ -20,8 +20,8 @@ const thePage = {
     // calling functions
     thePage.today(fulldate);
 
-    
-    if (document.querySelector(".active")){
+
+    if (document.querySelector(".active")) {
       thePage.activeCustomize(active);
     }
 
@@ -35,13 +35,17 @@ const thePage = {
 
     thePage.localStore_age(myDate);
 
-    
+
     if (document.querySelector("nav") && active === "Discover") {
       thePage.localStore_ageColor();
     }
 
     if (document.querySelector("nav") && active === "Join") {
       thePage.form();
+    }
+
+    if (document.querySelector("nav") && active === "Directory") {
+      thePage.directory();
     }
 
     // thePage.hover();
@@ -225,17 +229,17 @@ const thePage = {
         .replace(/[\s+]/g, '')
         .split(',');
       let a = parseFloat(values[3] || 1),
-          r = Math.floor(a * parseInt(values[0]) + (1 - a) * 255),
-          g = Math.floor(a * parseInt(values[1]) + (1 - a) * 255),
-          b = Math.floor(a * parseInt(values[2]) + (1 - a) * 255);
+        r = Math.floor(a * parseInt(values[0]) + (1 - a) * 255),
+        g = Math.floor(a * parseInt(values[1]) + (1 - a) * 255),
+        b = Math.floor(a * parseInt(values[2]) + (1 - a) * 255);
       return "#" +
         ("0" + r.toString(16)).slice(-2) +
         ("0" + g.toString(16)).slice(-2) +
         ("0" + b.toString(16)).slice(-2);
     }
-    
+
     let myHex = hexify('rgba(255,255,255,0.6)'); // "#f5faf3"
-    
+
     console.log(myHex);
 
     // get colors
@@ -266,20 +270,45 @@ const thePage = {
 
     console.log("%c colorBody", "color: red")
     console.log(colorBody)
-    
+
     // prepare output
     const hexColorBody = document.querySelector("#hexColorBody");
     const hexColorMain = document.querySelector("#hexColorMain");
     const hexColorSection = document.querySelector("#hexColorSection");
     const hexColorHeadFoot = document.querySelector("#hexColorHeadFoot");
     const hexColorgalP = document.querySelector("#hexColorgalP");
-    
+
     let configs = [];
-    configs.push({ element: "body", color: `${bodyHex}`, inputId: "colorBody", outputId: "hexColorBody"});
-    configs.push({ element: "main", color: `${mainHex}`, inputId: "colorMain", outputId: "hexColorMain"});
-    configs.push({ element: ".placeholder-box", color: `${sectionHex}`, inputId: "colorSection", outputId: "hexColorSection"});
-    configs.push({ element: "HeadFoot", color: `${HeadFootHex}`, inputId: "colorHeadFoot", outputId: "hexColorHeadFoot"});
-    configs.push({ element: "galP", color: `${galPHex}`, inputId: "colorgalP", outputId: "hexColorgalP"});
+    configs.push({
+      element: "body",
+      color: `${bodyHex}`,
+      inputId: "colorBody",
+      outputId: "hexColorBody"
+    });
+    configs.push({
+      element: "main",
+      color: `${mainHex}`,
+      inputId: "colorMain",
+      outputId: "hexColorMain"
+    });
+    configs.push({
+      element: ".placeholder-box",
+      color: `${sectionHex}`,
+      inputId: "colorSection",
+      outputId: "hexColorSection"
+    });
+    configs.push({
+      element: "HeadFoot",
+      color: `${HeadFootHex}`,
+      inputId: "colorHeadFoot",
+      outputId: "hexColorHeadFoot"
+    });
+    configs.push({
+      element: "galP",
+      color: `${galPHex}`,
+      inputId: "colorgalP",
+      outputId: "hexColorgalP"
+    });
     // alert(window.getComputedStyle(main).backgroundColor);
 
     // console.log("%cConfigs: ", "color: red")
@@ -295,27 +324,48 @@ const thePage = {
         setStycles(elemento.element, elemento.inputId, elemento.color, elemento.outputId);
       }
     }); */
-/* 
-    function populateStorage(element, input, color, outputId) {
-      localStorage.setItem(input, color);
-      setStyles(element, input, color, outputId);
-    } */
-    
-if (!localStorage.getItem("body")) {	populateStorage()} else {setStyles()}
-if (!localStorage.getItem("main")) {	populateStorage()} else {setStyles()}
-if (!localStorage.getItem("section")) {	populateStorage()} else {setStyles()}
-if (!localStorage.getItem("HeadFoot")) {	populateStorage()} else {setStyles()}
-if (!localStorage.getItem("galP")) {	populateStorage()} else {setStyles()}
+    /* 
+        function populateStorage(element, input, color, outputId) {
+          localStorage.setItem(input, color);
+          setStyles(element, input, color, outputId);
+        } */
+
+    if (!localStorage.getItem("body")) {
+      populateStorage()
+    } else {
+      setStyles()
+    }
+    if (!localStorage.getItem("main")) {
+      populateStorage()
+    } else {
+      setStyles()
+    }
+    if (!localStorage.getItem("section")) {
+      populateStorage()
+    } else {
+      setStyles()
+    }
+    if (!localStorage.getItem("HeadFoot")) {
+      populateStorage()
+    } else {
+      setStyles()
+    }
+    if (!localStorage.getItem("galP")) {
+      populateStorage()
+    } else {
+      setStyles()
+    }
 
 
-function populateStorage() {
-	localStorage.setItem("body", colorBody.value);
-	localStorage.setItem("main", colorMain.value);
-	localStorage.setItem("section", colorSection.value);
-	localStorage.setItem("HeadFoot", colorHeadFoot.value);
-	localStorage.setItem("galP", colorgalP.value);
-	setStyles();
-}
+    function populateStorage() {
+      localStorage.setItem("body", colorBody.value);
+      localStorage.setItem("main", colorMain.value);
+      localStorage.setItem("section", colorSection.value);
+      localStorage.setItem("HeadFoot", colorHeadFoot.value);
+      localStorage.setItem("galP", colorgalP.value);
+      setStyles();
+    }
+
     function setStyles() {
       let colorBody = localStorage.getItem("body");
       let colorMain = localStorage.getItem("main");
@@ -342,31 +392,177 @@ function populateStorage() {
       document.documentElement.style.setProperty('--galP-background-color', colorgalP);
     }
 
-    
-    
-    colorBody.addEventListener("input", populateStorage);   
-    colorMain.addEventListener("input", populateStorage);    
-    colorSection.addEventListener("input", populateStorage);    
-    colorHeadFoot.addEventListener("input", populateStorage);    
-    colorgalP.addEventListener("input", populateStorage);    
-     
+
+
+    colorBody.addEventListener("input", populateStorage);
+    colorMain.addEventListener("input", populateStorage);
+    colorSection.addEventListener("input", populateStorage);
+    colorHeadFoot.addEventListener("input", populateStorage);
+    colorgalP.addEventListener("input", populateStorage);
+
 
     // console.log("%c input values : ", "color: red")
     // console.log(colorBody.value, colorMain.value, colorSection.value, colorHeadFoot.value) 
   },
   form: () => {
-      const fname = document.getElementById("fname");
-      const lname = document.getElementById("lname");
-      const male = document.getElementById("email");
-      
-      fname.addEventListener("change", changing);
-      lname.addEventListener("change", changing);
-      
-      function changing() {
-          // console.log(fname.value);
-          // console.log(lname.value);
-          male.value = `${fname.value}.${lname.value}@snailmail.com`;
+    const fname = document.getElementById("fname");
+    const lname = document.getElementById("lname");
+    const male = document.getElementById("email");
+
+    fname.addEventListener("change", changing);
+    lname.addEventListener("change", changing);
+
+    function changing() {
+      // console.log(fname.value);
+      // console.log(lname.value);
+      male.value = `${fname.value}.${lname.value}@snailmail.com`;
+    }
+  },
+  directory: () => {
+    const URL = 'data/directory.json'
+    const cards = document.querySelector('.directory-grid');
+    window.dataProperty = []
+    
+    async function getContacts(URL) {
+      let response = await fetch(URL);
+      if (response.ok) {
+        let data = await response.json();
+        window.data = data;
+    
+        // console.log("%c getContacts data\n", "color: blue; font-weight: bold; font-size: 1rem", data)
+        showElements(data.directory);
+      } else {
+        throw Error(response.statusText)
       }
+    }
+    getContacts(URL);
+    
+    function showElements(data) {
+      document.querySelector('.directory').innerHTML = ""
+      console.log("%c showElements data\n", "color: blue", data)
+      data.forEach(contact => {
+        let card = document.createElement('section');
+        card.setAttribute("class", "directory-section");
+        cards.append(card);
+    
+        let div = document.createElement('div');
+        card.append(div);
+    
+        let img = document.createElement('img');
+        img.setAttribute("class", "directory-img");
+        // img.setAttribute("src", contact.imageurl);
+        img.setAttribute("src", "images/placeHolder_225x225.jpg");
+        img.setAttribute("alt", `${contact.name} image`);
+        img.setAttribute("loading", "lazy");
+        div.append(img);
+    
+    
+        let h2 = document.createElement('h2');
+        h2.innerHTML = contact.name;
+        div.append(h2);
+    
+        // let p = document.createElement('p');
+        // p.innerHTML = contact.slogan;
+        // p.setAttribute("class", "directory-slogan");
+        // div.append(p);
+    
+        let pa = document.createElement('p');
+        pa.innerHTML = contact.address;
+        div.append(pa);
+    
+        let pp = document.createElement('a');
+        pp.textContent = contact.phone;
+        pp.setAttribute("href", `tel:${contact.phone}`)
+        div.append(pp);
+    
+        let pw = document.createElement('a');
+        pw.textContent = contact.website;
+        pw.setAttribute("href", contact.website)
+        div.append(pw);
+    
+      });
+    }
+    
+    
+    // end of tae
+    
+    const gridbutton = document.querySelector("#grid");
+    const listbutton = document.querySelector("#list");
+    const display = document.querySelector(".directory-grid");
+    
+    // The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
+    // my answer: arrow function procces quicker than defined function
+    gridbutton.addEventListener("click", () => {
+      display.classList.add("directory-grid");
+      display.classList.remove("list");
+      gridbutton.style.display = "none";
+      listbutton.style.display = "block";
+    });
+    
+    listbutton.addEventListener("click", () => {
+      display.classList.add("list");
+      display.classList.remove("directory-grid");
+      gridbutton.style.display = "block";
+      listbutton.style.display = "none";
+    });
+    
+    window.onload = () => {
+      // search
+      document.getElementById("search").addEventListener("keyup", () => {
+        let input, filter, a, i, txtValue;
+        input = document.getElementById("search");
+        filter = input.value.toLocaleLowerCase();
+        section = document.getElementById("cards").getElementsByTagName("section");
+        for (i = 0; i < section.length; i++) {
+          a = section[i].getElementsByTagName("div")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toLocaleLowerCase().indexOf(filter) > -1) {
+            section[i].style.display = "";
+          } else {
+            section[i].style.display = "none";
+          }
+        }
+      });
+    
+      // sort
+      document.getElementById("sortBy").addEventListener("change", sortCard);
+    
+      sortByProperty = document.getElementById("sortByProperty");
+      sortByProperty.addEventListener("change", sortCard);
+      name = sortByProperty.value;
+    
+      function sortCard() {
+        // console.log("%c onload data: ", "color: red", window.data)
+    
+        let sortie = document.querySelector("#sortBy").value;
+        console.log("%c onload sortie: ", "color: red", sortie)
+        let sortieProperty = document.querySelector("#sortByProperty").value;
+        console.log("%c onload sortie: ", "color: red", sortieProperty)
+        newArray = window.data.directory
+        // console.log("%c onload newArray: ", "color: red", newArray)
+        switch (sortie) {
+          case "Ascending":
+            sorted = newArray.sort((a, b) => (a[sortieProperty] > b[sortieProperty] ? 1 : -1));
+            console.log("%c onload sorted\n", "color: blue", sorted)
+            if (sortie && sortieProperty) {
+              showElements(sorted);
+            }
+            break;
+          case "Descending":
+            sorted = newArray.sort((a, b) => (a[sortieProperty] < b[sortieProperty] ? 1 : -1));
+            console.log("%c onload sorted\n", "color: blue", sorted)
+            if (sortie && sortieProperty) {
+              showElements(sorted);
+            }
+            break;
+          default:
+            getContacts(URL);
+            break;
+        }
+      }
+    
+    
+    }
   },
   hover: () => {
     const imgTag = document.querySelector("img").src;
@@ -393,25 +589,25 @@ function populateStorage() {
     </div>
   </div>`;
 
-    
-    
+
+
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
       // you're at the bottom of the page
       divy.style.visibility = 'visible';
       console.log("%cimgTag", "color: red")
       console.log(imgTag)
 
-  }
-  
+    }
+
   },
   magic: () => {
-    
+
     // window.onscroll = function(ev) {
     //   if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
     //       // you're at the bottom of the page
     //     frmFeedbackElement.style.visibility = 'visible';
     //   }
   }
-  
+
 }
 thePage.init();
