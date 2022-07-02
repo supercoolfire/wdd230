@@ -1228,7 +1228,9 @@ outline: 2px dashed #3e00fa71;
 /* end of lazyload */
 
 /* bouncy bounce */
+
 .arrow {
+  display: none;
   position: absolute;
   text-align: center;
   margin-top: -311px;
