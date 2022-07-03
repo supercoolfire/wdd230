@@ -144,6 +144,32 @@
   }
 /*----------- end of DIRECTORY --------------*/
 
+/*----------- CONTACT --------------*/
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "contact-form contact-board"
+    "contact-map contact-board"
+    "contact-info contact-board"
+    ;
+  gap: 1rem;
+}
+.contact-info {
+  grid-area: contact-info;
+}
+.contact-map {
+  grid-area: contact-map;
+}
+.contact-form {
+  grid-area: contact-form;
+}
+.contact-board {
+  grid-area: contact-board;
+}
+/*----------- end of CONTACT --------------*/
+
+
 
   /*----------- FOOTER --------------*/
   footer * {

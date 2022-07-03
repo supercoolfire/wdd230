@@ -956,7 +956,7 @@ form label.top, form div {
   margin: 1rem 0;
 }
 
-form label.top input, form labe.top select, textarea, .submitBtn {
+.joinForm label.top input, .joinForm label.top select, #joinDescription, .submitBtn {
   -webkit-appearance: none;
   display: block;
   font-size: 1rem;
@@ -1190,6 +1190,81 @@ outline: 2px dashed #3e00fa71;
   }
 }
 /*----------- end of DIRECTORY --------------*/
+
+/*----------- CONTACT --------------*/
+
+
+
+
+.contact-us {
+margin: 0;
+}
+
+.contact-board div {
+  padding: 1rem;
+}
+
+.contact-board div:nth-of-type(even) {
+  background-color: #dae5bd;
+}
+
+.contact-board div:nth-of-type(odd) {
+  background-color: #d1d6c4;
+}
+
+#iframed {
+  width: 100%;
+  height: 400px;
+}
+
+.contact-us {
+  display: flex;    
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  flex-direction: column; 
+  flex-wrap: wrap; 
+  align-content: space-around;
+}
+
+.contact-us label {
+  width: 90%;
+  max-width: unset;
+}
+.contact-us * > * {
+  -webkit-appearance: none;
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  border: 1px solid rgb(153, 153, 153);
+  border-radius: 4px;
+  padding: .75rem;
+  color: #555;
+}
+/* .contactForm label.top input, .contactForm label.top select, #contactComment, .submitBtn {
+  -webkit-appearance: none;
+  display: block;
+  font-size: 1rem;
+  border: 1px solid rgb(153, 153, 153);
+  border-radius: 4px;
+  padding: .75rem;
+  color: #555;
+  width: 100%;
+  max-width: 28rem;
+  background-color: rgba(0, 0, 0, .1);
+} */
+
+.submitBtn2 {
+  border: none;
+  background-color: rgb(182, 28, 28);
+  color: rgb(255, 255, 255);
+  border-radius: 1rem;
+  padding: .75rem 1.5rem;
+  margin: 0;
+  /* width: 96%; */
+  /* max-width: 28rem; */
+  cursor: pointer;
+}
+/*----------- end of CONTACT --------------*/
 
 .clearfix:after {
   content: "";

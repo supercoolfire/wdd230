@@ -1,4 +1,4 @@
-const app = {
+  const app = {
   init: () => {
     document.getElementById('latitude').addEventListener('change', app.fetchWeather);
     document.getElementById('longitude').addEventListener('change',app.fetchWeather);
