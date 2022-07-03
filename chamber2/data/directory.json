@@ -29,7 +29,7 @@
             "person": "Catguocaun Mechthild Agnarsson",
             "email": "thurston@comcast.net",
             "position": "Real Estate Agent",
-            "slogan" : "",
+            "slogan" : "No need to travel abroad to taste continental cuisine",
             "address": "456-1200, Honcho, Gas City",
             "phone": "+1-202-555-0165",
             "imageurl": "images/placeHolder_225x225.jpg",
@@ -41,7 +41,7 @@
             "person": "Ilona Govad Rana",
             "email": "mleary@me.com",
             "position": "Desktop publisher",
-            "slogan" : "",
+            "slogan" : "Where money always comes out clean",
             "address": "55-11, Gajwa-dong, Gas City",
             "phone": "+1-202-555-0110",
             "imageurl": "images/placeHolder_225x225.jpg",
@@ -130,7 +130,7 @@
             "phone": "901-344-0659",
             "imageurl": "images/placeHolder_225x225.jpg",
             "website": "http://www.dayrep.com",
-            "membership": "Silver"
+            "membership": "Bronze"
         },
         {
             "name" : "Gleason Group",

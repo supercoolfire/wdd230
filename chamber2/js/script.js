@@ -28,6 +28,7 @@ const thePage = {
     // spam
     if (document.querySelector("nav") && active === "Home") {
       thePage.spam();
+      thePage.homie();
     }
 
     thePage.footer(myYear);
@@ -55,6 +56,110 @@ const thePage = {
     // thePage.hover();
 
     // thePage.magic();
+  },
+  homie: () => {
+    const URL = 'data/directory.json'
+    const cards = document.querySelector('.contact-board');
+    
+    async function getContacts(URL) {
+      let response = await fetch(URL);
+      if (response.ok) {
+        let data = await response.json();
+    
+        // console.log("%c getContacts data\n", "color: blue; font-weight: bold; font-size: 1rem", data)
+        showElements(data.directory);
+      } else {
+        throw Error(response.statusText)
+      }
+    }
+    getContacts(URL);
+    
+    function showElements(data) {
+      
+      console.log("%c homie data", "color: red", data)
+      
+      // spot 1
+      spot1 = document.querySelector('.spot:nth-of-type(1)');
+      spot1.innerHTML = ""
+      const goldilocks = data.filter(member => member.membership.toLocaleLowerCase() == "gold");
+      const leprechaun = goldilocks[Math.floor(Math.random() * goldilocks.length)];
+      console.log("%c filtered leprechaun", "color: red", leprechaun)
+
+      let h2 = document.createElement('h2');
+      h2.textContent = "Featured Gold member";
+      spot1.append(h2);
+  
+      let h3 = document.createElement('h3');
+      h3.textContent = leprechaun.name;
+      spot1.append(h3);
+  
+      let p = document.createElement('p');
+      p.textContent = leprechaun.slogan;
+      spot1.append(p);
+      
+      let picture = document.createElement('picture');
+      spot1.append(picture);
+    
+      let img = document.createElement('img');
+      img.setAttribute("class", "directory-img");
+      // img.setAttribute("src", leprechaun.imageurl);
+      img.setAttribute("src", "images/placeHolder_225x225.jpg");
+      img.setAttribute("alt", `${leprechaun.name} logo`);
+      img.setAttribute("loading", "lazy");
+      picture.append(img);
+  
+      let pp = document.createElement('a');
+      pp.textContent = leprechaun.phone;
+      pp.setAttribute("href", `tel:${leprechaun.phone}`)
+      spot1.append(pp);
+      
+      let pa = document.createElement('a');
+      pa.textContent = leprechaun.website;
+      pa.setAttribute("href", leprechaun.website)
+      spot1.append(pa);
+      
+      // spot 2
+      spot2 = document.querySelector('.spot:nth-of-type(2)');
+      spot2.innerHTML = ""
+      const silverilocks = data.filter(member => member.membership.toLocaleLowerCase() == "silver");
+      const vampire = silverilocks[Math.floor(Math.random() * silverilocks.length)];
+      console.log("%c filtered vampire", "color: red", vampire)
+
+      let h22 = document.createElement('h2');
+      h22.textContent = "Featured Silver member";
+      spot2.append(h22);
+  
+      let h32 = document.createElement('h3');
+      h32.textContent = vampire.name;
+      spot2.append(h32);
+  
+      let p2 = document.createElement('p');
+      p2.textContent = vampire.slogan;
+      spot2.append(p2);
+      
+      let picture2 = document.createElement('picture');
+      spot2.append(picture2);
+    
+      let img2 = document.createElement('img');
+      img2.setAttribute("class", "directory-img");
+      // img2.setAttribute("src", vampire.imageurl);
+      img2.setAttribute("src", "images/placeHolder_225x225.jpg");
+      img2.setAttribute("alt", `${vampire.name} logo`);
+      img2.setAttribute("loading", "lazy");
+      picture2.append(img2);
+  
+      let pp2 = document.createElement('a');
+      pp2.textContent = vampire.phone;
+      pp2.setAttribute("href", `tel:${vampire.phone}`)
+      spot2.append(pp2);
+      
+      let pa2 = document.createElement('a');
+      pa2.textContent = vampire.website;
+      pa2.setAttribute("href", vampire.website)
+      spot2.append(pa2);
+    
+    }
+
   },
   toggleMenu: () => {
     console.log("it worked");
@@ -440,10 +545,11 @@ const thePage = {
     getContacts(URL);
     
     function showElements(data) {
+      data.sort(() => Math.random() - 0.5);
       document.querySelector('.contact-board').innerHTML = ""
       
       let h2 = document.createElement('h2');
-      h2.textContent = "Board of Director Information";
+      h2.textContent = "Board of Directors Information";
       cards.append(h2);
 
       // console.log("%c showElements data\n", "color: blue", data)
@@ -467,12 +573,7 @@ const thePage = {
     
       });
     }
-    
-    
-    // end of tae
-
-    
-    
+      
   },
   directory: () => {
     const URL = 'data/directory.json'
@@ -668,16 +769,3 @@ const thePage = {
 }
 thePage.init();
 
-let mapOptions = {
-  center:[51.958, 9.141],
-  zoom:10
-}
-
-
-let map = new L.map('map' , mapOptions);
-
-let layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-map.addLayer(layer);
-
-let marker = new L.Marker([51.958, 9.141]);
-marker.addTo(map);
