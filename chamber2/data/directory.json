@@ -2,75 +2,147 @@
     "directory": [
         {
             "name" : "Baby Shark Lending",
+            "person": "Kalle Denitsa Lovász",
+            "email": "marioph@live.com",
+            "position": "Bus Driver",
             "slogan" : "When money talks, everybody listen.",
             "address": "5328/67, Hardhayan Singh Road, Gas City",
             "phone": "1(800)LOANSHARK",
             "imageurl": "images/placeHolder_225x225.jpg",
-            "website": "http://www.loanshark.com"
+            "website": "http://www.loanshark.com",
+            "membership": "Gold"
         },
         {
             "name" : "Gauntlet Holdings Inc.",
+            "person": "Julius Paphnutius Joshi",
+            "email": "keijser@msn.com",
+            "position": "Computer Systems Administrator",
             "slogan" : "Securing stock pile of company",
             "address": "Puerta Nueva 39, Gas City",
             "phone": "+1-202-555-0186",
             "imageurl": "images/placeHolder_225x225.jpg",
-            "website": "http://www.riddlewater.com"
+            "website": "http://www.riddlewater.com",
+            "membership": "Gold"
         },
         {
             "name" : "Rest To Run Restaurant",
+            "person": "Catguocaun Mechthild Agnarsson",
+            "email": "thurston@comcast.net",
+            "position": "Real Estate Agent",
             "slogan" : "",
             "address": "456-1200, Honcho, Gas City",
             "phone": "+1-202-555-0165",
             "imageurl": "images/placeHolder_225x225.jpg",
-            "website": "http://www.geostrip.com"
+            "website": "http://www.geostrip.com",
+            "membership": "Silver"
         },
         {
             "name" : "Monney's Laundry Shop",
+            "person": "Ilona Govad Rana",
+            "email": "mleary@me.com",
+            "position": "Desktop publisher",
             "slogan" : "",
             "address": "55-11, Gajwa-dong, Gas City",
             "phone": "+1-202-555-0110",
             "imageurl": "images/placeHolder_225x225.jpg",
-            "website": "http://www.oceanwater.com"
+            "website": "http://www.oceanwater.com",
+            "membership": "Silver"
         },
         {
             "name" : "komdatdotcom",
+            "person": "Hávarðr Carmelita Hoch",
+            "email": "agolomsh@sbcglobal.net",
+            "position": "Systems Analyst",
             "slogan" : "",
             "address": "1478 Wood Duck Drive, Gas City",
             "phone": "+1-202-555-0162",
             "imageurl": "images/placeHolder_225x225.jpg",
-            "website": "http://www.komdat-dotkom.com"
+            "website": "http://www.komdat-dotkom.com",
+            "membership": "Bronze"
         },
         {
             "name" : "Choke Beverages",
+            "person": "Johanne Lene Furnadjiev",
+            "email": "ninenine@icloud.com",
+            "position": "Actuary",
             "slogan" : "The only chocolate cola",
             "address": "3589 Lakeland Terrace, Gas City",
             "phone": "+1-202-555-0174",
             "imageurl": "images/placeHolder_225x225.jpg",
-            "website": "http://www.chokeacola.com"
+            "website": "http://www.chokeacola.com",
+            "membership": "Bronze"
         },
         {
             "name" : "Cobblerone Tannery",
+            "person": "Atticus Aybek Karstensen",
+            "email": "ivoibs@att.net",
+            "position": "",
             "slogan" : "",
             "address": "2074 Marion Street, Gas City",
             "phone": "+1-202-555-0103",
             "imageurl": "images/placeHolder_225x225.jpg",
-            "website": "http://www.cobblerone.com"
+            "website": "http://www.cobblerone.com",
+            "membership": "Bronze"
         },
         {
             "name" : "Mon's Key Business",
+            "person": "Kalle Denitsa Lovász",
+            "email": "aegreene@att.net",
+            "position": "Actor",
             "slogan" : "The only locksmith in town",
             "address": "1706 White Avenue, Gas City",
             "phone": "+1-202-555-0105",
             "imageurl": "images/placeHolder_225x225.jpg",
-            "website": "http://www.monkeybusines.com"
+            "website": "http://www.monkeybusines.com",
+            "membership": "Gold"
         },
         {
             "name" : "Time Machine",
+            "person": "Kouji Jessa Dùbhghlas",
+            "email": "szymansk@optonline.net",
+            "position": "Referee",
             "slogan" : "We will bring you to the future",
             "address": "3995 Rainbow Road, Gas City",
             "phone": "+1-202-555-0148",
             "imageurl": "images/placeHolder_225x225.jpg",
-            "website": "http://www.tripplecore.com"
+            "website": "http://www.tripplecore.com",
+            "membership": "NP"
+        },
+        {
+            "name" : "Monarch Media",
+            "person": "Debbie L. Wallace",
+            "email": "DebbieLWallace@dayrep.com",
+            "position": "Librarian",
+            "slogan" : "",
+            "address": "1329 Marcus Street, Gas City",
+            "phone": "256-607-5671",
+            "imageurl": "images/placeHolder_225x225.jpg",
+            "website": "http://www.schowalter.com",
+            "membership": "Gold"
+        },
+        {
+            "name" : "Pixy Acoustics",
+            "person": "Alan B. Abston",
+            "email": "AlanBAbston@jourrapide.com",
+            "position": "Mathematician",
+            "slogan" : "",
+            "address": "4530 Woodridge Lane, Gas City",
+            "phone": "901-344-0659",
+            "imageurl": "images/placeHolder_225x225.jpg",
+            "website": "http://www.dayrep.com",
+            "membership": "Silver"
+        },
+        {
+            "name" : "Gleason Group",
+            "person": "Claire Corwin",
+            "email": "armstrong.lauretta@schowalter.com",
+            "position": "Road sweeper",
+            "slogan" : "",
+            "address": "74 Brekke Shoal, Gas City",
+            "phone": "0463 6772 8448",
+            "imageurl": "images/placeHolder_225x225.jpg",
+            "website": "http://www.meltedshallow.com",
+            "membership": "NP"
         }
     ]
 }

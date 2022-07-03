@@ -48,6 +48,10 @@ const thePage = {
       thePage.directory();
     }
 
+    if (document.querySelector("nav") && active === "Contact") {
+      thePage.contact();
+    }
+
     // thePage.hover();
 
     // thePage.magic();
@@ -416,6 +420,152 @@ const thePage = {
       // console.log(fname.value);
       // console.log(lname.value);
       male.value = `${fname.value}.${lname.value}@snailmail.com`;
+    }
+  },
+  contact: () => {
+    const URL = 'data/directory.json'
+    const cards = document.querySelector('.directory-grid');
+    window.dataProperty = []
+    
+    async function getContacts(URL) {
+      let response = await fetch(URL);
+      if (response.ok) {
+        let data = await response.json();
+        window.data = data;
+    
+        // console.log("%c getContacts data\n", "color: blue; font-weight: bold; font-size: 1rem", data)
+        showElements(data.directory);
+      } else {
+        throw Error(response.statusText)
+      }
+    }
+    getContacts(URL);
+    
+    function showElements(data) {
+      document.querySelector('.directory').innerHTML = ""
+      console.log("%c showElements data\n", "color: blue", data)
+      data.forEach(contact => {
+        let card = document.createElement('section');
+        card.setAttribute("class", "directory-section");
+        cards.append(card);
+    
+        let div = document.createElement('div');
+        card.append(div);
+    
+        let img = document.createElement('img');
+        img.setAttribute("class", "directory-img");
+        // img.setAttribute("src", contact.imageurl);
+        img.setAttribute("src", "images/placeHolder_225x225.jpg");
+        img.setAttribute("alt", `${contact.name} logo`);
+        img.setAttribute("loading", "lazy");
+        div.append(img);
+    
+    
+        let h2 = document.createElement('h2');
+        h2.innerHTML = contact.name;
+        div.append(h2);
+    
+        // let p = document.createElement('p');
+        // p.innerHTML = contact.slogan;
+        // p.setAttribute("class", "directory-slogan");
+        // div.append(p);
+    
+        let pa = document.createElement('p');
+        pa.innerHTML = contact.address;
+        div.append(pa);
+    
+        let pp = document.createElement('a');
+        pp.textContent = contact.phone;
+        pp.setAttribute("href", `tel:${contact.phone}`)
+        div.append(pp);
+    
+        let pw = document.createElement('a');
+        pw.textContent = contact.website;
+        pw.setAttribute("href", contact.website)
+        div.append(pw);
+    
+      });
+    }
+    
+    
+    // end of tae
+    
+    const gridbutton = document.querySelector("#grid");
+    const listbutton = document.querySelector("#list");
+    const display = document.querySelector(".directory-grid");
+    
+    // The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
+    // my answer: arrow function procces quicker than defined function
+    gridbutton.addEventListener("click", () => {
+      display.classList.add("directory-grid");
+      display.classList.remove("list");
+      gridbutton.style.display = "none";
+      listbutton.style.display = "block";
+    });
+    
+    listbutton.addEventListener("click", () => {
+      display.classList.add("list");
+      display.classList.remove("directory-grid");
+      gridbutton.style.display = "block";
+      listbutton.style.display = "none";
+    });
+    
+    window.onload = () => {
+      // search
+      document.getElementById("search").addEventListener("keyup", () => {
+        let input, filter, a, i, txtValue;
+        input = document.getElementById("search");
+        filter = input.value.toLocaleLowerCase();
+        section = document.getElementById("cards").getElementsByTagName("section");
+        for (i = 0; i < section.length; i++) {
+          a = section[i].getElementsByTagName("div")[0];
+          txtValue = a.textContent || a.innerText;
+          if (txtValue.toLocaleLowerCase().indexOf(filter) > -1) {
+            section[i].style.display = "";
+          } else {
+            section[i].style.display = "none";
+          }
+        }
+      });
+    
+      // sort
+      document.getElementById("sortBy").addEventListener("change", sortCard);
+    
+      sortByProperty = document.getElementById("sortByProperty");
+      sortByProperty.addEventListener("change", sortCard);
+      name = sortByProperty.value;
+    
+      function sortCard() {
+        // console.log("%c onload data: ", "color: red", window.data)
+    
+        let sortie = document.querySelector("#sortBy").value;
+        console.log("%c onload sortie: ", "color: red", sortie)
+        let sortieProperty = document.querySelector("#sortByProperty").value;
+        console.log("%c onload sortie: ", "color: red", sortieProperty)
+        newArray = window.data.directory
+        // console.log("%c onload newArray: ", "color: red", newArray)
+        switch (sortie) {
+          case "Ascending":
+            sorted = newArray.sort((a, b) => (a[sortieProperty] > b[sortieProperty] ? 1 : -1));
+            console.log("%c onload sorted\n", "color: blue", sorted)
+            if (sortie && sortieProperty) {
+              showElements(sorted);
+            }
+            break;
+          case "Descending":
+            sorted = newArray.sort((a, b) => (a[sortieProperty] < b[sortieProperty] ? 1 : -1));
+            console.log("%c onload sorted\n", "color: blue", sorted)
+            if (sortie && sortieProperty) {
+              showElements(sorted);
+            }
+            break;
+          default:
+            getContacts(URL);
+            break;
+        }
+      }
+    
+    
     }
   },
   directory: () => {
