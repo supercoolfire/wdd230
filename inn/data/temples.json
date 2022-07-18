@@ -1,0 +1,232 @@
+{
+  "temples": [{
+    "id": "0",
+      "name": "Aba Nigeria Temple",
+      "location": "Aba, Abia, Nigeria",
+      "dedicated": "7 August 2005",
+      "address": "72-80 Okpu-Umuobo Rd, Aba, Abia State, Nigeria",
+      "phone": "(234) 80-3903-4810",
+      "email": "",
+      "services": [
+        "No clothing rental available",
+        "No cafeteria available",
+        "Patron housing available",
+        "Distribution center nearby"
+      ],
+      "history": [
+        ["2 April 2000", "Announced"],
+        ["23 February 2002", "Groundbreaking"],
+        ["7 August 2005", "Dedicated — dedicatory prayer"]
+      ],
+      "ordinance": [
+        "baptism",
+        "confirmation",
+        "Melchizedek Priesthood ordination (males)",
+        "initiatory",
+        "endowment",
+        "sealing"
+      ],
+      "ordinance_schedule": [
+        "Appointments for proxy ordinances are encouraged. Patrons without appointments are also welcome, but may be asked to wait for an opportunity to participate. Click the Appointments button below to schedule or modify a proxy appointment.",
+        "Appointments are required for members to receive their own ordinances (endowment and sealing). Call or email the temple to schedule this type of appointment.",
+        "Masks may be required depending on local government restrictions.",
+        "Patrons are encouraged to bring their own temple clothing.",
+        "Family name cards may be printed at the temple and cards may be returned upon request. You will receive a FamilySearch notification to confirm that the ordinance was recorded.",
+        "All government guidelines will be observed.",
+        "Please contact the temple for more information or if you have special circumstances or needs"
+      ],
+      "session_schedule": [""],
+      "closure_schedule": [
+        ["2022", [
+          "aturday, 20 August 2022",
+          "Monday, 5 September 2022 - Monday, 2 January 2023"
+        ]],
+        ["2023", [
+          "Monday, 6 March 2023 - Monday, 20 March 2023",
+          "Saturday, 19 August 2023",
+          "Monday, 4 September 2023 - Monday, 18 September 2023"
+        ]]
+      ],
+      "image": "images/temples/aba_nigeria_temple_lds.jpg"
+    },
+    {
+      "id": "1",
+      "name": "Sapporo Japan Temple",
+      "location": "Atsubetsu-ku Sapporo, Hokkaido, Japan",
+      "dedicated": "21 August 2016",
+      "address": "1-6-1 Oyachi-Nishi, Atsubetsu-ku Sapporo, Hokkaido, 004-0042, Japan",
+      "phone": "(81) 11-890-8120",
+      "email": "",
+      "services": [
+        "No clothing rental available",
+        "No cafeteria available",
+        "Patron housing available",
+        "Distribution center nearby"
+      ],
+      "history": [
+        ["3 October 2009", "Announced"],
+        ["22 October 2011", "Groundbreaking"],
+        ["21 August 2016", "Dedicated — dedicatory prayer"]
+      ],
+      "ordinance": [
+        "baptism",
+        "confirmation",
+        "Melchizedek Priesthood ordination (males)",
+        "initiatory",
+        "endowment",
+        "sealing"
+      ],
+      "ordinance_schedule": [
+        "All ordinances are available by appointment only. Click the Appointments button below to schedule or modify an appointment.",
+"Proxy ordinances may be limited to members residing in their designated temple district.",
+"Patrons are encouraged to bring their own temple clothing.",
+"Family name cards may be printed at the temple, but cards will not be returned after your visit. You will receive a FamilySearch notification to confirm that the ordinance was recorded. FamilySearch is suspending all temple ordinance expiration dates until temples resume full operations.",
+"All government guidelines will be observed, including regulations related to travel, gatherings, sanitization, and safety.",
+"Please contact the temple for more information or if you have special circumstances or needs."
+      ],
+      "session_schedule": [""],
+      "closure_schedule": [""],
+      "image": "images/temples/sapporo_japan_temple_night_photo.jpg"
+    },
+    {
+      "id": "2",
+      "name": "Washington D.C. Temple",
+      "location": "Kensington, Maryland, United StatesKensington, Maryland, United States",
+      "dedicated": "Renovation",
+      "address": "9900 Stoneybrook Dr, Kensington MD 20895-3199, United States",
+      "phone": "301-588-0650",
+      "email": "",
+      "services": [
+        "No clothing rental available",
+        "No cafeteria available",
+        "Patron housing available",
+        "Distribution center nearby"
+      ],
+      "history": [
+        ["15 November 1968", "Announced"],
+        ["7 December 1968", "Groundbreaking"],
+        ["19 November 1974", "Dedicated — dedicatory prayer"],
+        ["14 August 2022", "Rededicated — dedicatory prayer"]
+      ],
+      "ordinance": [
+        "baptism",
+        "confirmation",
+        "Melchizedek Priesthood ordination (males)",
+        "initiatory",
+        "endowment",
+        "sealing"
+      ],
+      "ordinance_schedule": [
+        "Temple closed during renovation",
+        "Appointments for living ordinances can be made by calling 301-588-0650. Reservations for proxy ordinances can be made using the online appointment system.",
+        "The temple will be dedicated on August 14, 2022, and open for patrons on August 30, 2022."
+      ],
+      "session_schedule": [""],
+      "closure_schedule": [""],
+      "image": "images/temples/washington_dc_mormon_temple.jpg"
+    },
+    {
+      "id": "3",
+      "name": "Tegucigalpa Honduras Temple",
+      "location": "Comayagüela, Francisco Morazán, Honduras",
+      "dedicated": "17 March 2013",
+      "address": "La Iglesia de Jesucristo S.U.D., Templo de la Ciudad de Tegucigalpa, Residencial Roble Oeste, , Boulevard Roble Oeste, 3ra Calle Sur., Comayagüela, M.D.C., Francisco Morazán, Honduras",
+      "phone": "(504) 2264-1212, 1211, or 1213",
+      "email": "",
+      "services": [
+        "No clothing rental available",
+        "No cafeteria available",
+        "Patron housing available",
+        "Distribution center nearby"
+      ],
+      "history": [
+        ["9 June 2006", "Announced"],
+        ["12 September 2009", "Groundbreaking"],
+        ["17 March 2013", "Dedicated — dedicatory prayer"]
+      ],
+      "ordinance": [
+        "baptism",
+        "confirmation",
+        "Melchizedek Priesthood ordination (males)",
+        "initiatory",
+        "endowment",
+        "sealing"
+      ],
+      "ordinance_schedule": [
+        "All ordinances are available by appointment only. Click the Appointments button below to schedule or modify a proxy appointment. Call or email the temple to schedule a living ordinance appointment.",
+        "Masks may be required depending on local government restrictions.",
+        "Patrons are encouraged to bring their own temple clothing.",
+        "Family name cards may be printed at the temple and cards may be returned upon request. You will receive a FamilySearch notification to confirm that the ordinance was recorded.",
+        "All government guidelines will be observed.",
+        "Please contact the temple for more information or if you have special circumstances or needs."
+      ],
+      "session_schedule": [
+        ["2022",[
+          "Saturday, 1 October 2022",
+          "Monday, 7 November 2022 - Monday, 21 November 2022",
+          "Saturday, 24 December 2022",
+          "Saturday, 31 December 2022"
+        ]],
+        ["2023",[
+          "Saturday, 1 April 2023",
+          "Monday, 5 June 2023 - Monday, 19 June 2023",
+          "Saturday, 7 October 2023",
+          "Monday, 6 November 2023 - Monday, 20 November 2023"
+          ]]
+
+      ],
+      "closure_schedule": [""],
+      "image": "images/temples/honduras.jpg"
+    },
+    {
+      "id": "4",
+      "name": "Winnipeg Manitoba Temple",
+      "location": "Winnipeg, Manitoba, Canada",
+      "dedicated": "31 October 2021",
+      "address": "15 Centre St, Winnipeg MB R3Y 2C3, Canada",
+      "phone": "(1) 204-261-2200",
+      "email": "",
+      "services": [
+        "No clothing rental available",
+        "No cafeteria available",
+        "Patron housing available",
+        "Distribution center nearby"
+      ],
+      "history": [
+        ["2 April 2011", "Announced"],
+        ["3 December 2016", "Groundbreaking"],
+        ["31 October 2021", "Dedicated — dedicatory prayer"]
+      ],
+      "ordinance": [
+        "baptism",
+        "confirmation",
+        "Melchizedek Priesthood ordination (males)",
+        "initiatory",
+        "endowment",
+        "sealing"
+      ],
+      "ordinance_schedule": [
+        "Appointments for proxy ordinances are encouraged. Patrons without appointments are also welcome, but may be asked to wait for an opportunity to participate. Click the Appointments button below to schedule or modify a proxy appointment.",
+        "Appointments are required for members to receive their own ordinances (endowment and sealing). Call or email the temple to schedule this type of appointment.",
+        "Masks may be required depending on local government restrictions.",
+        "Patrons are encouraged to bring their own temple clothing.",
+        "Family name cards may be printed at the temple and cards may be returned upon request. You will receive a FamilySearch notification to confirm that the ordinance was recorded.",
+        "All government guidelines will be observed.",
+        "Please contact the temple for more information or if you have special circumstances or needs."
+      ],
+      "session_schedule": [""],
+      "closure_schedule": [
+        ["2022",[
+          "Monday, 19 September 2022 - Monday, 3 October 2022",
+          "Saturday, 24 December 2022",
+          "Saturday, 31 December 2022"
+        ]],
+        ["2023",[
+          "Monday, 1 May 2023 - Monday, 15 May 2023",
+          "Monday, 18 September 2023 - Monday, 2 October 2023"
+        ]]
+      ],
+      "image": "images/temples/winnipeg_manitoba_temple_exterior_evening.jpg"
+    }
+  ]
+}

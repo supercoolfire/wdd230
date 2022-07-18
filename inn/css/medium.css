@@ -1,0 +1,55 @@
+/* 35em is also 560px (if basefont is 16px) */
+@media only screen and (min-width: 35rem) {
+
+
+  /*----------- BODY --------------*/
+
+
+
+  /*----------- HEADER --------------*/
+  header {
+    justify-content: space-between;
+  }
+
+  header img {
+    width: 100%;
+  }
+
+  .headings h1 {
+    font-size: 2rem;
+    margin: 0;
+  }
+
+
+
+  .date {
+    /* border: 1px solid black; */
+    /* padding: .4rem 1vw; */
+    background-color: var(--date-background-color);
+  }
+
+  /*----------- NAVIGATION --------------*/
+
+
+
+  /*----------- MAIN --------------*/
+  
+  
+/* TEMPLE */
+.temples-grid {    
+  grid-template-columns: 1fr 1fr; 
+}
+/* end of TEMPLE */
+  
+
+
+  /*----------- FOOTER --------------*/
+  
+  
+}
+
+/* end of media query */
+
+
+
+
