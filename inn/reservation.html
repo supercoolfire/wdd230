@@ -64,28 +64,91 @@
     <div id="wayfind"><span class="invisible">See me if you can</span></div>
 
     <main>
-        <p>The R<strong>eservation</strong>&nbsp;page contains a</p>
-        <p>form that collects relevant information when making a normal stay reservation including the</p>
-        <ul>
-            <li>location,</li>
-            <li>date,</li>
-            <li>number and</li>
-            <li>type of rooms,</li>
-            <li>registrant's full name,</li>
-            <li>email,</li>
-            <li>phone,</li>
-            <li>home state or country, and</li>
-            <li>special accommodations/comments.</li>
-            <li>Make sure to do some form validation.</li>
-        </ul>
+        <section>
+            <h2></h2>
+            <form action="thanks.html">
+                <h3>Guest Information</h3>
+                <div class="formField">
+                    <label for="firstlast">Full Name: </label><input type="text" name="firstlast" id="firstlast"
+                        required pattern="[A-Za-z ]{5,}" placeholder="Your Full Name">
+                </div>
+                <div class="formField">
+                    <label for="email">E-mail: </label><input type="text" name="email" id="email"
+                        placeholder="Your E-mail" required>
+                </div>
+                <div class="formField">
+                    <label for="phone">Phone #: </label><input type="text" name="phone" id="phone"
+                        placeholder="Your Cell Number" required>
+                </div>
+                <div class="formField">
+                    <label for="address">Address: </label><input type="text" name="address" id="address"
+                        placeholder="Your Address">
+                </div>
+                <div class="formField">
+                    <label for="city">City: </label><input type="text" name="city" id="city" placeholder="Your City">
+                </div>
+                <div class="formField">
+                    <label for="state">State: </label><input type="text" name="state" id="state"
+                        placeholder="Your State">
+                </div>
+                <div class="formField">
+                    <label for="zipcode">Zip: </label><input type="text" name="zipcode" id="zipcode"
+                        placeholder="Your Zip Code">
+                </div>
+
+                <hr>
+
+                <h3>Room Information</h3>
+                <div class="formField">
+                    <label for="location">Hotel Location: </label>
+                    <select name="location" id="location">
+                        <option value="select" selected disabled>Select a Location</option>
+                        <option value="Saratoga Springs">Aba Nigeria</option>
+                        <option value="Payson">Sapporo Japan</option>
+                        <option value="Ogden">Washington D.C</option>
+                        <option value="Layton">Tegucigalpa Honduras</option>
+                        <option value="Layton">Winnipeg Manitoba</option>
+                    </select>
+                </div>
+                <div class="formField">
+                    <label for="checkIn">Check In: </label>
+                    <input type="date" name="checkIn" id="checkIn">
+                </div>
+                <div class="formField">
+                    <label for="checkOut">Check Out: </label>
+                    <input type="date" name="checkOut" id="checkOut">
+                </div>
+                <div class="formField" id="roomType">
+                    <label for="">Room Type: </label>
+                    <select name="roomType">
+                        <option value="select" selected disabled>Select Room Type</option>
+                        <option value="1 King Bed">1 King Bed</option>
+                        <option value="2 Queen Beds">2 Queen Beds</option>
+                        <option value="1 Bedroom Suite w/Kitchen">1 Bedroom Suite w/Kitchen</option>
+                        <option value="2 Bedroom Suite w/Kitchen">2 Bedroom Suite w/Kitchen</option>
+                    </select>
+                </div>
+                <fieldset id="roomsDiv">
+                    <legend id="roomQty">How many Rooms?</legend>
+                    <label class="sbs"><input type="radio" name="rooms" value="1" checked>1</label>
+                    <label class="sbs"><input type="radio" name="rooms" value="2">2</label>
+                    <label class="sbs"><input type="radio" name="rooms" value="3">3</label>
+                    <label class="sbs"><input type="radio" name="rooms" value="4">4</label>
+                </fieldset>
+                <div>
+                    <label for="commentBox">Requests & Comments: </label for="">
+                    <textarea name="commentBox" id="commentBox" cols="60" rows="5"
+                        placeholder="Comment here..."></textarea>
+                </div>
+                <div>
+                    <input type="submit" value="Book now" class="submitForm">
+                    <a href="thanks.html"></a>
+                </div>
+            </form>
+        </section>
     </main>
     <footer>
         <div id="footloose"></div>
-        <p>&copy; <span id="theYear"> </span> | Chamber | <a class="bold" href="../index.html">Jayser Pilapil</a> | WDD
-            230
-            Project
-            |
-            <span id="lu"></span></p>
     </footer>
     <script src="js/lazyload.js"></script>
     <script src="js/script.js"></script>

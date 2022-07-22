@@ -47,6 +47,7 @@
     </div>
 
     <nav>
+      <button id="hamburgerBtn2" class="hamburgerBtn close"><span>&#9776;</span><span>X</span></button>
       <ul id="primaryNav" class="menu">
         <li class="active"><a href="index.html">Home</a></li>
         <li><a href="temple.html">Temples</a></li>
@@ -65,38 +66,53 @@
   <div id="wayfind"><span class="invisible">See me if you can</span></div>
 
   <main>
-    <img class="villain" src="images/content/lobby.jpg" alt="">
     <section class="hero">
-      <h2>Hotel kwang
+      <h2></h2>
+      <figure id="heroFigure">
+        <img src="images/placeHolder_225x225.jpg" data-src="images/content/lobby.jpg" data-srcset="
+          images/content/lobby400.jpg 400w,
+          images/content/lobby650.jpg 650w,
+          images/content/lobby.jpg 1000w
+          " sizes="100vw" alt="welcome to hotel">
+      </figure>
+      <button class="btnBook">BOOK NOW</button>
+    </section>
 
-      </h2>
-      <picture>
+    <div class="cards">
+      <section class="card summary">
+        <h2>Summary</h2>
+        <p>Summary information about a temple of your choosing</p>
+      </section>
+      <section class="card weahter">
+        <h2>Weather</h2>
+        <p>Current weather card that summarizes the conditions. You must use the One Call API (1.0) at
+          openweathermap.org
+          (Links to an external site.) and include the following content.</p>
+        <ul>
+          <li>The current temperature, current condition description, and humidity </li>
+          <li>Weather alerts if available/applicable from the government and display it as a closeable message at the
+            top
+            of the page. Closeable means the user can click to remove the alert. </li>
+          <li>Display and label a three day forecast of the "day" temperature using the current date. This can be
+            designed
+            in another card or area.</li>
+        </ul>
+      </section>
 
-      </picture>
-      <button class="bthBook">BOOK NOW</button>
-    </section>
-    <section class="card summary">
-      <p>Summary information about a temple of your choosing</p>
-    </section>
-    <section class="card weahter">
-      <p>Current weather card that summarizes the conditions. You must use the One Call API (1.0) at openweathermap.org
-        (Links to an external site.) and include the following content.</p>
-      <ul>
-        <li>The current temperature, current condition description, and humidity </li>
-        <li>Weather alerts if available/applicable from the government and display it as a closeable message at the top
-          of the page. Closeable means the user can click to remove the alert. </li>
-        <li>Display and label a three day forecast of the "day" temperature using the current date. This can be designed
-          in another card or area.</li>
-      </ul>
-    </section>
-    <section class="card event"></section>
+      <section class="card event">
+        <h2>Events</h2>
+      </section>
+    </div>
+
   </main>
-  <footer>
+  <footer class="clearfix">
     <div id="footloose"></div>
-    <p>&copy; <span id="theYear"> </span> | Chamber | <a class="bold" href="../index.html">Jayser Pilapil</a> | WDD 230
+    <p>&copy; <span id="theYear"> </span> | Temple Inn and Suites | <a class="bold" href="../index.html">Jayser
+        Pilapil</a> | WDD 230
       Project
       |
       <span id="lu"></span></p>
+
   </footer>
   <script src="js/lazyload.js"></script>
   <script src="js/script.js"></script>

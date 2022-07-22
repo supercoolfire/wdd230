@@ -35,7 +35,7 @@
         "All government guidelines will be observed.",
         "Please contact the temple for more information or if you have special circumstances or needs"
       ],
-      "session_schedule": [""],
+      "session_schedule": [],
       "closure_schedule": [
         ["2022", [
           "aturday, 20 August 2022",
@@ -84,8 +84,8 @@
 "All government guidelines will be observed, including regulations related to travel, gatherings, sanitization, and safety.",
 "Please contact the temple for more information or if you have special circumstances or needs."
       ],
-      "session_schedule": [""],
-      "closure_schedule": [""],
+      "session_schedule": [],
+      "closure_schedule": [],
       "image": "images/temples/sapporo_japan_temple_night_photo.jpg"
     },
     {
@@ -121,8 +121,8 @@
         "Appointments for living ordinances can be made by calling 301-588-0650. Reservations for proxy ordinances can be made using the online appointment system.",
         "The temple will be dedicated on August 14, 2022, and open for patrons on August 30, 2022."
       ],
-      "session_schedule": [""],
-      "closure_schedule": [""],
+      "session_schedule": [],
+      "closure_schedule": [],
       "image": "images/temples/washington_dc_mormon_temple.jpg"
     },
     {
@@ -160,7 +160,8 @@
         "All government guidelines will be observed.",
         "Please contact the temple for more information or if you have special circumstances or needs."
       ],
-      "session_schedule": [
+      "session_schedule": [],
+      "closure_schedule": [
         ["2022",[
           "Saturday, 1 October 2022",
           "Monday, 7 November 2022 - Monday, 21 November 2022",
@@ -173,9 +174,7 @@
           "Saturday, 7 October 2023",
           "Monday, 6 November 2023 - Monday, 20 November 2023"
           ]]
-
       ],
-      "closure_schedule": [""],
       "image": "images/temples/honduras.jpg"
     },
     {
@@ -214,7 +213,7 @@
         "All government guidelines will be observed.",
         "Please contact the temple for more information or if you have special circumstances or needs."
       ],
-      "session_schedule": [""],
+      "session_schedule": [],
       "closure_schedule": [
         ["2022",[
           "Monday, 19 September 2022 - Monday, 3 October 2022",

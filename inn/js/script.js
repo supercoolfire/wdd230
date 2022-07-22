@@ -16,7 +16,7 @@ const thePage = {
     }).format(myDate);
     const dayNumber = myDate.getDay();
     // console.log(dayNumber);
-
+    
     // calling functions
     thePage.today(fulldate);
 
@@ -31,6 +31,7 @@ const thePage = {
     }
 
     thePage.footer(myYear);
+
     thePage.poopUpBanner(dayNumber);
 
     thePage.localStore_age(myDate);
@@ -55,6 +56,7 @@ const thePage = {
     // thePage.hover();
 
     // thePage.magic();
+    thePage.reservationDate(myDate);
   },
   homie: () => {
     const URL = 'data/directory.json'
@@ -102,7 +104,7 @@ const thePage = {
       let img = document.createElement('img');
       img.setAttribute("class", "directory-img");
       // img.setAttribute("src", leprechaun.imageurl);
-      img.setAttribute("src", "images/placeHolder_225x225.jpg");
+      // img.setAttribute("src", "images/placeHolder_225x225.jpg");
       img.setAttribute("alt", `${leprechaun.name} logo`);
       img.setAttribute("loading", "lazy");
       picture.append(img);
@@ -174,6 +176,26 @@ const thePage = {
       datefield.innerHTML = fulldate;
     }
   },
+  reservationDate: (myuDate) => {
+    var Chicken = document.getElementById("checkIn");
+    var today = new Date();
+    var day = today.getDate();
+    // Set month to string to add leading 0
+    var mon = new String(today.getMonth()+1); //January is 0!
+    var yr = today.getFullYear();
+    
+      if(mon.length < 2) { mon = "0" + mon; }
+    
+      var date = new String( yr + '-' + mon + '-' + day );
+    
+    Chicken.disabled = false; 
+    Chicken.setAttribute('min', date);
+    Chicken.setAttribute('data-id', date);
+    
+    var Chick = document.getElementById("checkOut");
+    Chicken.addEventListener("change", () => {})
+    Chick.setAttribute('min', Chicken.getAttribute("data-id"));
+  },
   activeCustomize: (active) => {
     let wayfind = document.querySelector("#wayfind");
     wayfind.innerHTML = `<h1>${wayfind.innerHTML}${active}</h1>`;
@@ -187,8 +209,10 @@ const thePage = {
 
   },
   footer: (myYear) => {
-    document.getElementById("theYear").textContent = myYear;
-    document.querySelector("#lu").textContent = `Last Modification:  ${document.lastModified}`;
+    window.onload = () => {
+      document.getElementById("theYear").textContent = myYear;
+      document.querySelector("#lu").textContent = `Last Modification:  ${document.lastModified}`;
+    }
   },
   poopUpBanner: (dayNumber) => {
     if (document.getElementById("dateBanner")) {
@@ -524,14 +548,16 @@ const thePage = {
     getTemples(URL);
 
     function showElements(data) {
+      likes = []
       document.querySelector('.temples').innerHTML = ""
       // console.log("%c showElements data\n", "color: blue", data)
       data.forEach(temple => {
         let card = document.createElement('section');
-        card.setAttribute("class", "temples-section");
+        card.setAttribute("class", "temples-card");
         cards.append(card);
 
         let div = document.createElement('div');
+        div.setAttribute("class", "card-wrap");
         card.append(div);
 
         let img = document.createElement('img');
@@ -544,13 +570,26 @@ const thePage = {
 
 
         let h2 = document.createElement('h2');
-        h2.innerHTML = temple.name;
+        let childSpan1 = document.createElement('span');
+        let childSpan2 = document.createElement('span');
+        childSpan1.setAttribute("id", `heart${temple.id}`);
+        childSpan1.setAttribute("class", "heart");
+        // check if local storage item likes exist
+        if (localStorage.getItem("likes")) {
+          likes = JSON.parse(localStorage.getItem("likes"));
+          // console.log("%c likes", "color: blue", localStorage.getItem('likes'))
+          // console.log("%c Check hart4", "color: blue", likes.includes(`heart4`))
+          if (likes.includes(`heart${temple.id}`)) {
+            childSpan1.textContent = "🧡";
+          } else {
+            childSpan1.textContent = "🤍";
+          }
+        } else {
+          childSpan1.textContent = "🤍";
+        }
+        childSpan2.textContent = temple.name;
+        h2.append(childSpan1, childSpan2, );
         div.append(h2);
-
-        // let p = document.createElement('p');
-        // p.innerHTML = temple.slogan;
-        // p.setAttribute("class", "temples-slogan");
-        // div.append(p);
 
         let pa = document.createElement('p');
         pa.innerHTML = temple.address;
@@ -561,36 +600,164 @@ const thePage = {
         pp.setAttribute("href", `tel:${temple.phone}`)
         div.append(pp);
 
-        let pw = document.createElement('a');
-        pw.textContent = temple.website;
-        pw.setAttribute("href", temple.website)
-        div.append(pw);
+        let dinfo = document.createElement('p');
+        dinfo.textContent = "View info";
+        dinfo.setAttribute("id", `button${temple.id}`)
+        dinfo.setAttribute("class", "view-info")
+        dinfo.setAttribute("onclick", `poop('dinfoWrap-info${temple.id}')`);
+        div.append(dinfo);
 
+        let dinfoWrap = document.createElement('div');
+        dinfoWrap.setAttribute("id", `dinfoWrap-info${temple.id}`)
+        dinfoWrap.setAttribute("class", "dinfoWrap-info")
+        div.append(dinfoWrap);
+
+        // services
+        let hs = document.createElement('h3');
+        hs.textContent = 'Services';
+        dinfoWrap.append(hs);
+        let uls = document.createElement('ul');
+        dinfoWrap.append(uls);
+        temple.services.forEach((service) => {
+          let lis = document.createElement('li');
+          lis.textContent = service;
+          uls.append(lis);
+        });
+        
+        // History
+        let h3h = document.createElement('h3');
+        h3h.textContent = 'History';
+        dinfoWrap.append(h3h);
+        let ulh = document.createElement('ul');
+        dinfoWrap.append(ulh);
+        temple.history.forEach((service) => {
+          let lih = document.createElement('li');
+          lih.textContent = service;
+          ulh.append(lih);
+        });
+        
+        // ordinance
+        let h3o = document.createElement('h3');
+        h3o.textContent = 'Ordinance';
+        dinfoWrap.append(h3o);
+        let ulo = document.createElement('ul');
+        dinfoWrap.append(ulo);
+        temple.ordinance.forEach((service) => {
+          let lio = document.createElement('li');
+          lio.textContent = service;
+          ulo.append(lio);
+        });
+        
+        // ordinance schedule
+        let h3os = document.createElement('h3');
+        h3os.textContent = 'Ordinance Schedule';
+        dinfoWrap.append(h3os);
+        let ulos = document.createElement('ul');
+        dinfoWrap.append(ulos);
+        temple.ordinance_schedule.forEach((service) => {
+          let lios = document.createElement('li');
+          lios.textContent = service;
+          ulos.append(lios);
+        });
+        
+        // closure schedule
+        if(temple.closure_schedule.length >= 1) {
+          let h3cs = document.createElement('h3');
+          h3cs.textContent = 'Closure Schedule';
+          dinfoWrap.append(h3cs);
+          let ulcs = document.createElement('ul');
+          dinfoWrap.append(ulcs);
+          temple.closure_schedule.forEach((service) => {
+            let lics = document.createElement('li');
+            lics.textContent = service[0];
+            ulcs.append(lics);
+            if(service[1].length >= 1) {
+              let ulcs1 = document.createElement('ul');
+              lics.append(ulcs1);
+              service[1].forEach((servic) => {
+                let lics1 = document.createElement('li');
+                lics1.textContent = servic;
+                ulcs1.append(lics1);
+              });
+            }
+  
+          });
+
+        }
+
+
+
+        document.getElementById(`heart${temple.id}`).addEventListener("click", () => {
+          likee = document.getElementById(`heart${temple.id}`);
+          if (likee.textContent == "🤍") {
+            
+          } else {
+            
+          }
+          // check if array exist
+          if (localStorage.getItem("likes")) {
+            likes = JSON.parse(localStorage.getItem("likes"));
+            // alert("likes exist", likes)
+            if (likes.includes(`heart${temple.id}`)) {
+              // add to array
+              // alert("deleting ", `heart${temple.id}`)
+              likes.pop(`heart${temple.id}`);
+              likee.textContent = "🤍";
+              // alert(likes)
+              // send array back to local storage
+              localStorage.setItem('likes', JSON.stringify(likes));
+            } else {
+              // add to array
+              likes.push(`heart${temple.id}`);
+              likee.textContent = "🧡";
+              // send array back to local storage
+              localStorage.setItem('likes', JSON.stringify(likes));
+              JSON.parse(localStorage.getItem('likes')); 
+            }
+          } else {
+            // alert("likes dont exist")
+            // send array to local storage
+            localStorage.setItem('likes', JSON.stringify(likes));
+            // retrieve local storage to array
+            likes = JSON.parse(localStorage.getItem('likes'));
+            // add to array
+            likes.push(`heart${temple.id}`);
+            likee.textContent = "🧡";
+            // send array back to local storage
+            localStorage.setItem('likes', JSON.stringify(likes));
+            JSON.parse(localStorage.getItem('likes')); 
+          }
+        });
       });
+
+
     }
 
+    // THIS IS FOR SOFT HEARTED PERSON
 
-    // end of tae
 
-    const gridbutton = document.querySelector("#grid");
-    const listbutton = document.querySelector("#list");
-    const display = document.querySelector(".directory-grid");
+
+    // this is for grid list button
+
+    // const gridbutton = document.querySelector("#grid");
+    // const listbutton = document.querySelector("#list");
+    // const display = document.querySelector(".directory-grid");
 
     // The following code could be written cleaner. How? We may have to simplfiy our HTMl and think about a default view.
     // my answer: arrow function procces quicker than defined function
-    gridbutton.addEventListener("click", () => {
-      display.classList.add("directory-grid");
-      display.classList.remove("list");
-      gridbutton.style.display = "none";
-      listbutton.style.display = "block";
-    });
+    // gridbutton.addEventListener("click", () => {
+    //   display.classList.add("directory-grid");
+    //   display.classList.remove("list");
+    //   gridbutton.style.display = "none";
+    //   listbutton.style.display = "block";
+    // });
 
-    listbutton.addEventListener("click", () => {
-      display.classList.add("list");
-      display.classList.remove("directory-grid");
-      gridbutton.style.display = "block";
-      listbutton.style.display = "none";
-    });
+    // listbutton.addEventListener("click", () => {
+    //   display.classList.add("list");
+    //   display.classList.remove("directory-grid");
+    //   gridbutton.style.display = "block";
+    //   listbutton.style.display = "none";
+    // });
 
     window.onload = () => {
       // search
@@ -610,42 +777,42 @@ const thePage = {
         }
       });
 
-      // sort
-      document.getElementById("sortBy").addEventListener("change", sortCard);
+    //   // sort
+    //   document.getElementById("sortBy").addEventListener("change", sortCard);
 
-      sortByProperty = document.getElementById("sortByProperty");
-      sortByProperty.addEventListener("change", sortCard);
-      name = sortByProperty.value;
+    //   sortByProperty = document.getElementById("sortByProperty");
+    //   sortByProperty.addEventListener("change", sortCard);
+    //   name = sortByProperty.value;
 
-      function sortCard() {
-        // console.log("%c onload data: ", "color: red", window.data)
+    //   function sortCard() {
+    //     // console.log("%c onload data: ", "color: red", window.data)
 
-        let sortie = document.querySelector("#sortBy").value;
-        console.log("%c onload sortie: ", "color: red", sortie)
-        let sortieProperty = document.querySelector("#sortByProperty").value;
-        console.log("%c onload sortie: ", "color: red", sortieProperty)
-        newArray = window.data.directory
-        // console.log("%c onload newArray: ", "color: red", newArray)
-        switch (sortie) {
-          case "Ascending":
-            sorted = newArray.sort((a, b) => (a[sortieProperty] > b[sortieProperty] ? 1 : -1));
-            console.log("%c onload sorted\n", "color: blue", sorted)
-            if (sortie && sortieProperty) {
-              showElements(sorted);
-            }
-            break;
-          case "Descending":
-            sorted = newArray.sort((a, b) => (a[sortieProperty] < b[sortieProperty] ? 1 : -1));
-            console.log("%c onload sorted\n", "color: blue", sorted)
-            if (sortie && sortieProperty) {
-              showElements(sorted);
-            }
-            break;
-          default:
-            getTemples(URL);
-            break;
-        }
-      }
+    //     let sortie = document.querySelector("#sortBy").value;
+    //     console.log("%c onload sortie: ", "color: red", sortie)
+    //     let sortieProperty = document.querySelector("#sortByProperty").value;
+    //     console.log("%c onload sortie: ", "color: red", sortieProperty)
+    //     newArray = window.data.directory
+    //     // console.log("%c onload newArray: ", "color: red", newArray)
+    //     switch (sortie) {
+    //       case "Ascending":
+    //         sorted = newArray.sort((a, b) => (a[sortieProperty] > b[sortieProperty] ? 1 : -1));
+    //         console.log("%c onload sorted\n", "color: blue", sorted)
+    //         if (sortie && sortieProperty) {
+    //           showElements(sorted);
+    //         }
+    //         break;
+    //       case "Descending":
+    //         sorted = newArray.sort((a, b) => (a[sortieProperty] < b[sortieProperty] ? 1 : -1));
+    //         console.log("%c onload sorted\n", "color: blue", sorted)
+    //         if (sortie && sortieProperty) {
+    //           showElements(sorted);
+    //         }
+    //         break;
+    //       default:
+    //         getTemples(URL);
+    //         break;
+    //     }
+    //   }
 
 
     }
@@ -695,14 +862,14 @@ const thePage = {
     //   }
   },
   footloose: () => {
-      fetch('footer.html')
-        .then(response => response.text())
-        .then(text => {
-          document.getElementById('footloose').innerHTML = text;
-          document.querySelector(".social-yt").addEventListener("click", (e) => {
-            window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank").focus();
-            e.preventDefault();
-          });
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(text => {
+        document.getElementById('footloose').innerHTML = text;
+        document.querySelector(".social-yt").addEventListener("click", (e) => {
+          window.open("https://www.youtube.com/watch?v=dQw4w9WgXcQ", "_blank").focus();
+          e.preventDefault();
+        });
 
       });
   }
