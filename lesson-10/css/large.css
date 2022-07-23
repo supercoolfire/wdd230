@@ -1,0 +1,92 @@
+/* 64em is also 1028px (if basefont is 16px) */
+@media only screen and (min-width: 1030px) {
+
+    header,
+    .dateWrapper,
+    nav,
+    main,
+    footer {
+      max-width: 1080px;
+      margin: auto;
+    }
+  
+    /*----------- BODY --------------*/
+  
+    /*----------- HEADER --------------*/
+  
+  
+  
+    /*----------- NAVIGATION --------------*/
+    .hamburgerBtn {
+      display: none;
+    }
+  
+    nav {
+      visibility: visible;
+      height: unset;
+      position: unset;
+      top: unset;
+      left: unset;
+      width: unset;
+      text-align: unset;
+    }
+  
+    #primaryNav {
+      display: flex;
+      position: relative;
+      /*display side by side*/
+      /* justify-content: flex-end; */
+      margin-left: 2vw;
+      border-left: 1px solid rgba(0, 0, 0, .3);
+    }
+  
+    nav.move {
+      position: unset;
+      top: unset;
+      left: unset;
+      width: unset;
+      text-align: unset;
+  
+      visibility: visible;
+      height: 280px;
+    }
+  
+    nav ul li a {
+      padding: .5rem 1rem;
+      border: none;
+      border-right: 1px solid rgba(0, 0, 0, .3);
+    }
+  
+    nav ul li.active a {
+      /*must place before hover*/
+      border-radius: 0;
+    }
+  
+    nav ul li a:hover {
+      border-radius: 0;
+    }
+  
+    /*----------- MAIN --------------*/
+   
+  
+  
+    
+  
+  
+    /*----------- FOOTER --------------*/
+  
+    
+  
+  /* bouncy bounce */
+  .arrow {
+    margin-top: -309px;
+    margin-left: -18px;
+  }
+  /* end of bouncy bounce */
+  
+  }
+  
+  /* end of media query */
+  
+  
+  

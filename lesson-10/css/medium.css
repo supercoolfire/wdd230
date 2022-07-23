@@ -1,0 +1,57 @@
+/* 35em is also 560px (if basefont is 16px) */
+@media only screen and (min-width: 35rem) {
+
+
+    /*----------- BODY --------------*/
+  
+  
+  
+    /*----------- HEADER --------------*/
+    header {
+      justify-content: space-between;
+    }
+  
+    header img {
+      width: 100%;
+    }
+  
+    .headings h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+  
+    m {
+      letter-spacing: 1.5pt;
+      font-size: .9rem;
+    }
+  
+    .social {
+      display: block;
+    }
+  
+  
+    .date {
+      /* border: 1px solid black; */
+      /* padding: .4rem 1vw; */
+      background-color: var(--date-background-color);
+    }
+  
+    /*----------- NAVIGATION --------------*/
+  
+  
+  
+    /*----------- MAIN --------------*/
+  
+  
+    /*----------- FOOTER --------------*/
+ 
+  
+    
+  }
+  
+  /* end of media query */
+  
+  
+  
+  
+  
